@@ -4,3 +4,4 @@
 *.lock
 *~.nib
 /src/.idea
+/src/JPKit.xcodeproj/project.xcworkspace/xcuserdata

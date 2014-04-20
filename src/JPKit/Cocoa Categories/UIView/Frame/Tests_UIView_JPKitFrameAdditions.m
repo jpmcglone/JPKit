@@ -34,6 +34,10 @@
             )
     )
     );
+
+    self.view.origin = CGPointMake(20, 10);
+    self.view.size = CGSizeMake(40, 30);
+    XCTAssert(CGRectEqualToRect(self.view.frame, CGRectMake(20, 10, 40, 30)));
 }
 
 - (void)tearDown {

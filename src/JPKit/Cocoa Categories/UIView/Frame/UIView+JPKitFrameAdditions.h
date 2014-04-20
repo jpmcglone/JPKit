@@ -7,6 +7,9 @@
 
 @interface UIView (JPKitFrameAdditions)
 
+@property(nonatomic, readwrite) CGPoint origin;
+@property(nonatomic, readwrite) CGSize size;
+
 @property(nonatomic, readwrite) CGFloat x;
 @property(nonatomic, readwrite) CGFloat y;
 @property(nonatomic, readwrite) CGFloat width;
