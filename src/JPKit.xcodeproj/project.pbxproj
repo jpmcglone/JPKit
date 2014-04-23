@@ -17,6 +17,9 @@
 		F04A63861903581F00CA5FD7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F04A63851903581F00CA5FD7 /* UIKit.framework */; };
 		F04A63891903581F00CA5FD7 /* libJPKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F04A63711903581E00CA5FD7 /* libJPKit.a */; };
 		F04A638F1903581F00CA5FD7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F04A638D1903581F00CA5FD7 /* InfoPlist.strings */; };
+		F0AC84D51907A8EE009971BB /* JPKit.h in Headers */ = {isa = PBXBuildFile; fileRef = F04A63791903581E00CA5FD7 /* JPKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F0AC84D61907A8F0009971BB /* UIView+JPKitFrameAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = A5EDA1D9BA12F07C30444100 /* UIView+JPKitFrameAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F0AC84D81907AAED009971BB /* JPKit-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = F04A63781903581E00CA5FD7 /* JPKit-Prefix.pch */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -180,6 +183,19 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		F0AC84D41907A8DB009971BB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0AC84D81907AAED009971BB /* JPKit-Prefix.pch in Headers */,
+				F0AC84D51907A8EE009971BB /* JPKit.h in Headers */,
+				F0AC84D61907A8F0009971BB /* UIView+JPKitFrameAdditions.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
 		F04A63701903581E00CA5FD7 /* JPKit */ = {
 			isa = PBXNativeTarget;
@@ -188,6 +204,7 @@
 				F04A636D1903581E00CA5FD7 /* Sources */,
 				F04A636E1903581E00CA5FD7 /* Frameworks */,
 				F04A636F1903581E00CA5FD7 /* CopyFiles */,
+				F0AC84D41907A8DB009971BB /* Headers */,
 			);
 			buildRules = (
 			);
