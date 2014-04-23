@@ -18,31 +18,39 @@
 }
 
 - (void)testSetters {
-    self.view.x = 10;
-    self.view.y = 20;
-    self.view.width = 30;
-    self.view.height = 40;
+    self.view.jp_x = 10;
+    XCTAssert(CGRectEqualToRect(self.view.frame, CGRectMake(10, 0, 0, 0)));
+    
+    self.view.jp_y = 20;
+    XCTAssert(CGRectEqualToRect(self.view.frame, CGRectMake(10, 20, 0, 0)));
 
-    XCTAssert(
-    CGRectEqualToRect(
-            self.view.frame,
-            CGRectMake(
-                    10,
-                    20,
-                    30,
-                    40
-            )
-    )
-    );
+    self.view.jp_width = 30;
+    XCTAssert(CGRectEqualToRect(self.view.frame, CGRectMake(10, 20, 30, 0)));
 
-    self.view.origin = CGPointMake(20, 10);
-    self.view.size = CGSizeMake(40, 30);
+    self.view.jp_height = 40;
+    XCTAssert(CGRectEqualToRect(self.view.frame, CGRectMake(10, 20, 30, 40)));
+
+    self.view.jp_origin = CGPointMake(20, 10);
+    XCTAssert(CGRectEqualToRect(self.view.frame, CGRectMake(20, 10, 30, 40)));
+
+    self.view.jp_size = CGSizeMake(40, 30);
     XCTAssert(CGRectEqualToRect(self.view.frame, CGRectMake(20, 10, 40, 30)));
+    
+    //TODO: top, jp_bottom, jp_left, jp_right
+}
+
+- (void)testBeginEndUpdates {
+    [self.view jp_beginFrameUpdates];
+    self.view.jp_x = 10;
+    XCTAssertFalse(CGRectEqualToRect(self.view.frame, CGRectMake(10, 0, 0, 0)));
+    self.view.jp_y = 10;
+    [self.view jp_endFrameUpdates];
+    XCTAssertTrue(CGRectEqualToRect(self.view.frame, CGRectMake(10, 10, 0, 0)));
 }
 
 - (void)tearDown {
     [super tearDown];
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
+    self.view = nil;
 }
 
 @end

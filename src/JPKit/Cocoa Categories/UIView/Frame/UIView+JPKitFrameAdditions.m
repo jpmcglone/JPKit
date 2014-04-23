@@ -4,99 +4,173 @@
 //
 
 #import "UIView+JPKitFrameAdditions.h"
+#import <objc/runtime.h>
+
+static char const * const jp_initialFrameKey = "jp_initialFrame";
+static char const * const jp_updatingFrameKey = "jp_updatingFrameKey";
+
+@interface UIView ()
+@property (nonatomic, assign) CGRect jp_initialFrame;
+@property (nonatomic, assign) BOOL jp_updatingFrame;
+@end
 
 @implementation UIView (JPKitFrameAdditions)
 
-- (CGPoint)origin {
+#pragma mark - Frame shortcuts
+#pragma mark - origin
+- (CGPoint)jp_origin {
     return self.frame.origin;
 }
 
-- (void)setOrigin:(CGPoint)origin {
-    CGRect frame = self.frame;
+- (void)setJp_origin:(CGPoint)origin {
+    CGRect frame;
+    [self jp_getUpdatingFrameIfNeeded:&frame];
     frame.origin = origin;
-    self.frame = frame;
+    [self jp_setUpdatingFrameIfNeeded:frame];
 }
 
-- (CGSize)size {
+#pragma mark - size
+- (CGSize)jp_size {
     return self.frame.size;
 }
 
-- (void)setSize:(CGSize)size {
+- (void)setJp_size:(CGSize)size {
     CGRect frame = self.frame;
+    [self jp_getUpdatingFrameIfNeeded:&frame];
     frame.size = size;
-    self.frame = frame;
+    [self jp_setUpdatingFrameIfNeeded:frame];
 }
 
-- (CGFloat)x {
-    return self.origin.x;
+#pragma mark - x
+- (CGFloat)jp_x {
+    return self.jp_origin.x;
 }
 
-- (void)setX:(CGFloat)x {
+- (void)setJp_x:(CGFloat)x {
     CGRect frame = self.frame;
+    [self jp_getUpdatingFrameIfNeeded:&frame];
     frame.origin = CGPointMake(x, frame.origin.y);
-    self.frame = frame;
+    [self jp_setUpdatingFrameIfNeeded:frame];
 }
 
-- (CGFloat)y {
+#pragma mark - y
+- (CGFloat)jp_y {
     return self.frame.origin.y;
 }
 
-- (void)setY:(CGFloat)y {
+- (void)setJp_y:(CGFloat)y {
     CGRect frame = self.frame;
+    [self jp_getUpdatingFrameIfNeeded:&frame];
     frame.origin = CGPointMake(frame.origin.x, y);
-    self.frame = frame;
+    [self jp_setUpdatingFrameIfNeeded:frame];
 }
 
-- (CGFloat)width {
+#pragma mark - width
+- (CGFloat)jp_width {
     return self.bounds.size.width;
 }
 
-- (void)setWidth:(CGFloat)width {
+- (void)setJp_width:(CGFloat)width {
     CGRect frame = self.frame;
+    [self jp_getUpdatingFrameIfNeeded:&frame];
     frame.size = CGSizeMake(width, frame.size.width);
-    self.frame = frame;
+    [self jp_setUpdatingFrameIfNeeded:frame];
 }
 
-- (CGFloat)height {
+#pragma mark - height
+- (CGFloat)jp_height {
     return self.bounds.size.height;
 }
 
-- (void)setHeight:(CGFloat)height {
+- (void)setJp_height:(CGFloat)height {
     CGRect frame = self.frame;
+    [self jp_getUpdatingFrameIfNeeded:&frame];
     frame.size = CGSizeMake(frame.size.width, height);
-    self.frame = frame;
+    [self jp_setUpdatingFrameIfNeeded:frame];
 }
 
-- (CGFloat)top {
+#pragma mark - Frame alias helpers 
+#pragma mark - top
+- (CGFloat)jp_top {
     return self.frame.origin.y;
 }
 
-- (void)setTop:(CGFloat)top {
-    self.y = top;
+- (void)setJp_top:(CGFloat)top {
+    self.jp_y = top;
 }
 
-- (CGFloat)right {
+#pragma mark - right
+- (CGFloat)jp_right {
     return CGRectGetMaxX(self.frame);
 }
 
-- (void)setRight:(CGFloat)right {
-    self.x = right - self.width;
+- (void)setJp_right:(CGFloat)right {
+    self.jp_x = right - self.jp_width;
 }
 
-- (CGFloat)bottom {
+#pragma mark - bottom
+- (CGFloat)jp_bottom {
     return CGRectGetMaxY(self.frame);
 }
 
-- (void)setBottom:(CGFloat)bottom {
-    self.y = bottom - self.height;
+- (void)setJp_bottom:(CGFloat)bottom {
+    self.jp_y = bottom - self.jp_height;
 }
 
-- (CGFloat)left {
+#pragma mark - left
+- (CGFloat)jp_left {
     return self.frame.origin.x;
 }
 
-- (void)setLeft:(CGFloat)left {
-    self.x = left;
+- (void)setJp_left:(CGFloat)left {
+    self.jp_x = left;
+}
+
+#pragma mark - JP Update Frames
+#pragma mark - begin / end updates
+- (void)jp_beginFrameUpdates {
+    self.jp_updatingFrame = YES;
+    self.jp_initialFrame = self.frame;
+}
+
+- (void)jp_endFrameUpdates {
+    self.jp_updatingFrame = NO;
+    self.frame = self.jp_initialFrame;
+}
+
+#pragma mark - jp_initialFrame
+- (CGRect)jp_initialFrame {
+    return [objc_getAssociatedObject(self, jp_initialFrameKey) CGRectValue];
+}
+
+- (void)setJp_initialFrame:(CGRect)initialFrame {
+    objc_setAssociatedObject(self, jp_initialFrameKey, [NSValue valueWithCGRect:initialFrame], OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+#pragma mark - jp_updatingFrame
+- (BOOL)jp_updatingFrame {
+    return [objc_getAssociatedObject(self, jp_updatingFrameKey) boolValue];
+}
+
+- (void)setJp_updatingFrame:(BOOL)jp_updatingFrame {
+    objc_setAssociatedObject(self, jp_updatingFrameKey, [NSNumber numberWithBool:jp_updatingFrame], OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+#pragma mark - internal
+- (void)jp_getUpdatingFrameIfNeeded:(CGRect *)frame {
+    if (self.jp_updatingFrame) {
+        *frame = self.jp_initialFrame;
+    } else {
+        *frame = self.frame;
+    }
+}
+
+- (void)jp_setUpdatingFrameIfNeeded:(CGRect)frame {
+    if (self.jp_updatingFrame) {
+        self.jp_initialFrame = frame;
+    } else {
+        self.frame = frame;
+    }
 }
 
 @end
