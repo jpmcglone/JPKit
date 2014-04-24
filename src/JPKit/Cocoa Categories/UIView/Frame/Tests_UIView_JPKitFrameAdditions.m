@@ -12,15 +12,17 @@
 
 @implementation Tests_UIView_JPKitFrameAdditions
 
-- (void)setUp {
+- (void)setUp
+{
     [super setUp];
     self.view = [UIView new];
 }
 
-- (void)testSetters {
+- (void)testSetters
+{
     self.view.jp_x = 10;
     XCTAssert(CGRectEqualToRect(self.view.frame, CGRectMake(10, 0, 0, 0)));
-    
+
     self.view.jp_y = 20;
     XCTAssert(CGRectEqualToRect(self.view.frame, CGRectMake(10, 20, 0, 0)));
 
@@ -35,11 +37,12 @@
 
     self.view.jp_size = CGSizeMake(40, 30);
     XCTAssert(CGRectEqualToRect(self.view.frame, CGRectMake(20, 10, 40, 30)));
-    
+
     //TODO: top, jp_bottom, jp_left, jp_right
 }
 
-- (void)testBeginEndUpdates {
+- (void)testBeginEndUpdates
+{
     [self.view jp_beginFrameUpdates];
     self.view.jp_x = 10;
     XCTAssertFalse(CGRectEqualToRect(self.view.frame, CGRectMake(10, 0, 0, 0)));
@@ -48,7 +51,8 @@
     XCTAssertTrue(CGRectEqualToRect(self.view.frame, CGRectMake(10, 10, 0, 0)));
 }
 
-- (void)tearDown {
+- (void)tearDown
+{
     [super tearDown];
     self.view = nil;
 }
