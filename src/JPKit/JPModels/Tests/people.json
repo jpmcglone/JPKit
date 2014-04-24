@@ -1,0 +1,35 @@
+{
+   "some_object":{
+       "some_number":1,
+       "some_string":"string",
+       "some_bool":true,
+       "person":{
+           "name":"Insider",
+           "age":0
+       },
+       "some_array":[
+            {
+                "some_number":2
+            }
+        ],
+       "some_null":null
+   },
+   "people":[
+      {
+         "name":"JP",
+         "age":25
+      },
+      {
+         "name":"Ed",
+         "age":50
+      },
+      {
+         "name":"Jeff",
+         "age":57
+      }
+   ],
+   "person":{
+       "name":"Outsider",
+       "age":0
+   }
+}

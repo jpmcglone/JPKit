@@ -7,9 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A5EDA00FB591ED4DEAD02B97 /* JPModelMapManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDA595D6DC2C539224D378 /* JPModelMapManager.m */; };
+		A5EDA0774857A4DE8C34051C /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDA84CBEE40DEB41A19DCD /* Person.m */; };
+		A5EDA10577C8B6B91892FEB6 /* JPModelManager.h in Headers */ = {isa = PBXBuildFile; fileRef = A5EDAF7B3C805B77294A426A /* JPModelManager.h */; };
+		A5EDA2593991E581AA0770EF /* JPModelManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDAE69D4CD3D6FC536090C /* JPModelManager.m */; };
 		A5EDA2B8A3B21FDD158FDDFC /* UIView+JPKitFrameAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDA17D64E1024B3A217626 /* UIView+JPKitFrameAdditions.m */; };
+		A5EDA36067D6694274F39363 /* JPModelMapManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDA595D6DC2C539224D378 /* JPModelMapManager.m */; };
+		A5EDA361C34962083D70962D /* Tests_JPModels.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDA444DD9D7A9F2BCC16E8 /* Tests_JPModels.m */; };
+		A5EDA36B9AD2A151FC721A41 /* JPModelMap.h in Headers */ = {isa = PBXBuildFile; fileRef = A5EDA95EBBE6A4266E22038F /* JPModelMap.h */; };
+		A5EDA49D8F221FAE4F4A2260 /* JPModelManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDAE69D4CD3D6FC536090C /* JPModelManager.m */; };
+		A5EDA79A78324AAF3FAACA3A /* JPModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDA63E6F12F963F79F559B /* JPModel.m */; };
+		A5EDA80EC888ABB508B8B3C3 /* NSString+JPAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDAEF8B12E42793377048C /* NSString+JPAdditions.m */; };
 		A5EDA8C77DB30D03CF46B418 /* UIView+JPKitFrameAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDA17D64E1024B3A217626 /* UIView+JPKitFrameAdditions.m */; };
+		A5EDA954406328515AE04DB2 /* JPModel.h in Headers */ = {isa = PBXBuildFile; fileRef = A5EDA8C6D995993863A31C52 /* JPModel.h */; };
+		A5EDAB1BEEEF0C92DF133CB8 /* JPModelMapManager.h in Headers */ = {isa = PBXBuildFile; fileRef = A5EDA643D16679EFC2700DF4 /* JPModelMapManager.h */; };
+		A5EDAC5D7A8744D9B25F627F /* JPModelMap.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDA8CE7524EB485F57E63E /* JPModelMap.m */; };
+		A5EDAF61328F76F2C180EFE7 /* NSString+JPAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDAEF8B12E42793377048C /* NSString+JPAdditions.m */; };
+		A5EDAF9A87ADD2600519ED50 /* NSString+JPAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = A5EDACF378A060BCFD97DB9A /* NSString+JPAdditions.h */; };
 		A5EDAFBA8D81883AC63A3307 /* Tests_UIView_JPKitFrameAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDAA44A679332EBA11E176 /* Tests_UIView_JPKitFrameAdditions.m */; };
+		A5EDAFFC4EDB36415E7B40E9 /* JPModelMap.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDA8CE7524EB485F57E63E /* JPModelMap.m */; };
 		F04A63751903581E00CA5FD7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F04A63741903581E00CA5FD7 /* Foundation.framework */; };
 		F04A637A1903581E00CA5FD7 /* JPKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = F04A63791903581E00CA5FD7 /* JPKit.h */; };
 		F04A63831903581F00CA5FD7 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F04A63821903581F00CA5FD7 /* XCTest.framework */; };
@@ -20,6 +36,7 @@
 		F0AC84D51907A8EE009971BB /* JPKit.h in Headers */ = {isa = PBXBuildFile; fileRef = F04A63791903581E00CA5FD7 /* JPKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F0AC84D61907A8F0009971BB /* UIView+JPKitFrameAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = A5EDA1D9BA12F07C30444100 /* UIView+JPKitFrameAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F0AC84D81907AAED009971BB /* JPKit-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = F04A63781903581E00CA5FD7 /* JPKit-Prefix.pch */; };
+		F0AC84DB1908E542009971BB /* people.json in Resources */ = {isa = PBXBuildFile; fileRef = F0AC84DA1908E542009971BB /* people.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +65,20 @@
 /* Begin PBXFileReference section */
 		A5EDA17D64E1024B3A217626 /* UIView+JPKitFrameAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JPKitFrameAdditions.m"; sourceTree = "<group>"; };
 		A5EDA1D9BA12F07C30444100 /* UIView+JPKitFrameAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JPKitFrameAdditions.h"; sourceTree = "<group>"; };
+		A5EDA444DD9D7A9F2BCC16E8 /* Tests_JPModels.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tests_JPModels.m; sourceTree = "<group>"; };
+		A5EDA595D6DC2C539224D378 /* JPModelMapManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPModelMapManager.m; sourceTree = "<group>"; };
+		A5EDA63E6F12F963F79F559B /* JPModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPModel.m; sourceTree = "<group>"; };
+		A5EDA643D16679EFC2700DF4 /* JPModelMapManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPModelMapManager.h; sourceTree = "<group>"; };
+		A5EDA84CBEE40DEB41A19DCD /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		A5EDA8C6D995993863A31C52 /* JPModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPModel.h; sourceTree = "<group>"; };
+		A5EDA8CE7524EB485F57E63E /* JPModelMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPModelMap.m; sourceTree = "<group>"; };
+		A5EDA95EBBE6A4266E22038F /* JPModelMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPModelMap.h; sourceTree = "<group>"; };
 		A5EDAA44A679332EBA11E176 /* Tests_UIView_JPKitFrameAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tests_UIView_JPKitFrameAdditions.m; sourceTree = "<group>"; };
+		A5EDACF378A060BCFD97DB9A /* NSString+JPAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+JPAdditions.h"; sourceTree = "<group>"; };
+		A5EDAE3D98583C2416F82BFF /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		A5EDAE69D4CD3D6FC536090C /* JPModelManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPModelManager.m; sourceTree = "<group>"; };
+		A5EDAEF8B12E42793377048C /* NSString+JPAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+JPAdditions.m"; sourceTree = "<group>"; };
+		A5EDAF7B3C805B77294A426A /* JPModelManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPModelManager.h; sourceTree = "<group>"; };
 		F04A63711903581E00CA5FD7 /* libJPKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libJPKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F04A63741903581E00CA5FD7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F04A63781903581E00CA5FD7 /* JPKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JPKit-Prefix.pch"; sourceTree = "<group>"; };
@@ -58,6 +88,7 @@
 		F04A63851903581F00CA5FD7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		F04A638C1903581F00CA5FD7 /* JPKitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JPKitTests-Info.plist"; sourceTree = "<group>"; };
 		F04A638E1903581F00CA5FD7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F0AC84DA1908E542009971BB /* people.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = people.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +114,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A5EDA34E299E095276E14075 /* JPModels */ = {
+			isa = PBXGroup;
+			children = (
+				A5EDA63E6F12F963F79F559B /* JPModel.m */,
+				A5EDA8C6D995993863A31C52 /* JPModel.h */,
+				A5EDA8CE7524EB485F57E63E /* JPModelMap.m */,
+				A5EDA95EBBE6A4266E22038F /* JPModelMap.h */,
+				A5EDA643D16679EFC2700DF4 /* JPModelMapManager.h */,
+				A5EDAD10D1E0137D8E8A74CF /* Tests */,
+				A5EDA595D6DC2C539224D378 /* JPModelMapManager.m */,
+				A5EDAE69D4CD3D6FC536090C /* JPModelManager.m */,
+				A5EDAF7B3C805B77294A426A /* JPModelManager.h */,
+			);
+			path = JPModels;
+			sourceTree = "<group>";
+		};
 		A5EDA53620C2142802013089 /* Frame */ = {
 			isa = PBXGroup;
 			children = (
@@ -93,19 +140,33 @@
 			path = Frame;
 			sourceTree = "<group>";
 		};
-		A5EDA658119C564E2EC00259 /* JP Classes */ = {
+		A5EDA7B9BF21CBA7C5147DC1 /* NSString */ = {
 			isa = PBXGroup;
 			children = (
+				A5EDAEF8B12E42793377048C /* NSString+JPAdditions.m */,
+				A5EDACF378A060BCFD97DB9A /* NSString+JPAdditions.h */,
 			);
-			path = "JP Classes";
+			path = NSString;
 			sourceTree = "<group>";
 		};
 		A5EDA95C5F05BE3888F6EE36 /* Cocoa Categories */ = {
 			isa = PBXGroup;
 			children = (
 				A5EDAE4733D4A46EE2CF81B5 /* UIView */,
+				A5EDA7B9BF21CBA7C5147DC1 /* NSString */,
 			);
 			path = "Cocoa Categories";
+			sourceTree = "<group>";
+		};
+		A5EDAD10D1E0137D8E8A74CF /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				F0AC84DA1908E542009971BB /* people.json */,
+				A5EDA444DD9D7A9F2BCC16E8 /* Tests_JPModels.m */,
+				A5EDA84CBEE40DEB41A19DCD /* Person.m */,
+				A5EDAE3D98583C2416F82BFF /* Person.h */,
+			);
+			path = Tests;
 			sourceTree = "<group>";
 		};
 		A5EDAE4733D4A46EE2CF81B5 /* UIView */ = {
@@ -151,7 +212,7 @@
 				F04A63791903581E00CA5FD7 /* JPKit.h */,
 				F04A63771903581E00CA5FD7 /* Supporting Files */,
 				A5EDA95C5F05BE3888F6EE36 /* Cocoa Categories */,
-				A5EDA658119C564E2EC00259 /* JP Classes */,
+				A5EDA34E299E095276E14075 /* JPModels */,
 			);
 			path = JPKit;
 			sourceTree = "<group>";
@@ -191,6 +252,11 @@
 				F0AC84D81907AAED009971BB /* JPKit-Prefix.pch in Headers */,
 				F0AC84D51907A8EE009971BB /* JPKit.h in Headers */,
 				F0AC84D61907A8F0009971BB /* UIView+JPKitFrameAdditions.h in Headers */,
+				A5EDA954406328515AE04DB2 /* JPModel.h in Headers */,
+				A5EDA36B9AD2A151FC721A41 /* JPModelMap.h in Headers */,
+				A5EDAB1BEEEF0C92DF133CB8 /* JPModelMapManager.h in Headers */,
+				A5EDAF9A87ADD2600519ED50 /* NSString+JPAdditions.h in Headers */,
+				A5EDA10577C8B6B91892FEB6 /* JPModelManager.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,6 +331,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0AC84DB1908E542009971BB /* people.json in Resources */,
 				F04A638F1903581F00CA5FD7 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,6 +344,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5EDA2B8A3B21FDD158FDDFC /* UIView+JPKitFrameAdditions.m in Sources */,
+				A5EDA79A78324AAF3FAACA3A /* JPModel.m in Sources */,
+				A5EDAC5D7A8744D9B25F627F /* JPModelMap.m in Sources */,
+				A5EDAF61328F76F2C180EFE7 /* NSString+JPAdditions.m in Sources */,
+				A5EDA00FB591ED4DEAD02B97 /* JPModelMapManager.m in Sources */,
+				A5EDA2593991E581AA0770EF /* JPModelManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +358,12 @@
 			files = (
 				A5EDA8C77DB30D03CF46B418 /* UIView+JPKitFrameAdditions.m in Sources */,
 				A5EDAFBA8D81883AC63A3307 /* Tests_UIView_JPKitFrameAdditions.m in Sources */,
+				A5EDAFFC4EDB36415E7B40E9 /* JPModelMap.m in Sources */,
+				A5EDA80EC888ABB508B8B3C3 /* NSString+JPAdditions.m in Sources */,
+				A5EDA361C34962083D70962D /* Tests_JPModels.m in Sources */,
+				A5EDA0774857A4DE8C34051C /* Person.m in Sources */,
+				A5EDA36067D6694274F39363 /* JPModelMapManager.m in Sources */,
+				A5EDA49D8F221FAE4F4A2260 /* JPModelManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
