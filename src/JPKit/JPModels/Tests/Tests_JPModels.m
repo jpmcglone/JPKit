@@ -75,6 +75,19 @@
     XCTAssertTrue([person.other[@"something"] isEqualToString:@"else"]);
 }
 
+- (void)testNestedModels
+{
+    NSDictionary *info = @{@"id" : @(123),
+                           @"name" : @"JP",
+                           @"something" : @"else",
+                           @"firstBorn" : @{@"name" : @"Topanga", @"age" : @(3)}
+                           };
+    
+    Person *person = [[Person alloc] initWithInfo:info];
+    XCTAssertTrue([person.other[@"something"] isEqualToString:@"else"]);
+    XCTAssertTrue([person.firstBorn.name isEqualToString:@"Topanga"]);
+}
+
 - (void)tearDown
 {
     [super tearDown];

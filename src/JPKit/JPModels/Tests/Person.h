@@ -10,5 +10,5 @@
 @property (nonatomic, readonly) NSString *name;
 @property (nonatomic, readonly) NSNumber *age;
 @property (nonatomic, readonly) NSNumber *personID;
-
+@property (nonatomic, readonly) Person *firstBorn;
 @end
