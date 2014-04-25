@@ -4,7 +4,6 @@
 //
 
 #import "JPModelMap.h"
-#import "NSString+JPAdditions.h"
 
 @implementation JPModelMap
 

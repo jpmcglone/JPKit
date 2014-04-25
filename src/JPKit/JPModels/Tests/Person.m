@@ -12,7 +12,7 @@
     static NSDictionary *template = nil;
     static dispatch_once_t predicate;
     dispatch_once(&predicate, ^{
-        template = @{@"id":@"personID"};
+        template = @{@"id" : @"personID"};
     });
     return template;
 }

@@ -10,7 +10,7 @@
 #import "JPModelManager.h"
 
 @interface Tests_JPModels : XCTestCase
-@property(nonatomic, strong) NSString *JSONString;
+@property (nonatomic, strong) NSString *JSONString;
 @end
 
 @implementation Tests_JPModels
@@ -38,7 +38,7 @@
 
     NSArray *personModelMaps = [JPModelMap mapsWithSingularKey:@"person"
                                                      pluralKey:@"people"
-                                                        class:[Person class]];
+                                                         class:[Person class]];
 
     [mapManager addModelMaps:personModelMaps];
 
@@ -53,7 +53,7 @@
 
 - (void)testInitWithInfo1
 {
-    NSDictionary *info = @{@"name":@"JP", @"age":@(25)};
+    NSDictionary *info = @{@"name" : @"JP", @"age" : @(25)};
     Person *person = [[Person alloc] initWithInfo:info];
     XCTAssertTrue([person.name isEqualToString:@"JP"]);
     XCTAssertTrue(person.age.integerValue == 25);
@@ -61,7 +61,7 @@
 
 - (void)testInitWithInfo2
 {
-    NSDictionary *info = @{@"id":@(123), @"name":@"JP"};
+    NSDictionary *info = @{@"id" : @(123), @"name" : @"JP"};
     Person *person = [[Person alloc] initWithInfo:info];
     XCTAssertTrue([person.name isEqualToString:@"JP"]);
     XCTAssertTrue(person.age == nil);
@@ -70,7 +70,7 @@
 
 - (void)testModelOther
 {
-    NSDictionary *info = @{@"id":@(123), @"name":@"JP", @"something":@"else"};
+    NSDictionary *info = @{@"id" : @(123), @"name" : @"JP", @"something" : @"else"};
     Person *person = [[Person alloc] initWithInfo:info];
     XCTAssertTrue([person.other[@"something"] isEqualToString:@"else"]);
 }
