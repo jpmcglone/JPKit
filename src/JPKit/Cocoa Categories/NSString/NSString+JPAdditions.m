@@ -7,7 +7,7 @@
 
 @implementation NSString (JPAdditions)
 
-- (NSDictionary *)JSON
+- (NSDictionary *)jp_JSON
 {
     NSData *JSONData = [self dataUsingEncoding:NSUTF8StringEncoding];
     NSDictionary *JSON = [NSJSONSerialization JSONObjectWithData:JSONData

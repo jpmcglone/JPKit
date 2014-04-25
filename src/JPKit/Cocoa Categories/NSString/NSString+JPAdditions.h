@@ -7,6 +7,6 @@
 
 @interface NSString (JPAdditions)
 
-@property (nonatomic, readonly) NSDictionary *JSON;
+@property (nonatomic, readonly) NSDictionary *jp_JSON;
 
 @end

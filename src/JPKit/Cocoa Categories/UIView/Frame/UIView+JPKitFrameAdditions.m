@@ -10,8 +10,8 @@ static char const *const jp_initialFrameKey = "jp_initialFrame";
 static char const *const jp_updatingFrameKey = "jp_updatingFrameKey";
 
 @interface UIView ()
-@property(nonatomic, assign) CGRect jp_initialFrame;
-@property(nonatomic, assign) BOOL jp_updatingFrame;
+@property (nonatomic, assign) CGRect jp_initialFrame;
+@property (nonatomic, assign) BOOL jp_updatingFrame;
 @end
 
 @implementation UIView (JPKitFrameAdditions)

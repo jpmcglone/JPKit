@@ -7,7 +7,7 @@
 #import "UIView+JPKitFrameAdditions.h"
 
 @interface Tests_UIView_JPKitFrameAdditions : XCTestCase
-@property(nonatomic, strong) UIView *view;
+@property (nonatomic, strong) UIView *view;
 @end
 
 @implementation Tests_UIView_JPKitFrameAdditions

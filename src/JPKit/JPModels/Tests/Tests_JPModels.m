@@ -28,7 +28,7 @@
 
 - (void)testJSON
 {
-    NSDictionary *JSON = self.JSONString.JSON;
+    NSDictionary *JSON = self.JSONString.jp_JSON;
     XCTAssertTrue([JSON[@"people"] isKindOfClass:[NSArray class]]);
 }
 
@@ -45,7 +45,7 @@
     XCTAssertTrue(nil != [mapManager mapForKey:@"people"]);
     XCTAssertTrue(nil != [mapManager mapForKey:@"person"]);
 
-    id info = [JPModelManager modelsFromJSON:self.JSONString.JSON];
+    id info = [JPModelManager modelsFromJSON:self.JSONString.jp_JSON];
     XCTAssertTrue([info[@"person"] isKindOfClass:[Person class]]);
     XCTAssertTrue([info[@"people"][1] isKindOfClass:[Person class]]);
     XCTAssertTrue([info[@"some_object"][@"some_number"] integerValue] == 1);
@@ -78,11 +78,11 @@
 - (void)testNestedModels
 {
     NSDictionary *info = @{@"id" : @(123),
-                           @"name" : @"JP",
-                           @"something" : @"else",
-                           @"firstBorn" : @{@"name" : @"Topanga", @"age" : @(3)}
-                           };
-    
+            @"name" : @"JP",
+            @"something" : @"else",
+            @"firstBorn" : @{@"name" : @"Topanga", @"age" : @(3)}
+    };
+
     Person *person = [[Person alloc] initWithInfo:info];
     XCTAssertTrue([person.other[@"something"] isEqualToString:@"else"]);
     XCTAssertTrue([person.firstBorn.name isEqualToString:@"Topanga"]);
