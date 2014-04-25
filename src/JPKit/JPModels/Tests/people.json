@@ -5,7 +5,8 @@
        "some_bool":true,
        "person":{
            "name":"Insider",
-           "age":0
+           "age":1,
+           "ssn":"123-12-1234"
        },
        "some_array":[
             {
@@ -30,6 +31,6 @@
    ],
    "person":{
        "name":"Outsider",
-       "age":0
+       "age":2
    }
 }

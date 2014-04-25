@@ -51,6 +51,30 @@
     XCTAssertTrue([info[@"some_object"][@"some_number"] integerValue] == 1);
 }
 
+- (void)testInitWithInfo1
+{
+    NSDictionary *info = @{@"name":@"JP", @"age":@(25)};
+    Person *person = [[Person alloc] initWithInfo:info];
+    XCTAssertTrue([person.name isEqualToString:@"JP"]);
+    XCTAssertTrue(person.age.integerValue == 25);
+}
+
+- (void)testInitWithInfo2
+{
+    NSDictionary *info = @{@"id":@(123), @"name":@"JP"};
+    Person *person = [[Person alloc] initWithInfo:info];
+    XCTAssertTrue([person.name isEqualToString:@"JP"]);
+    XCTAssertTrue(person.age == nil);
+    XCTAssertTrue(person.personID.integerValue == 123);
+}
+
+- (void)testModelOther
+{
+    NSDictionary *info = @{@"id":@(123), @"name":@"JP", @"something":@"else"};
+    Person *person = [[Person alloc] initWithInfo:info];
+    XCTAssertTrue([person.other[@"something"] isEqualToString:@"else"]);
+}
+
 - (void)tearDown
 {
     [super tearDown];

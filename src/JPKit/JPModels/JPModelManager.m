@@ -17,16 +17,14 @@
         NSArray *allKeys = [JSON allKeys];
         NSMutableDictionary *other = [[NSMutableDictionary alloc] init];
         for (NSString *key in allKeys) {
-            NSLog(@"Key: %@", key);
             id info = JSON[key];
             JPModelMap *map = [mapManager mapForKey:key];
             if (map != nil) {
                 Class aClass = map.aClass;
-                NSLog(@"Mapped Class: %@", aClass);
                 if (map.isPlural) {
                     NSMutableArray *array = [[NSMutableArray alloc] initWithCapacity:[info count]];
                     for (id value in info) {
-                        id obj = [[aClass alloc] initWithInfo:info];
+                        id obj = [[aClass alloc] initWithInfo:value];
                         [array addObject:obj];
                     }
                     other[key] = array;

@@ -117,15 +117,15 @@
 		A5EDA34E299E095276E14075 /* JPModels */ = {
 			isa = PBXGroup;
 			children = (
-				A5EDA63E6F12F963F79F559B /* JPModel.m */,
 				A5EDA8C6D995993863A31C52 /* JPModel.h */,
-				A5EDA8CE7524EB485F57E63E /* JPModelMap.m */,
-				A5EDA95EBBE6A4266E22038F /* JPModelMap.h */,
-				A5EDA643D16679EFC2700DF4 /* JPModelMapManager.h */,
-				A5EDAD10D1E0137D8E8A74CF /* Tests */,
-				A5EDA595D6DC2C539224D378 /* JPModelMapManager.m */,
-				A5EDAE69D4CD3D6FC536090C /* JPModelManager.m */,
+				A5EDA63E6F12F963F79F559B /* JPModel.m */,
 				A5EDAF7B3C805B77294A426A /* JPModelManager.h */,
+				A5EDAE69D4CD3D6FC536090C /* JPModelManager.m */,
+				A5EDA95EBBE6A4266E22038F /* JPModelMap.h */,
+				A5EDA8CE7524EB485F57E63E /* JPModelMap.m */,
+				A5EDA643D16679EFC2700DF4 /* JPModelMapManager.h */,
+				A5EDA595D6DC2C539224D378 /* JPModelMapManager.m */,
+				A5EDAD10D1E0137D8E8A74CF /* Tests */,
 			);
 			path = JPModels;
 			sourceTree = "<group>";

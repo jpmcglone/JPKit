@@ -8,6 +8,7 @@
 @interface Person : JPModel
 
 @property (nonatomic, readonly) NSString *name;
-@property (nonatomic, readonly) NSInteger age;
+@property (nonatomic, readonly) NSNumber *age;
+@property (nonatomic, readonly) NSNumber *personID;
 
 @end
