@@ -45,7 +45,7 @@
 
 - (id)initWithInfo:(id)info
 {
-    self = [super init];
+    self = [self init];
     if (self) {
 #ifdef JPDEBUG
         _info = info;
