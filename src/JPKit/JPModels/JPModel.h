@@ -13,6 +13,9 @@
 @property (nonatomic, readonly) id info;
 #endif
 
+// TODO: Converts the model into JSON (NSDictionary / NSArray), includes 'other'
+//@property (nonatomic, readonly) id JSON;
+
 @property (nonatomic, readonly) id other;
 
 + (NSDictionary *)template;
