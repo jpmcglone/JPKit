@@ -9,61 +9,70 @@
 
 @implementation NSObject (JPAdditions_AutoDescription)
 
-- (NSString *)autoDescriptionForClassType:(Class)classType showNulls:(BOOL)showNulls
+- (NSString *)jp_autoDescribeForClassType:(Class)classType withAddresses:(BOOL)withAddresses showsNulls:(BOOL)showsNulls
 {
     NSUInteger count;
     objc_property_t *propList = class_copyPropertyList(classType, &count);
     NSMutableString *propPrint = [NSMutableString string];
-
+    
     for (int i = 0; i < count; i++) {
         objc_property_t property = propList[i];
-
+        
         const char *propName = property_getName(property);
         NSString *propNameString = [NSString stringWithCString:propName encoding:NSASCIIStringEncoding];
-
+        
         if (propName) {
             id value = [self valueForKey:propNameString];
-            if (showNulls || value) {
-                [propPrint appendString:[NSString stringWithFormat:@"  %@: %@ = %@;\n",
-                                                                   [[self class] jp_typeNameForPropertyKey:propNameString],
-                                                                   propNameString,
-                                                                   value]
-                ];
+            if (showsNulls || value) {
+                if (withAddresses) {
+                    [propPrint appendString:[NSString stringWithFormat:@"    <%@: %p>: %@ = %@;\n",
+                                             [[self class] jp_typeNameForPropertyKey:propNameString],
+                                             value,
+                                             propNameString,
+                                             value]
+                     ];
+                } else {
+                    [propPrint appendString:[NSString stringWithFormat:@"    %@: %@ = %@;\n",
+                                             [[self class] jp_typeNameForPropertyKey:propNameString],
+                                             propNameString,
+                                             value]
+                    ];
+                }
             }
         }
     }
     free(propList);
-
-
+    
+    
     // Now see if we need to map any superclasses as well.
     Class superClass = class_getSuperclass(classType);
     if (superClass != nil && ![superClass isEqual:[NSObject class]]) {
-        NSString *superString = [self autoDescriptionForClassType:superClass
-                                                        showNulls:showNulls];
+        NSString *superString = [self jp_autoDescribeForClassType:superClass
+                                                    withAddresses:withAddresses
+                                                       showsNulls:showsNulls];
         [propPrint appendString:superString];
     }
-
+    
+    NSString *headerString = [NSString stringWithFormat:@"\njp_autoDescribe:\n<%@ :%p>\n",
+                              [self class],
+                              self];
+    return [headerString stringByAppendingString:propPrint];
     return propPrint;
 }
 
-- (NSString *)autoDescribeShowNulls:(BOOL)showNulls
+- (NSString *)jp_autoDescribeWithAddresses:(BOOL)withAddresses showsNulls:(BOOL)showsNulls
 {
-    NSString *headerString = [NSString stringWithFormat:@"\njp_autoDescribe:\n<%@ :%p>\n",
-                                                        [self class],
-                                                        self];
-    NSString *autoDescription = [self autoDescriptionForClassType:[self class]
-                                                        showNulls:showNulls];
-    return [headerString stringByAppendingString:autoDescription];
+    return [self jp_autoDescribeForClassType:[self class] withAddresses:withAddresses showsNulls:showsNulls];
+}
+
+- (NSString *)jp_autoDescribeWithAddresses:(BOOL)withAddresses
+{
+    return [self jp_autoDescribeWithAddresses:withAddresses showsNulls:NO];
 }
 
 - (NSString *)jp_autoDescribe
 {
-    return [self autoDescribeShowNulls:NO];
-}
-
-- (NSString *)jp_autoDescribeWithNulls
-{
-    return [self autoDescribeShowNulls:YES];
+    return [self jp_autoDescribeWithAddresses:NO];
 }
 
 

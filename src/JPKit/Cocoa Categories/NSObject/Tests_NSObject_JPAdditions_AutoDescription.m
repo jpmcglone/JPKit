@@ -24,7 +24,7 @@
 {
     // TODO: make real tests
     NSString *autoDescribe1 = [self.person jp_autoDescribe];
-    NSString *autoDescribe2 = [self.person jp_autoDescribeWithNulls];
+    NSString *autoDescribe2 = [self.person jp_autoDescribeWithAddresses:NO showsNulls:YES];
 
     XCTAssertTrue([autoDescribe1 length] < [autoDescribe2 length]);
 }

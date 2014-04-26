@@ -7,7 +7,8 @@
 
 @interface NSObject (JPAdditions_AutoDescription)
 
+- (NSString *)jp_autoDescribeWithAddresses:(BOOL)withAddresses showsNulls:(BOOL)showsNulls;
+- (NSString *)jp_autoDescribeWithAddresses:(BOOL)withAddresses;
 - (NSString *)jp_autoDescribe;
-- (NSString *)jp_autoDescribeWithNulls;
 
 @end
