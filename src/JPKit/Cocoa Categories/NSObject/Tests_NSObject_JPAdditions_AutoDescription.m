@@ -23,7 +23,10 @@
 - (void)testAutoDescription
 {
     // TODO: make real tests
-    XCTAssertTrue([[self.person jp_autoDescribe] length] < [[self.person jp_autoDescribeWithNulls] length]);
+    NSString *autoDescribe1 = [self.person jp_autoDescribe];
+    NSString *autoDescribe2 = [self.person jp_autoDescribeWithNulls];
+
+    XCTAssertTrue([autoDescribe1 length] < [autoDescribe2 length]);
 }
 
 - (void)tearDown

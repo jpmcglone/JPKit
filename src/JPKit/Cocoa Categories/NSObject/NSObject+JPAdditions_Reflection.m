@@ -14,6 +14,46 @@
     return [self instancesRespondToSelector:selector];
 }
 
++ (NSString *)jp_typeNameFromRawPropertyType:(const char *)rawPropertyType
+{
+    if (strcmp(rawPropertyType, @encode(int)) == 0) return @"int";
+    if (strcmp(rawPropertyType, @encode(BOOL)) == 0) return @"BOOL";
+    if (strcmp(rawPropertyType, @encode(bool)) == 0) return @"bool";
+    if (strcmp(rawPropertyType, @encode(short)) == 0) return @"short";
+    if (strcmp(rawPropertyType, @encode(long)) == 0) return @"long";
+    if (strcmp(rawPropertyType, @encode(long long)) == 0) return @"long long";
+    if (strcmp(rawPropertyType, @encode(unsigned char)) == 0) return @"unsigned char";
+    if (strcmp(rawPropertyType, @encode(unsigned int)) == 0) return @"unsigned int";
+    if (strcmp(rawPropertyType, @encode(unsigned short)) == 0) return @"unsigned short";
+    if (strcmp(rawPropertyType, @encode(unsigned long)) == 0) return @"unsigned long";
+    if (strcmp(rawPropertyType, @encode(unsigned long long)) == 0) return @"unsigned long long";
+    if (strcmp(rawPropertyType, @encode(float)) == 0) return @"float";
+    if (strcmp(rawPropertyType, @encode(double)) == 0) return @"double";
+    if (strcmp(rawPropertyType, @encode(id)) == 0) return @"id";
+    if (strcmp(rawPropertyType, @encode(Class)) == 0) return @"Class";
+    
+    // If it is a struct, return the struct's type
+    NSString *propertyType = [NSString stringWithCString:rawPropertyType
+                                                encoding:[NSString defaultCStringEncoding]];
+    
+    // e.g. {CGPoint:ff} we don't care about the types in the struct
+    NSString *pattern = @"\\{(\\w*)=";
+    NSRange range = NSMakeRange(0, [propertyType length]);
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:pattern
+                                                                           options:0
+                                                                             error:nil];
+    NSArray *matches = [regex matchesInString:propertyType
+                                      options:0
+                                        range:range];
+    for (NSTextCheckingResult *match in matches) {
+        NSRange matchRange = [match rangeAtIndex:1];
+        NSString* matchString = [propertyType substringWithRange:matchRange];
+        return matchString;
+    }    
+    
+    return nil;
+}
+
 + (NSString *)jp_typeNameForPropertyKey:(NSString *)propertyKey
 {
     objc_property_t property = class_getProperty(
@@ -28,27 +68,11 @@
     NSString *propertyType = [typeAttribute substringFromIndex:1];
     const char *rawPropertyType = [propertyType UTF8String];
 
-    if (strcmp(rawPropertyType, @encode(float)) == 0) {
-        return @"float";
-    } else if (strcmp(rawPropertyType, @encode(int)) == 0) {
-        return @"int";
-    } else if (strcmp(rawPropertyType, @encode(BOOL)) == 0) {
-        return @"BOOL";
-    } else if (strcmp(rawPropertyType, @encode(char)) == 0) {
-        return @"char";
-    } else if (strcmp(rawPropertyType, @encode(id)) == 0) {
-        return @"id";
-    } else if (strcmp(rawPropertyType, @encode(Point)) == 0) {
-        return @"Point";
-    } else {
-        // According to Apples Documentation you can determine the corresponding encoding values
+    NSString *typeName = [self jp_typeNameFromRawPropertyType:rawPropertyType];
+    if (typeName == nil && [typeAttribute hasPrefix:@"T@"]) {
+        typeName = [typeAttribute substringWithRange:NSMakeRange(3, [typeAttribute length] - 4)];
     }
-
-    if ([typeAttribute hasPrefix:@"T@"]) {
-        NSString *typeClassName = [typeAttribute substringWithRange:NSMakeRange(3, [typeAttribute length] - 4)];
-        return typeClassName;
-    }
-    return nil;
+    return typeName;
 }
 
 + (Class)jp_classForPropertyKey:(NSString *)propertyKey
