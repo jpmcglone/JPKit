@@ -9,7 +9,7 @@
 
 @implementation JPModel
 
-+ (NSDictionary *)template
++ (NSDictionary *)overrides
 {
     // Overwrite
     return nil;
@@ -21,7 +21,7 @@
 
         NSArray *keys = [info allKeys];
         for (NSString *key in keys) {
-            NSString *propertyKey = [[self class] template][key] ?: key;
+            NSString *propertyKey = [[self class] overrides][key] ?: key;
             if ([[self class] jp_hasPropertyWithKey:propertyKey]) {
                 id value = info[key];
                 Class propertyClass = [[self class] jp_classForPropertyKey:propertyKey];

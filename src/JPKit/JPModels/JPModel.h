@@ -18,7 +18,7 @@
 
 @property (nonatomic, readonly) id other;
 
-+ (NSDictionary *)template;
++ (NSDictionary *)overrides;
 
 - (id)initWithInfo:(id)info;
 

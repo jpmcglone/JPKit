@@ -7,14 +7,14 @@
 
 @implementation Person
 
-+ (NSDictionary *)template
++ (NSDictionary *)overrides
 {
-    static NSDictionary *template = nil;
+    static NSDictionary *overrides = nil;
     static dispatch_once_t predicate;
     dispatch_once(&predicate, ^{
-        template = @{@"id" : @"personID"};
+        overrides = @{@"id" : @"personID"};
     });
-    return template;
+    return overrides;
 }
 
 @end
