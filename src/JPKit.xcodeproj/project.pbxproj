@@ -12,23 +12,27 @@
 		A5EDA10577C8B6B91892FEB6 /* JPModelManager.h in Headers */ = {isa = PBXBuildFile; fileRef = A5EDAF7B3C805B77294A426A /* JPModelManager.h */; };
 		A5EDA12147A7CA27CFEB00B3 /* NSObject+JPAdditions_AutoDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDAEC92AB1A4E2A0A239E3 /* NSObject+JPAdditions_AutoDescription.m */; };
 		A5EDA2593991E581AA0770EF /* JPModelManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDAE69D4CD3D6FC536090C /* JPModelManager.m */; };
+		A5EDA2ABCD7655B65F50B2E8 /* Tests_JPLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDA2605EACB8A6E9786383 /* Tests_JPLayout.m */; };
 		A5EDA2B8A3B21FDD158FDDFC /* UIView+JPKitFrameAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDA17D64E1024B3A217626 /* UIView+JPKitFrameAdditions.m */; };
 		A5EDA36067D6694274F39363 /* JPModelMapManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDA595D6DC2C539224D378 /* JPModelMapManager.m */; };
 		A5EDA361C34962083D70962D /* Tests_JPModels.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDA444DD9D7A9F2BCC16E8 /* Tests_JPModels.m */; };
 		A5EDA36B9AD2A151FC721A41 /* JPModelMap.h in Headers */ = {isa = PBXBuildFile; fileRef = A5EDA95EBBE6A4266E22038F /* JPModelMap.h */; };
 		A5EDA48642D001611B5D6EE9 /* NSObject+JPAdditions_Reflection.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDA3E553B1ED851D3840CD /* NSObject+JPAdditions_Reflection.m */; };
 		A5EDA49D8F221FAE4F4A2260 /* JPModelManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDAE69D4CD3D6FC536090C /* JPModelManager.m */; };
+		A5EDA55528D7F02D19DFE4AB /* JPLayoutModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDA03525B3C62DE1E1BC7D /* JPLayoutModel.m */; };
 		A5EDA651501C4E11712B6032 /* Tests_NSObject_JPAdditions_AutoDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDAB435EF601F57ADFE413 /* Tests_NSObject_JPAdditions_AutoDescription.m */; };
 		A5EDA79A78324AAF3FAACA3A /* JPModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDA63E6F12F963F79F559B /* JPModel.m */; };
 		A5EDA7FA192F67BAA089A26F /* NSObject+JPAdditions_AutoDescription.h in Headers */ = {isa = PBXBuildFile; fileRef = A5EDAD482C02E1D9A831DB97 /* NSObject+JPAdditions_AutoDescription.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A5EDA80EC888ABB508B8B3C3 /* NSString+JPAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDAEF8B12E42793377048C /* NSString+JPAdditions.m */; };
 		A5EDA8C77DB30D03CF46B418 /* UIView+JPKitFrameAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDA17D64E1024B3A217626 /* UIView+JPKitFrameAdditions.m */; };
 		A5EDA954406328515AE04DB2 /* JPModel.h in Headers */ = {isa = PBXBuildFile; fileRef = A5EDA8C6D995993863A31C52 /* JPModel.h */; };
+		A5EDAAA11B1673A4C2E20DDB /* JPLayoutModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDA03525B3C62DE1E1BC7D /* JPLayoutModel.m */; };
 		A5EDAAB8D4360C736591C64C /* NSObject+JPAdditions_Reflection.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDA3E553B1ED851D3840CD /* NSObject+JPAdditions_Reflection.m */; };
 		A5EDAB1BEEEF0C92DF133CB8 /* JPModelMapManager.h in Headers */ = {isa = PBXBuildFile; fileRef = A5EDA643D16679EFC2700DF4 /* JPModelMapManager.h */; };
 		A5EDAC5D7A8744D9B25F627F /* JPModelMap.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDA8CE7524EB485F57E63E /* JPModelMap.m */; };
 		A5EDAC724751D64EC8D1F475 /* NSObject+JPAdditions_AutoDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDAEC92AB1A4E2A0A239E3 /* NSObject+JPAdditions_AutoDescription.m */; };
 		A5EDAD1F940434ADD8E950B8 /* NSObject+JPAdditions_Reflection.h in Headers */ = {isa = PBXBuildFile; fileRef = A5EDA8D8FF820ED13FB73892 /* NSObject+JPAdditions_Reflection.h */; };
+		A5EDADFED04158A7C2D9E756 /* JPLayoutModel.h in Headers */ = {isa = PBXBuildFile; fileRef = A5EDADF6BF14300090AD2FB8 /* JPLayoutModel.h */; };
 		A5EDAF61328F76F2C180EFE7 /* NSString+JPAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDAEF8B12E42793377048C /* NSString+JPAdditions.m */; };
 		A5EDAF9A87ADD2600519ED50 /* NSString+JPAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = A5EDACF378A060BCFD97DB9A /* NSString+JPAdditions.h */; };
 		A5EDAFBA8D81883AC63A3307 /* Tests_UIView_JPKitFrameAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDAA44A679332EBA11E176 /* Tests_UIView_JPKitFrameAdditions.m */; };
@@ -70,8 +74,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A5EDA03525B3C62DE1E1BC7D /* JPLayoutModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPLayoutModel.m; sourceTree = "<group>"; };
 		A5EDA17D64E1024B3A217626 /* UIView+JPKitFrameAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JPKitFrameAdditions.m"; sourceTree = "<group>"; };
 		A5EDA1D9BA12F07C30444100 /* UIView+JPKitFrameAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JPKitFrameAdditions.h"; sourceTree = "<group>"; };
+		A5EDA2605EACB8A6E9786383 /* Tests_JPLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tests_JPLayout.m; sourceTree = "<group>"; };
 		A5EDA3E553B1ED851D3840CD /* NSObject+JPAdditions_Reflection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JPAdditions_Reflection.m"; sourceTree = "<group>"; };
 		A5EDA444DD9D7A9F2BCC16E8 /* Tests_JPModels.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tests_JPModels.m; sourceTree = "<group>"; };
 		A5EDA595D6DC2C539224D378 /* JPModelMapManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPModelMapManager.m; sourceTree = "<group>"; };
@@ -86,6 +92,7 @@
 		A5EDAB435EF601F57ADFE413 /* Tests_NSObject_JPAdditions_AutoDescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tests_NSObject_JPAdditions_AutoDescription.m; sourceTree = "<group>"; };
 		A5EDACF378A060BCFD97DB9A /* NSString+JPAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+JPAdditions.h"; sourceTree = "<group>"; };
 		A5EDAD482C02E1D9A831DB97 /* NSObject+JPAdditions_AutoDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+JPAdditions_AutoDescription.h"; sourceTree = "<group>"; };
+		A5EDADF6BF14300090AD2FB8 /* JPLayoutModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPLayoutModel.h; sourceTree = "<group>"; };
 		A5EDAE3D98583C2416F82BFF /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		A5EDAE69D4CD3D6FC536090C /* JPModelManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPModelManager.m; sourceTree = "<group>"; };
 		A5EDAEC92AB1A4E2A0A239E3 /* NSObject+JPAdditions_AutoDescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JPAdditions_AutoDescription.m"; sourceTree = "<group>"; };
@@ -183,6 +190,16 @@
 			path = "Cocoa Categories";
 			sourceTree = "<group>";
 		};
+		A5EDA9F35A236D95B51D56A2 /* JPLayout */ = {
+			isa = PBXGroup;
+			children = (
+				A5EDA03525B3C62DE1E1BC7D /* JPLayoutModel.m */,
+				A5EDADF6BF14300090AD2FB8 /* JPLayoutModel.h */,
+				A5EDA2605EACB8A6E9786383 /* Tests_JPLayout.m */,
+			);
+			path = JPLayout;
+			sourceTree = "<group>";
+		};
 		A5EDAD10D1E0137D8E8A74CF /* Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -238,6 +255,7 @@
 				F04A63771903581E00CA5FD7 /* Supporting Files */,
 				A5EDA95C5F05BE3888F6EE36 /* Cocoa Categories */,
 				A5EDA34E299E095276E14075 /* JPModels */,
+				A5EDA9F35A236D95B51D56A2 /* JPLayout */,
 			);
 			path = JPKit;
 			sourceTree = "<group>";
@@ -284,6 +302,7 @@
 				A5EDA10577C8B6B91892FEB6 /* JPModelManager.h in Headers */,
 				A5EDA7FA192F67BAA089A26F /* NSObject+JPAdditions_AutoDescription.h in Headers */,
 				A5EDAD1F940434ADD8E950B8 /* NSObject+JPAdditions_Reflection.h in Headers */,
+				A5EDADFED04158A7C2D9E756 /* JPLayoutModel.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,6 +397,7 @@
 				A5EDA2593991E581AA0770EF /* JPModelManager.m in Sources */,
 				A5EDAC724751D64EC8D1F475 /* NSObject+JPAdditions_AutoDescription.m in Sources */,
 				A5EDAAB8D4360C736591C64C /* NSObject+JPAdditions_Reflection.m in Sources */,
+				A5EDAAA11B1673A4C2E20DDB /* JPLayoutModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,6 +416,8 @@
 				A5EDA12147A7CA27CFEB00B3 /* NSObject+JPAdditions_AutoDescription.m in Sources */,
 				A5EDA651501C4E11712B6032 /* Tests_NSObject_JPAdditions_AutoDescription.m in Sources */,
 				A5EDA48642D001611B5D6EE9 /* NSObject+JPAdditions_Reflection.m in Sources */,
+				A5EDA55528D7F02D19DFE4AB /* JPLayoutModel.m in Sources */,
+				A5EDA2ABCD7655B65F50B2E8 /* Tests_JPLayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
