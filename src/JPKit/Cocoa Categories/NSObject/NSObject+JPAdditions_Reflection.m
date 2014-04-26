@@ -32,8 +32,14 @@
         return @"float";
     } else if (strcmp(rawPropertyType, @encode(int)) == 0) {
         return @"int";
+    } else if (strcmp(rawPropertyType, @encode(BOOL)) == 0) {
+        return @"BOOL";
+    } else if (strcmp(rawPropertyType, @encode(char)) == 0) {
+        return @"char";
     } else if (strcmp(rawPropertyType, @encode(id)) == 0) {
         return @"id";
+    } else if (strcmp(rawPropertyType, @encode(Point)) == 0) {
+        return @"Point";
     } else {
         // According to Apples Documentation you can determine the corresponding encoding values
     }
