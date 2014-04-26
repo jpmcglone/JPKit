@@ -8,6 +8,7 @@
 #import "Person.h"
 #import "JPModelMapManager.h"
 #import "JPModelManager.h"
+#import "NSObject+JPAdditions_AutoDescription.h"
 
 @interface Tests_JPModels : XCTestCase
 @property (nonatomic, strong) NSString *JSONString;
@@ -86,6 +87,27 @@
     Person *person = [[Person alloc] initWithInfo:info];
     XCTAssertTrue([person.other[@"something"] isEqualToString:@"else"]);
     XCTAssertTrue([person.firstBorn.name isEqualToString:@"Topanga"]);
+}
+
+- (void)testNestedArray
+{
+    NSDictionary *info = @{@"id" : @(123),
+            @"name" : @"JP",
+            @"something" : @"else",
+            @"parents" : @[
+                    @{
+                            @"name" : @"Angela",
+                            @"age" : @(30)
+                    },
+                    @{
+                            @"name" : @"Shawn",
+                            @"age" : @(30)
+                    }
+            ]
+    };
+
+    Person *person = [[Person alloc] initWithInfo:info];
+    XCTAssertTrue([[[person.parents firstObject] name] isEqualToString:@"Angela"]);
 }
 
 - (void)tearDown

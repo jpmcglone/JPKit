@@ -7,7 +7,6 @@
 
 @interface JPModel : NSObject
 
-
 #ifdef JPDEBUG
 // a reference to the info that originally generated this model. Only available with the preprocessor flag JPDEBUG
 @property (nonatomic, readonly) id info;
@@ -18,7 +17,12 @@
 
 @property (nonatomic, readonly) id other;
 
-+ (NSDictionary *)overrides;
+// Overrides for properties, e.g. @{@"id":@"objID", @"created_time":@"createdTime"}
++ (NSDictionary *)propertyOverrides;
+
+// Tell the model what class your array is for, default makes it an array of id info
+// e.g. @{@"children":[Person class], @"parents":[OldPerson class]}
++ (NSDictionary *)arrayClasses;
 
 - (id)initWithInfo:(id)info;
 

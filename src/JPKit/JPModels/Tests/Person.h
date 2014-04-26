@@ -17,6 +17,7 @@ typedef struct CustomStruct{
 @property (nonatomic, readonly) NSNumber *age;
 @property (nonatomic, readonly) NSNumber *personID;
 @property (nonatomic, readonly) Person *firstBorn;
+@property (nonatomic, readonly) NSArray *parents;
 
 // Just for testing the different @encode() with autoDescribe
 @property (nonatomic, readonly) int anInt;

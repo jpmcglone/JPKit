@@ -7,7 +7,7 @@
 
 @implementation Person
 
-+ (NSDictionary *)overrides
++ (NSDictionary *)propertyOverrides
 {
     static NSDictionary *overrides = nil;
     static dispatch_once_t predicate;
@@ -17,4 +17,13 @@
     return overrides;
 }
 
++ (NSDictionary *)arrayClasses
+{
+    static NSDictionary *arrayClasses = nil;
+    static dispatch_once_t predicate;
+    dispatch_once(&predicate, ^{
+        arrayClasses = @{@"parents" : [Person class]};
+    });
+    return arrayClasses;
+}
 @end
