@@ -7,23 +7,25 @@
 
 @implementation Person
 
-+ (NSDictionary *)propertyOverrides
++ (NSDictionary *)specs
 {
     static NSDictionary *overrides = nil;
     static dispatch_once_t predicate;
     dispatch_once(&predicate, ^{
-        overrides = @{@"id" : @"personID"};
+        overrides = @{
+                @"id" : @{
+                        @"name" : @"personID",
+                        //@"class" : @"Person"
+                        //@"isPlural" : @(NO),
+                },
+                @"parents" : @{
+                        //@"name" : @"parents",
+                        @"class" : @"Person"
+                        //@"isPlural" : @(YES),
+                }
+        };
     });
     return overrides;
 }
 
-+ (NSDictionary *)arrayClasses
-{
-    static NSDictionary *arrayClasses = nil;
-    static dispatch_once_t predicate;
-    dispatch_once(&predicate, ^{
-        arrayClasses = @{@"parents" : [Person class]};
-    });
-    return arrayClasses;
-}
 @end

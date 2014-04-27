@@ -17,12 +17,12 @@
 
 @property (nonatomic, readonly) id other;
 
-// Overrides for properties, e.g. @{@"id":@"objID", @"created_time":@"createdTime"}
-+ (NSDictionary *)propertyOverrides;
-
-// Tell the model what class your array is for, default makes it an array of id info
-// e.g. @{@"children":[Person class], @"parents":[OldPerson class]}
-+ (NSDictionary *)arrayClasses;
+// Overrides for things like property name, class, and if it's plural or not
+// e.g.
+// @{@"children":@{@"class":@"Person",@"isPlural":@(YES),@"name":@"theChildren"},
+//   @"spouse":@{@"class":@"Person"}}
+// -- defaults -- class:class in model, isPlural:NO, name:name in data
++ (NSDictionary *)specs;
 
 - (id)initWithInfo:(id)info;
 

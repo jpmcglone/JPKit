@@ -9,12 +9,7 @@
 
 @implementation JPModel
 
-+ (NSDictionary *)propertyOverrides
-{
-    return nil;
-}
-
-+ (NSDictionary *)arrayClasses
++ (NSDictionary *)specs
 {
     return nil;
 }
@@ -24,14 +19,15 @@
     if ([info isKindOfClass:[NSDictionary class]]) {
         NSArray *keys = [info allKeys];
         for (NSString *key in keys) {
-            NSString *propertyKey = [[self class] propertyOverrides][key] ?: key;
+            NSString *propertyKey = [[self class] specs][key][@"name"] ?: key;
             if ([[self class] jp_hasPropertyWithKey:propertyKey]) {
                 id value = info[key];
                 Class propertyClass = [[self class] jp_classForPropertyKey:propertyKey];
                 if ([JPModel jp_isOrPrecedesClass:propertyClass]) {
                     value = [[propertyClass alloc] initWithInfo:value];
                 } else if ([value isKindOfClass:[NSArray class]]&& [NSArray jp_isOrPrecedesClass:propertyClass]) {
-                    Class objClass = [[self class] arrayClasses][propertyKey] ?: nil;
+                    NSString *classString = [[self class] specs][key][@"class"] ?: nil;
+                    Class objClass = NSClassFromString(classString);
                     if (objClass != nil) {
                         NSMutableArray *newArray = [[NSMutableArray alloc] initWithCapacity:[value count]];
                         for (id i in value) {

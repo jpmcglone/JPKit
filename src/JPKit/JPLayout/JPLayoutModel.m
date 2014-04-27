@@ -16,6 +16,15 @@
     return self;
 }
 
+- (id)initWithRect:(CGRect)rect
+{
+    self = [self init];
+    if (self) {
+        _frame = rect;
+    }
+    return self;
+}
+
 #pragma mark - x
 - (CGFloat)x
 {

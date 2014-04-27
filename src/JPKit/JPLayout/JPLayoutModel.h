@@ -13,7 +13,7 @@
  * Set up as many layout models as you want, link them to your view(s), then commit away
  * and see them move! 
  */
-@interface JPLayoutModel : JPModel
+@interface JPLayoutModel : NSObject
 
 // Supported in JSON serialization
 @property (nonatomic, assign) CGFloat x;
@@ -36,6 +36,8 @@
 @property (nonatomic, assign) CGAffineTransform transform;
 
 @property (nonatomic, weak) UIView *view;
+
+- (id)initWithRect:(CGRect)rect;
 
 // Applies the model to the view
 - (void)commit;

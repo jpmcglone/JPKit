@@ -17,14 +17,12 @@
 {
     [super setUp];
 
-    NSDictionary *info = @{
-            @"x" : @(3),
-            @"y" : @(4),
-            @"width" : @(5),
-            @"height" : @(6)
-    };
-
-    self.layout = [[JPLayoutModel alloc] initWithInfo:info];
+    self.layout = [[JPLayoutModel alloc] init];
+    self.layout.x = 3;
+    self.layout.y = 4;
+    self.layout.width = 5;
+    self.layout.height = 6;
+    
     self.view = [[UIView alloc] init];
     self.layout.view = self.view;
 }
