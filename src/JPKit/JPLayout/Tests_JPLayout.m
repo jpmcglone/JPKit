@@ -27,7 +27,7 @@
     self.layout.view = self.view;
 }
 
-- (void)testInfo
+- (void)testLayoutModel
 {
     XCTAssertTrue(self.layout.x == 3);
     XCTAssertTrue(self.layout.y == 4);
