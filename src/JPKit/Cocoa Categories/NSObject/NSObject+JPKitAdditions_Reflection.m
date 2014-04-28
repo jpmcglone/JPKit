@@ -3,10 +3,10 @@
 // Copyright (c) 2014 JP McGlone. All rights reserved.
 //
 
-#import "NSObject+JPAdditions_Reflection.h"
+#import "NSObject+JPKitAdditions_Reflection.h"
 #import <objc/runtime.h>
 
-@implementation NSObject (JPAdditions_Reflection)
+@implementation NSObject (JPKitAdditions_Reflection)
 
 + (BOOL)jp_hasPropertyWithKey:(NSString *)key
 {

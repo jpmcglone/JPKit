@@ -5,7 +5,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSObject (JPAdditions_AutoDescription)
+@interface NSObject (JPKitAdditions_AutoDescription)
 
 - (NSString *)jp_autoDescribeWithAddresses:(BOOL)withAddresses showsNulls:(BOOL)showsNulls;
 - (NSString *)jp_autoDescribeWithAddresses:(BOOL)withAddresses;

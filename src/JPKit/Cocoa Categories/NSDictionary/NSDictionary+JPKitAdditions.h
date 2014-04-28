@@ -5,7 +5,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSDictionary (JPAdditions)
+@interface NSDictionary (JPKitAdditions)
 
 - (NSDictionary *)jp_dictionaryByAddingEntriesFromDictionary:(NSDictionary *)dictionary;
 

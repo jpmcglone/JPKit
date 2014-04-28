@@ -5,7 +5,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIView (JPKitFrameAdditions)
+@interface UIView (JPKitAdditions_FrameShortcuts)
 
 @property (nonatomic, readwrite) CGPoint jp_origin;
 @property (nonatomic, readwrite) CGSize jp_size;

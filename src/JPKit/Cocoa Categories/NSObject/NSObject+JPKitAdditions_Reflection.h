@@ -5,7 +5,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSObject (JPAdditions_Reflection)
+@interface NSObject (JPKitAdditions_Reflection)
 
 + (BOOL)jp_hasPropertyWithKey:(NSString *)key;
 

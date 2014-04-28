@@ -4,7 +4,7 @@
 //
 
 #import "JPModel.h"
-#import "UIView+JPKitFrameAdditions.h"
+#import "UIView+JPKitAdditions_FrameShortcuts.h"
 
 /**
  * This class allows you to set up your view's frame without actually making a view.

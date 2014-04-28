@@ -5,7 +5,7 @@
 
 #import "JPModel.h"
 #import <objc/runtime.h>
-#import "NSObject+JPAdditions_Reflection.h"
+#import "NSObject+JPKitAdditions_Reflection.h"
 
 @implementation JPModel
 

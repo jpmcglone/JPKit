@@ -8,7 +8,7 @@
 #import "Person.h"
 #import "JPModelMapManager.h"
 #import "JPModelManager.h"
-#import "NSObject+JPAdditions_AutoDescription.h"
+#import "NSObject+JPKitAdditions_AutoDescription.h"
 
 @interface Tests_JPModels : XCTestCase
 @property (nonatomic, strong) NSString *JSONString;

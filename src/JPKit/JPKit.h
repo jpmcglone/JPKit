@@ -1,1 +1,1 @@
-#import "UIView+JPKitFrameAdditions.h"
+#import "UIView+JPKitAdditions_FrameShortcuts.h"

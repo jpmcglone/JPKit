@@ -4,7 +4,7 @@
 //
 
 #import <XCTest/XCTest.h>
-#import "UIView+JPKitFrameAdditions.h"
+#import "UIView+JPKitAdditions_FrameShortcuts.h"
 
 @interface Tests_UIView_JPKitFrameAdditions : XCTestCase
 @property (nonatomic, strong) UIView *view;

@@ -5,13 +5,13 @@
 
 #import <XCTest/XCTest.h>
 #import "Person.h"
-#import "NSObject+JPAdditions_AutoDescription.h"
+#import "NSObject+JPKitAdditions_AutoDescription.h"
 
-@interface Tests_NSObject_JPAdditions_AutoDescription : XCTestCase
+@interface Tests_NSObject_JPKitAdditions_AutoDescription : XCTestCase
 @property (nonatomic, strong) Person *person;
 @end
 
-@implementation Tests_NSObject_JPAdditions_AutoDescription
+@implementation Tests_NSObject_JPKitAdditions_AutoDescription
 
 - (void)setUp
 {

@@ -3,9 +3,9 @@
 // Copyright (c) 2014 JP McGlone. All rights reserved.
 //
 
-#import "NSDictionary+JPAdditions.h"
+#import "NSDictionary+JPKitAdditions.h"
 
-@implementation NSDictionary (JPAdditions)
+@implementation NSDictionary (JPKitAdditions)
 
 - (NSDictionary *)jp_dictionaryByAddingEntriesFromDictionary:(NSDictionary *)dictionary
 {

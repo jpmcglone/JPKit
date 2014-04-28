@@ -3,7 +3,7 @@
 // Copyright (c) 2014 JP McGlone. All rights reserved.
 //
 
-#import "UIView+JPKitFrameAdditions.h"
+#import "UIView+JPKitAdditions_FrameShortcuts.h"
 #import <objc/runtime.h>
 
 static char const *const jp_initialFrameKey = "jp_initialFrame";
@@ -14,7 +14,7 @@ static char const *const jp_updatingFrameKey = "jp_updatingFrameKey";
 @property (nonatomic, assign) BOOL jp_updatingFrame;
 @end
 
-@implementation UIView (JPKitFrameAdditions)
+@implementation UIView (JPKitAdditions_FrameShortcuts)
 
 #pragma mark - Frame shortcuts
 #pragma mark - origin

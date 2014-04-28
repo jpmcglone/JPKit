@@ -3,11 +3,11 @@
 // Copyright (c) 2014 JP McGlone. All rights reserved.
 //
 
-#import "NSObject+JPAdditions_AutoDescription.h"
+#import "NSObject+JPKitAdditions_AutoDescription.h"
 #import <objc/runtime.h>
-#import "NSObject+JPAdditions_Reflection.h"
+#import "NSObject+JPKitAdditions_Reflection.h"
 
-@implementation NSObject (JPAdditions_AutoDescription)
+@implementation NSObject (JPKitAdditions_AutoDescription)
 
 - (NSString *)jp_autoDescribeForClassType:(Class)classType withAddresses:(BOOL)withAddresses showsNulls:(BOOL)showsNulls
 {
