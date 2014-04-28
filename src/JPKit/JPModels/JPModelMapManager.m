@@ -32,7 +32,7 @@
 
 - (void)addModelMap:(JPModelMap *)map
 {
-    if (map != [NSNull null]) {
+    if (![map isEqual:[NSNull null]]) {
         maps_[map.key] = map;
     }
 }
