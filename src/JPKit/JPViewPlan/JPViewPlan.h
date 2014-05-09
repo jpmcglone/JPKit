@@ -13,28 +13,34 @@
  * Set up as many layout models as you want, link them to your view(s), then commit away
  * and see them move! 
  */
-@interface JPLayoutModel : NSObject
+@interface JPViewPlan : NSObject
+
+@property (nonatomic, assign) CGRect frame;
+@property (nonatomic, assign) CGAffineTransform transform;
+@property (nonatomic, assign) CGFloat alpha;
+
+// Helpers
+@property (nonatomic, assign) CGPoint origin;
+@property (nonatomic, assign) CGSize  size;
 
 @property (nonatomic, assign) CGFloat x;
 @property (nonatomic, assign) CGFloat y;
 @property (nonatomic, assign) CGFloat width;
 @property (nonatomic, assign) CGFloat height;
 
-@property (nonatomic, assign) CGRect frame;
-
-@property (nonatomic, assign) CGPoint origin;
-@property (nonatomic, assign) CGSize  size;
-
 @property (nonatomic, assign) CGFloat top;
 @property (nonatomic, assign) CGFloat right;
 @property (nonatomic, assign) CGFloat bottom;
 @property (nonatomic, assign) CGFloat left;
 
-@property (nonatomic, assign) CGAffineTransform transform;
-
+// Link a view to commit changes to
 @property (nonatomic, weak) UIView *view;
 
-- (id)initWithRect:(CGRect)rect;
+// Also links the view
+- (id)initWithView:(UIView *)view;
+
+// Doesn't link a view
+- (id)initWithFrame:(CGRect)frame;
 
 // Applies the model to the view
 - (void)commit;

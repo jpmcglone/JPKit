@@ -3,24 +3,36 @@
 // Copyright (c) 2014 JP McGlone. All rights reserved.
 //
 
-#import "JPLayoutModel.h"
+#import "JPViewPlan.h"
 
-@implementation JPLayoutModel
+@implementation JPViewPlan
 
 - (id)init
 {
     self = [super init];
     if (self) {
+        _alpha = 1.0;
         _transform = CGAffineTransformIdentity;
     }
     return self;
 }
 
-- (id)initWithRect:(CGRect)rect
+- (id)initWithFrame:(CGRect)frame
 {
     self = [self init];
     if (self) {
-        _frame = rect;
+        _frame = frame;
+    }
+    return self;
+}
+
+- (id)initWithView:(UIView *)view
+{
+    self = [self initWithFrame:view.frame];
+    if (self) {
+        self.view = view;
+        _alpha = view.alpha;
+        _transform = view.transform;
     }
     return self;
 }
@@ -86,7 +98,7 @@
 
 - (void)setOrigin:(CGPoint)origin
 {
-    CGRect frame;
+    CGRect frame = self.frame;
     frame.origin = origin;
     self.frame = frame;
 }
@@ -153,7 +165,6 @@
 - (void)commit
 {
     self.view.frame = _frame;
-    self.view.transform = _transform;
 }
 
 @end

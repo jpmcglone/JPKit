@@ -4,20 +4,20 @@
 //
 
 #import <XCTest/XCTest.h>
-#import "JPLayoutModel.h"
+#import "JPViewPlan.h"
 
-@interface Tests_JPLayout : XCTestCase
-@property (nonatomic, strong) JPLayoutModel *layout;
+@interface Tests_JPViewPlan : XCTestCase
+@property (nonatomic, strong) JPViewPlan *layout;
 @property (nonatomic, strong) UIView *view;
 @end
 
-@implementation Tests_JPLayout
+@implementation Tests_JPViewPlan
 
 - (void)setUp
 {
     [super setUp];
 
-    self.layout = [[JPLayoutModel alloc] init];
+    self.layout = [[JPViewPlan alloc] init];
     self.layout.x = 3;
     self.layout.y = 4;
     self.layout.width = 5;

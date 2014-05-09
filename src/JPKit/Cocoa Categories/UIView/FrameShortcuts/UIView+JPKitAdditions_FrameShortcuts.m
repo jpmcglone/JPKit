@@ -5,13 +5,14 @@
 
 #import "UIView+JPKitAdditions_FrameShortcuts.h"
 #import <objc/runtime.h>
+#import "JPViewPlan.h"
 
-static char const *const jp_initialFrameKey = "jp_initialFrame";
+static char const *const jp_viewPlanKey = "jp_viewPlanKey";
 static char const *const jp_updatingFrameKey = "jp_updatingFrameKey";
 
 @interface UIView ()
-@property (nonatomic, assign) CGRect jp_initialFrame;
 @property (nonatomic, assign) BOOL jp_updatingFrame;
+@property JPViewPlan *jp_viewPlan;
 @end
 
 @implementation UIView (JPKitAdditions_FrameShortcuts)
@@ -25,10 +26,8 @@ static char const *const jp_updatingFrameKey = "jp_updatingFrameKey";
 
 - (void)setJp_origin:(CGPoint)origin
 {
-    CGRect frame;
-    [self jp_getUpdatingFrameIfNeeded:&frame];
-    frame.origin = origin;
-    [self jp_setUpdatingFrameIfNeeded:frame];
+    self.jp_viewPlan.origin = origin;
+    [self commitViewPlanIfNotUpdating];
 }
 
 #pragma mark - size
@@ -39,10 +38,8 @@ static char const *const jp_updatingFrameKey = "jp_updatingFrameKey";
 
 - (void)setJp_size:(CGSize)size
 {
-    CGRect frame = self.frame;
-    [self jp_getUpdatingFrameIfNeeded:&frame];
-    frame.size = size;
-    [self jp_setUpdatingFrameIfNeeded:frame];
+    self.jp_viewPlan.size = size;
+    [self commitViewPlanIfNotUpdating];
 }
 
 #pragma mark - x
@@ -53,10 +50,8 @@ static char const *const jp_updatingFrameKey = "jp_updatingFrameKey";
 
 - (void)setJp_x:(CGFloat)x
 {
-    CGRect frame = self.frame;
-    [self jp_getUpdatingFrameIfNeeded:&frame];
-    frame.origin = CGPointMake(x, frame.origin.y);
-    [self jp_setUpdatingFrameIfNeeded:frame];
+    self.jp_viewPlan.x = x;
+    [self commitViewPlanIfNotUpdating];
 }
 
 #pragma mark - y
@@ -67,10 +62,8 @@ static char const *const jp_updatingFrameKey = "jp_updatingFrameKey";
 
 - (void)setJp_y:(CGFloat)y
 {
-    CGRect frame = self.frame;
-    [self jp_getUpdatingFrameIfNeeded:&frame];
-    frame.origin = CGPointMake(frame.origin.x, y);
-    [self jp_setUpdatingFrameIfNeeded:frame];
+    self.jp_viewPlan.y = y;
+    [self commitViewPlanIfNotUpdating];
 }
 
 #pragma mark - width
@@ -81,10 +74,8 @@ static char const *const jp_updatingFrameKey = "jp_updatingFrameKey";
 
 - (void)setJp_width:(CGFloat)width
 {
-    CGRect frame = self.frame;
-    [self jp_getUpdatingFrameIfNeeded:&frame];
-    frame.size = CGSizeMake(width, frame.size.width);
-    [self jp_setUpdatingFrameIfNeeded:frame];
+    self.jp_viewPlan.width = width;
+    [self commitViewPlanIfNotUpdating];
 }
 
 #pragma mark - height
@@ -95,10 +86,8 @@ static char const *const jp_updatingFrameKey = "jp_updatingFrameKey";
 
 - (void)setJp_height:(CGFloat)height
 {
-    CGRect frame = self.frame;
-    [self jp_getUpdatingFrameIfNeeded:&frame];
-    frame.size = CGSizeMake(frame.size.width, height);
-    [self jp_setUpdatingFrameIfNeeded:frame];
+    self.jp_viewPlan.height = height;
+    [self commitViewPlanIfNotUpdating];
 }
 
 #pragma mark - Frame alias helpers 
@@ -151,24 +140,28 @@ static char const *const jp_updatingFrameKey = "jp_updatingFrameKey";
 - (void)jp_beginFrameUpdates
 {
     self.jp_updatingFrame = YES;
-    self.jp_initialFrame = self.frame;
 }
 
 - (void)jp_endFrameUpdates
 {
     self.jp_updatingFrame = NO;
-    self.frame = self.jp_initialFrame;
+    [self commitViewPlanIfNotUpdating];
 }
 
-#pragma mark - jp_initialFrame
-- (CGRect)jp_initialFrame
+#pragma mark - jp_viewPlan
+- (JPViewPlan *)jp_viewPlan
 {
-    return [objc_getAssociatedObject(self, jp_initialFrameKey) CGRectValue];
+    JPViewPlan *viewPlan = objc_getAssociatedObject(self, jp_viewPlanKey);
+    if (viewPlan == nil) {
+        self.jp_viewPlan = [[JPViewPlan alloc] initWithView:self];
+        viewPlan = objc_getAssociatedObject(self, jp_viewPlanKey);
+    }
+    return viewPlan;
 }
 
-- (void)setJp_initialFrame:(CGRect)initialFrame
+- (void)setJp_viewPlan:(JPViewPlan *)viewPlan
 {
-    objc_setAssociatedObject(self, jp_initialFrameKey, [NSValue valueWithCGRect:initialFrame], OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, jp_viewPlanKey, viewPlan, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 #pragma mark - jp_updatingFrame
@@ -177,27 +170,16 @@ static char const *const jp_updatingFrameKey = "jp_updatingFrameKey";
     return [objc_getAssociatedObject(self, jp_updatingFrameKey) boolValue];
 }
 
-- (void)setJp_updatingFrame:(BOOL)jp_updatingFrame
+- (void)setJp_updatingFrame:(BOOL)updatingFrame
 {
-    objc_setAssociatedObject(self, jp_updatingFrameKey, [NSNumber numberWithBool:jp_updatingFrame], OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, jp_updatingFrameKey, [NSNumber numberWithBool:updatingFrame], OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 #pragma mark - internal
-- (void)jp_getUpdatingFrameIfNeeded:(CGRect *)frame
+- (void)commitViewPlanIfNotUpdating
 {
-    if (self.jp_updatingFrame) {
-        *frame = self.jp_initialFrame;
-    } else {
-        *frame = self.frame;
-    }
-}
-
-- (void)jp_setUpdatingFrameIfNeeded:(CGRect)frame
-{
-    if (self.jp_updatingFrame) {
-        self.jp_initialFrame = frame;
-    } else {
-        self.frame = frame;
+    if (!self.jp_updatingFrame) {
+        [self.jp_viewPlan commit];
     }
 }
 
