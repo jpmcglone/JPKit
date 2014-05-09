@@ -16,4 +16,9 @@
     return JSON;
 }
 
+- (BOOL)jp_containsString:(NSString *)string
+{
+    return !NSEqualRanges([self rangeOfString:string], NSMakeRange(NSNotFound, 0));
+}
+
 @end

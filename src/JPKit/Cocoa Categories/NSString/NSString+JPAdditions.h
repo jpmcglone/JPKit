@@ -9,4 +9,6 @@
 
 @property (nonatomic, readonly) NSDictionary *jp_JSON;
 
+- (BOOL)jp_containsString:(NSString *)string;
+
 @end
