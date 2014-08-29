@@ -10,29 +10,29 @@
 	<string>JPKit</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>20178270-F11C-4922-A53F-296443CA4C2D</key>
+		<key>38C33D33BB3812D40644275BC93EB37C2A0D15A5</key>
 		<string>https://github.com/jpmcglone/JPKit.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>src/JPKit.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>20178270-F11C-4922-A53F-296443CA4C2D</key>
+		<key>38C33D33BB3812D40644275BC93EB37C2A0D15A5</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/jpmcglone/JPKit.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>20178270-F11C-4922-A53F-296443CA4C2D</string>
+	<string>38C33D33BB3812D40644275BC93EB37C2A0D15A5</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>20178270-F11C-4922-A53F-296443CA4C2D</string>
+			<string>38C33D33BB3812D40644275BC93EB37C2A0D15A5</string>
 			<key>IDESourceControlWCCName</key>
 			<string>JPKit</string>
 		</dict>

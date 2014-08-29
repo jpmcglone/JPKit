@@ -52,6 +52,7 @@
 		F04A63861903581F00CA5FD7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F04A63851903581F00CA5FD7 /* UIKit.framework */; };
 		F04A63891903581F00CA5FD7 /* libJPKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F04A63711903581E00CA5FD7 /* libJPKit.a */; };
 		F04A638F1903581F00CA5FD7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F04A638D1903581F00CA5FD7 /* InfoPlist.strings */; };
+		F08D677519B018C900214381 /* JPCocoaCategories.h in Headers */ = {isa = PBXBuildFile; fileRef = F08D677419B018C900214381 /* JPCocoaCategories.h */; };
 		F0AC84D51907A8EE009971BB /* JPKit.h in Headers */ = {isa = PBXBuildFile; fileRef = F04A63791903581E00CA5FD7 /* JPKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F0AC84D61907A8F0009971BB /* UIView+JPKitAdditions_FrameShortcuts.h in Headers */ = {isa = PBXBuildFile; fileRef = A5EDA1D9BA12F07C30444100 /* UIView+JPKitAdditions_FrameShortcuts.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F0AC84D81907AAED009971BB /* JPKit-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = F04A63781903581E00CA5FD7 /* JPKit-Prefix.pch */; };
@@ -115,6 +116,9 @@
 		F04A63851903581F00CA5FD7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		F04A638C1903581F00CA5FD7 /* JPKitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JPKitTests-Info.plist"; sourceTree = "<group>"; };
 		F04A638E1903581F00CA5FD7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F08D677419B018C900214381 /* JPCocoaCategories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPCocoaCategories.h; sourceTree = "<group>"; };
+		F08D677619B018F200214381 /* UIView+JPKitAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+JPKitAdditions.h"; sourceTree = "<group>"; };
+		F08D677719B0197400214381 /* NSObject+JPKitAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+JPKitAdditions.h"; sourceTree = "<group>"; };
 		F0AC84DA1908E542009971BB /* people.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = people.json; sourceTree = "<group>"; };
 		F0F1C668191C988100F2022F /* UIColor+JPKitAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+JPKitAdditions.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -142,7 +146,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A5EDA34E299E095276E14075 /* JPModels */ = {
+		A5EDA34E299E095276E14075 /* JPModel */ = {
 			isa = PBXGroup;
 			children = (
 				A5EDA8C6D995993863A31C52 /* JPModel.h */,
@@ -155,14 +159,15 @@
 				A5EDA595D6DC2C539224D378 /* JPModelMapManager.m */,
 				A5EDAD10D1E0137D8E8A74CF /* Tests */,
 			);
+			name = JPModel;
 			path = JPModels;
 			sourceTree = "<group>";
 		};
 		A5EDA3BF5451B1DEC127C746 /* NSDictionary */ = {
 			isa = PBXGroup;
 			children = (
-				A5EDA0B01C30C489FBEB99DE /* NSDictionary+JPKitAdditions.m */,
 				A5EDA716EBAFF718882B7D18 /* NSDictionary+JPKitAdditions.h */,
+				A5EDA0B01C30C489FBEB99DE /* NSDictionary+JPKitAdditions.m */,
 			);
 			path = NSDictionary;
 			sourceTree = "<group>";
@@ -180,11 +185,12 @@
 		A5EDA4F60B65AF406C0D7DF7 /* NSObject */ = {
 			isa = PBXGroup;
 			children = (
-				A5EDAEC92AB1A4E2A0A239E3 /* NSObject+JPKitAdditions_AutoDescription.m */,
 				A5EDAD482C02E1D9A831DB97 /* NSObject+JPKitAdditions_AutoDescription.h */,
-				A5EDAB435EF601F57ADFE413 /* Tests_NSObject_JPKitAdditions_AutoDescription.m */,
-				A5EDA3E553B1ED851D3840CD /* NSObject+JPKitAdditions_Reflection.m */,
+				A5EDAEC92AB1A4E2A0A239E3 /* NSObject+JPKitAdditions_AutoDescription.m */,
 				A5EDA8D8FF820ED13FB73892 /* NSObject+JPKitAdditions_Reflection.h */,
+				A5EDA3E553B1ED851D3840CD /* NSObject+JPKitAdditions_Reflection.m */,
+				F08D677719B0197400214381 /* NSObject+JPKitAdditions.h */,
+				A5EDAB435EF601F57ADFE413 /* Tests_NSObject_JPKitAdditions_AutoDescription.m */,
 			);
 			path = NSObject;
 			sourceTree = "<group>";
@@ -192,9 +198,9 @@
 		A5EDA53620C2142802013089 /* FrameShortcuts */ = {
 			isa = PBXGroup;
 			children = (
+				A5EDAA44A679332EBA11E176 /* Tests_UIView_JPKitFrameAdditions.m */,
 				A5EDA1D9BA12F07C30444100 /* UIView+JPKitAdditions_FrameShortcuts.h */,
 				A5EDA17D64E1024B3A217626 /* UIView+JPKitAdditions_FrameShortcuts.m */,
-				A5EDAA44A679332EBA11E176 /* Tests_UIView_JPKitFrameAdditions.m */,
 			);
 			path = FrameShortcuts;
 			sourceTree = "<group>";
@@ -202,8 +208,8 @@
 		A5EDA7B9BF21CBA7C5147DC1 /* NSString */ = {
 			isa = PBXGroup;
 			children = (
-				A5EDAEF8B12E42793377048C /* NSString+JPAdditions.m */,
 				A5EDACF378A060BCFD97DB9A /* NSString+JPAdditions.h */,
+				A5EDAEF8B12E42793377048C /* NSString+JPAdditions.m */,
 			);
 			path = NSString;
 			sourceTree = "<group>";
@@ -211,6 +217,7 @@
 		A5EDA95C5F05BE3888F6EE36 /* Cocoa Categories */ = {
 			isa = PBXGroup;
 			children = (
+				F08D677419B018C900214381 /* JPCocoaCategories.h */,
 				A5EDAE4733D4A46EE2CF81B5 /* UIView */,
 				A5EDA7B9BF21CBA7C5147DC1 /* NSString */,
 				A5EDA4F60B65AF406C0D7DF7 /* NSObject */,
@@ -223,8 +230,8 @@
 		A5EDA9F35A236D95B51D56A2 /* JPViewPlan */ = {
 			isa = PBXGroup;
 			children = (
-				A5EDA03525B3C62DE1E1BC7D /* JPViewPlan.m */,
 				A5EDADF6BF14300090AD2FB8 /* JPViewPlan.h */,
+				A5EDA03525B3C62DE1E1BC7D /* JPViewPlan.m */,
 				A5EDA2605EACB8A6E9786383 /* Tests_JPViewPlan.m */,
 			);
 			path = JPViewPlan;
@@ -244,8 +251,8 @@
 		A5EDAD269AD0842B970A4005 /* LayerShortcuts */ = {
 			isa = PBXGroup;
 			children = (
-				A5EDA595A1A3569EDFD9E7D8 /* UIView+JPKitAdditions_LayerShortcuts.m */,
 				A5EDAF82FF3BA72D12B71F6E /* UIView+JPKitAdditions_LayerShortcuts.h */,
+				A5EDA595A1A3569EDFD9E7D8 /* UIView+JPKitAdditions_LayerShortcuts.m */,
 			);
 			path = LayerShortcuts;
 			sourceTree = "<group>";
@@ -255,6 +262,7 @@
 			children = (
 				A5EDA53620C2142802013089 /* FrameShortcuts */,
 				A5EDAD269AD0842B970A4005 /* LayerShortcuts */,
+				F08D677619B018F200214381 /* UIView+JPKitAdditions.h */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -292,12 +300,12 @@
 			isa = PBXGroup;
 			children = (
 				F04A63791903581E00CA5FD7 /* JPKit.h */,
-				F04A63771903581E00CA5FD7 /* Supporting Files */,
 				A5EDA95C5F05BE3888F6EE36 /* Cocoa Categories */,
-				A5EDA34E299E095276E14075 /* JPModels */,
+				A5EDA34E299E095276E14075 /* JPModel */,
 				A5EDA9F35A236D95B51D56A2 /* JPViewPlan */,
 				A5EDA9FDEEBD20B7C1B225BD /* JPKitTest.m */,
 				A5EDA2A1ED1DC5068ECE431D /* JPKitTest.h */,
+				F04A63771903581E00CA5FD7 /* Supporting Files */,
 			);
 			path = JPKit;
 			sourceTree = "<group>";
@@ -348,6 +356,7 @@
 				A5EDADFED04158A7C2D9E756 /* JPViewPlan.h in Headers */,
 				A5EDA8DA4AA6E13CE768A9E7 /* NSDictionary+JPKitAdditions.h in Headers */,
 				A5EDA137EFAF60E834CF14BB /* JPKitTest.h in Headers */,
+				F08D677519B018C900214381 /* JPCocoaCategories.h in Headers */,
 				A5EDAB16D95EC60E79D80D18 /* UIView+JPKitAdditions_LayerShortcuts.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
