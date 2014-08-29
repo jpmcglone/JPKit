@@ -218,11 +218,11 @@
 			isa = PBXGroup;
 			children = (
 				F08D677419B018C900214381 /* JPCocoaCategories.h */,
-				A5EDAE4733D4A46EE2CF81B5 /* UIView */,
-				A5EDA7B9BF21CBA7C5147DC1 /* NSString */,
-				A5EDA4F60B65AF406C0D7DF7 /* NSObject */,
 				A5EDA3BF5451B1DEC127C746 /* NSDictionary */,
+				A5EDA4F60B65AF406C0D7DF7 /* NSObject */,
+				A5EDA7B9BF21CBA7C5147DC1 /* NSString */,
 				A5EDA3C471C933029C82AA07 /* UIColor */,
+				A5EDAE4733D4A46EE2CF81B5 /* UIView */,
 			);
 			path = "Cocoa Categories";
 			sourceTree = "<group>";
@@ -290,8 +290,8 @@
 			isa = PBXGroup;
 			children = (
 				F04A63741903581E00CA5FD7 /* Foundation.framework */,
-				F04A63821903581F00CA5FD7 /* XCTest.framework */,
 				F04A63851903581F00CA5FD7 /* UIKit.framework */,
+				F04A63821903581F00CA5FD7 /* XCTest.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
