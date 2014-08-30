@@ -22,7 +22,11 @@
         NSString *propNameString = [NSString stringWithCString:propName encoding:NSASCIIStringEncoding];
         
         if (propName) {
-            id value = [self valueForKey:propNameString];
+            id value;
+            if ([self respondsToSelector:NSSelectorFromString(propNameString)]) {
+                value = [self valueForKey:propNameString];
+            }
+            
             if (showsNulls || value) {
                 if (withAddresses) {
                     [propPrint appendString:[NSString stringWithFormat:@"    <%@: %p>: %@ = %@;\n",
