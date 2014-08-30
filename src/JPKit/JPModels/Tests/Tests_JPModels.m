@@ -4,7 +4,7 @@
 //
 
 #import <XCTest/XCTest.h>
-#import "NSString+JPAdditions.h"
+#import "NSString+JPKitAdditions.h"
 #import "Person.h"
 #import "JPModelMapManager.h"
 #import "JPModelManager.h"

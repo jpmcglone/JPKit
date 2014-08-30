@@ -27,7 +27,7 @@
 		A5EDA55528D7F02D19DFE4AB /* JPViewPlan.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDA03525B3C62DE1E1BC7D /* JPViewPlan.m */; };
 		A5EDA651501C4E11712B6032 /* Tests_NSObject_JPKitAdditions_AutoDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDAB435EF601F57ADFE413 /* Tests_NSObject_JPKitAdditions_AutoDescription.m */; };
 		A5EDA7FA192F67BAA089A26F /* NSObject+JPKitAdditions_AutoDescription.h in Headers */ = {isa = PBXBuildFile; fileRef = A5EDAD482C02E1D9A831DB97 /* NSObject+JPKitAdditions_AutoDescription.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A5EDA80EC888ABB508B8B3C3 /* NSString+JPAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDAEF8B12E42793377048C /* NSString+JPAdditions.m */; };
+		A5EDA80EC888ABB508B8B3C3 /* NSString+JPKitAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDAEF8B12E42793377048C /* NSString+JPKitAdditions.m */; };
 		A5EDA8C77DB30D03CF46B418 /* UIView+JPKitAdditions_FrameShortcuts.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDA17D64E1024B3A217626 /* UIView+JPKitAdditions_FrameShortcuts.m */; };
 		A5EDA8DA4AA6E13CE768A9E7 /* NSDictionary+JPKitAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = A5EDA716EBAFF718882B7D18 /* NSDictionary+JPKitAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A5EDA954406328515AE04DB2 /* JPModel.h in Headers */ = {isa = PBXBuildFile; fileRef = A5EDA8C6D995993863A31C52 /* JPModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -42,8 +42,7 @@
 		A5EDAD2D5A1D2A44830B4F57 /* UIView+JPKitAdditions_LayerShortcuts.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDA595A1A3569EDFD9E7D8 /* UIView+JPKitAdditions_LayerShortcuts.m */; };
 		A5EDADFED04158A7C2D9E756 /* JPViewPlan.h in Headers */ = {isa = PBXBuildFile; fileRef = A5EDADF6BF14300090AD2FB8 /* JPViewPlan.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A5EDAE47583ED082BAB709B1 /* NSDictionary+JPKitAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDA0B01C30C489FBEB99DE /* NSDictionary+JPKitAdditions.m */; };
-		A5EDAF61328F76F2C180EFE7 /* NSString+JPAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDAEF8B12E42793377048C /* NSString+JPAdditions.m */; };
-		A5EDAF9A87ADD2600519ED50 /* NSString+JPAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = A5EDACF378A060BCFD97DB9A /* NSString+JPAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A5EDAF61328F76F2C180EFE7 /* NSString+JPKitAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDAEF8B12E42793377048C /* NSString+JPKitAdditions.m */; };
 		A5EDAFBA8D81883AC63A3307 /* Tests_UIView_JPKitFrameAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDAA44A679332EBA11E176 /* Tests_UIView_JPKitFrameAdditions.m */; };
 		A5EDAFFC4EDB36415E7B40E9 /* JPModelMap.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDA8CE7524EB485F57E63E /* JPModelMap.m */; };
 		F04A63751903581E00CA5FD7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F04A63741903581E00CA5FD7 /* Foundation.framework */; };
@@ -52,11 +51,14 @@
 		F04A63861903581F00CA5FD7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F04A63851903581F00CA5FD7 /* UIKit.framework */; };
 		F04A63891903581F00CA5FD7 /* libJPKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F04A63711903581E00CA5FD7 /* libJPKit.a */; };
 		F04A638F1903581F00CA5FD7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F04A638D1903581F00CA5FD7 /* InfoPlist.strings */; };
-		F08D677519B018C900214381 /* JPCocoaCategories.h in Headers */ = {isa = PBXBuildFile; fileRef = F08D677419B018C900214381 /* JPCocoaCategories.h */; };
+		F08D677519B018C900214381 /* JPCocoaCategories.h in Headers */ = {isa = PBXBuildFile; fileRef = F08D677419B018C900214381 /* JPCocoaCategories.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F0A1EE4119B27B3D005CC921 /* UIView+JPKitAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = F08D677619B018F200214381 /* UIView+JPKitAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F0AC84D51907A8EE009971BB /* JPKit.h in Headers */ = {isa = PBXBuildFile; fileRef = F04A63791903581E00CA5FD7 /* JPKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F0AC84D61907A8F0009971BB /* UIView+JPKitAdditions_FrameShortcuts.h in Headers */ = {isa = PBXBuildFile; fileRef = A5EDA1D9BA12F07C30444100 /* UIView+JPKitAdditions_FrameShortcuts.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F0AC84D81907AAED009971BB /* JPKit-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = F04A63781903581E00CA5FD7 /* JPKit-Prefix.pch */; };
 		F0AC84DB1908E542009971BB /* people.json in Resources */ = {isa = PBXBuildFile; fileRef = F0AC84DA1908E542009971BB /* people.json */; };
+		F0ACE47419B2837500CD9972 /* NSObject+JPKitAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = F08D677719B0197400214381 /* NSObject+JPKitAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F0ACE47519B286CC00CD9972 /* NSString+JPKitAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = A5EDACF378A060BCFD97DB9A /* NSString+JPKitAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F0F1C655190B8C1D00F2022F /* JPModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDA63E6F12F963F79F559B /* JPModel.m */; };
 		F0F1C656190B8C1F00F2022F /* JPModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDA63E6F12F963F79F559B /* JPModel.m */; };
 		F0F1C669191C988100F2022F /* UIColor+JPKitAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = F0F1C668191C988100F2022F /* UIColor+JPKitAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -97,14 +99,14 @@
 		A5EDA9FDEEBD20B7C1B225BD /* JPKitTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPKitTest.m; sourceTree = "<group>"; };
 		A5EDAA44A679332EBA11E176 /* Tests_UIView_JPKitFrameAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tests_UIView_JPKitFrameAdditions.m; sourceTree = "<group>"; };
 		A5EDAB435EF601F57ADFE413 /* Tests_NSObject_JPKitAdditions_AutoDescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tests_NSObject_JPKitAdditions_AutoDescription.m; sourceTree = "<group>"; };
-		A5EDACF378A060BCFD97DB9A /* NSString+JPAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+JPAdditions.h"; sourceTree = "<group>"; };
+		A5EDACF378A060BCFD97DB9A /* NSString+JPKitAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = "NSString+JPKitAdditions.h"; sourceTree = "<group>"; };
 		A5EDAD482C02E1D9A831DB97 /* NSObject+JPKitAdditions_AutoDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+JPKitAdditions_AutoDescription.h"; sourceTree = "<group>"; };
 		A5EDADDA4C4D8AD6B46783EA /* UIColor+JPKitAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+JPKitAdditions.m"; sourceTree = "<group>"; };
 		A5EDADF6BF14300090AD2FB8 /* JPViewPlan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPViewPlan.h; sourceTree = "<group>"; };
 		A5EDAE3D98583C2416F82BFF /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		A5EDAE69D4CD3D6FC536090C /* JPModelManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPModelManager.m; sourceTree = "<group>"; };
 		A5EDAEC92AB1A4E2A0A239E3 /* NSObject+JPKitAdditions_AutoDescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JPKitAdditions_AutoDescription.m"; sourceTree = "<group>"; };
-		A5EDAEF8B12E42793377048C /* NSString+JPAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+JPAdditions.m"; sourceTree = "<group>"; };
+		A5EDAEF8B12E42793377048C /* NSString+JPKitAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+JPKitAdditions.m"; sourceTree = "<group>"; };
 		A5EDAF7B3C805B77294A426A /* JPModelManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPModelManager.h; sourceTree = "<group>"; };
 		A5EDAF82FF3BA72D12B71F6E /* UIView+JPKitAdditions_LayerShortcuts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JPKitAdditions_LayerShortcuts.h"; sourceTree = "<group>"; };
 		F04A63711903581E00CA5FD7 /* libJPKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libJPKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -208,8 +210,8 @@
 		A5EDA7B9BF21CBA7C5147DC1 /* NSString */ = {
 			isa = PBXGroup;
 			children = (
-				A5EDACF378A060BCFD97DB9A /* NSString+JPAdditions.h */,
-				A5EDAEF8B12E42793377048C /* NSString+JPAdditions.m */,
+				A5EDACF378A060BCFD97DB9A /* NSString+JPKitAdditions.h */,
+				A5EDAEF8B12E42793377048C /* NSString+JPKitAdditions.m */,
 			);
 			path = NSString;
 			sourceTree = "<group>";
@@ -342,19 +344,21 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0A1EE4119B27B3D005CC921 /* UIView+JPKitAdditions.h in Headers */,
 				F0AC84D81907AAED009971BB /* JPKit-Prefix.pch in Headers */,
 				F0AC84D51907A8EE009971BB /* JPKit.h in Headers */,
 				F0AC84D61907A8F0009971BB /* UIView+JPKitAdditions_FrameShortcuts.h in Headers */,
 				A5EDA954406328515AE04DB2 /* JPModel.h in Headers */,
 				A5EDA36B9AD2A151FC721A41 /* JPModelMap.h in Headers */,
 				A5EDAB1BEEEF0C92DF133CB8 /* JPModelMapManager.h in Headers */,
-				A5EDAF9A87ADD2600519ED50 /* NSString+JPAdditions.h in Headers */,
+				F0ACE47419B2837500CD9972 /* NSObject+JPKitAdditions.h in Headers */,
 				F0F1C669191C988100F2022F /* UIColor+JPKitAdditions.h in Headers */,
 				A5EDA10577C8B6B91892FEB6 /* JPModelManager.h in Headers */,
 				A5EDA7FA192F67BAA089A26F /* NSObject+JPKitAdditions_AutoDescription.h in Headers */,
 				A5EDAD1F940434ADD8E950B8 /* NSObject+JPKitAdditions_Reflection.h in Headers */,
 				A5EDADFED04158A7C2D9E756 /* JPViewPlan.h in Headers */,
 				A5EDA8DA4AA6E13CE768A9E7 /* NSDictionary+JPKitAdditions.h in Headers */,
+				F0ACE47519B286CC00CD9972 /* NSString+JPKitAdditions.h in Headers */,
 				A5EDA137EFAF60E834CF14BB /* JPKitTest.h in Headers */,
 				F08D677519B018C900214381 /* JPCocoaCategories.h in Headers */,
 				A5EDAB16D95EC60E79D80D18 /* UIView+JPKitAdditions_LayerShortcuts.h in Headers */,
@@ -445,7 +449,7 @@
 			files = (
 				A5EDA2B8A3B21FDD158FDDFC /* UIView+JPKitAdditions_FrameShortcuts.m in Sources */,
 				A5EDAC5D7A8744D9B25F627F /* JPModelMap.m in Sources */,
-				A5EDAF61328F76F2C180EFE7 /* NSString+JPAdditions.m in Sources */,
+				A5EDAF61328F76F2C180EFE7 /* NSString+JPKitAdditions.m in Sources */,
 				A5EDA00FB591ED4DEAD02B97 /* JPModelMapManager.m in Sources */,
 				A5EDA2593991E581AA0770EF /* JPModelManager.m in Sources */,
 				A5EDAC724751D64EC8D1F475 /* NSObject+JPKitAdditions_AutoDescription.m in Sources */,
@@ -467,7 +471,7 @@
 				A5EDAFBA8D81883AC63A3307 /* Tests_UIView_JPKitFrameAdditions.m in Sources */,
 				F0F1C655190B8C1D00F2022F /* JPModel.m in Sources */,
 				A5EDAFFC4EDB36415E7B40E9 /* JPModelMap.m in Sources */,
-				A5EDA80EC888ABB508B8B3C3 /* NSString+JPAdditions.m in Sources */,
+				A5EDA80EC888ABB508B8B3C3 /* NSString+JPKitAdditions.m in Sources */,
 				A5EDA361C34962083D70962D /* Tests_JPModels.m in Sources */,
 				A5EDA0774857A4DE8C34051C /* Person.m in Sources */,
 				A5EDA36067D6694274F39363 /* JPModelMapManager.m in Sources */,
@@ -582,9 +586,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JPKit/JPKit-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
-				PRIVATE_HEADERS_FOLDER_PATH = /usr/local/include/JPKit;
+				PRIVATE_HEADERS_FOLDER_PATH = "/usr/local/include/$(PROJECT_NAME)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "include/$(PROJECT_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "/include/$(PROJECT_NAME)";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -596,9 +600,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JPKit/JPKit-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
-				PRIVATE_HEADERS_FOLDER_PATH = /usr/local/include/JPKit;
+				PRIVATE_HEADERS_FOLDER_PATH = "/usr/local/include/$(PROJECT_NAME)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "include/$(PROJECT_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "/include/$(PROJECT_NAME)";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;

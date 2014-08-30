@@ -5,7 +5,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSString (JPAdditions)
+@interface NSString (JPKitAdditions)
 
 @property (nonatomic, readonly) NSDictionary *jp_JSON;
 

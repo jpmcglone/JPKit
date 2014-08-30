@@ -3,9 +3,9 @@
 // Copyright (c) 2014 JP McGlone. All rights reserved.
 //
 
-#import "NSString+JPAdditions.h"
+#import "NSString+JPKitAdditions.h"
 
-@implementation NSString (JPAdditions)
+@implementation NSString (JPKitAdditions)
 
 - (NSDictionary *)jp_JSON
 {
