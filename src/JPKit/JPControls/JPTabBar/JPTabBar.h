@@ -12,7 +12,7 @@
 - (NSUInteger)numberOfItemsInTabBar:(JPTabBar *)tabBar;
 - (JPTabBarItem *)tabBar:(JPTabBar *)tabBar itemAtIndex:(NSUInteger)index;
 @optional
-- (void)tabBar:(JPTabBar *)tabBar highlighted:(BOOL)highlighted item:(JPTabBarItem *)item atIndex:(NSUInteger)index;
+- (void)tabBar:(JPTabBar *)tabBar highlighted:(BOOL)highlighted atIndex:(NSUInteger)index;
 
 - (BOOL)tabBar:(JPTabBar *)tabBar shouldSelectItemAtIndex:(NSUInteger)index;
 - (NSUInteger)tabBar:(JPTabBar *)tabBar willSelectItemAtIndex:(NSUInteger)index;

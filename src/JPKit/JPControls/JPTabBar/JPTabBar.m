@@ -48,6 +48,7 @@
     NSUInteger numberOfItems = [self.delegate numberOfItemsInTabBar:self];
     for (NSUInteger i = 0; i < numberOfItems; i++) {
         JPTabBarItem *item = [self.delegate tabBar:self itemAtIndex:i];
+        item.exclusiveTouch = YES;
         [item addObserver:self forKeyPath:@"highlighted" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:nil];
         [item addObserver:self forKeyPath:@"selected" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:nil];
         [item addTarget:self action:@selector(selectItem:) forControlEvents:UIControlEventTouchUpInside];
@@ -119,7 +120,7 @@
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
     if ([keyPath isEqualToString:@"highlighted"]) {
-        if ([self.delegate respondsToSelector:@selector(tabBar:highlighted:item:atIndex:)]) {
+        if ([self.delegate respondsToSelector:@selector(tabBar:highlighted:atIndex:)]) {
             BOOL highlighted = [change[@"new"] boolValue];
             BOOL old = [change[@"old"] boolValue];
             if (highlighted == old) {
@@ -128,7 +129,7 @@
             NSLog(@"%@", change);
             JPTabBarItem *tabBarItem = object;
             NSUInteger index = [_items indexOfObject:tabBarItem];
-            [self.delegate tabBar:self highlighted:highlighted item:tabBarItem atIndex:index];
+            [self.delegate tabBar:self highlighted:highlighted atIndex:index];
         }
     } else if([keyPath isEqualToString:@"selected"]) {
         BOOL selected = [change[@"new"] boolValue];
