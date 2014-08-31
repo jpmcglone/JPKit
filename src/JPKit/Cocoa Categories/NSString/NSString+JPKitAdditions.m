@@ -21,4 +21,12 @@
     return !NSEqualRanges([self rangeOfString:string], NSMakeRange(NSNotFound, 0));
 }
 
+- (CGSize)jp_sizeWithFont:(UIFont *)font constrainedToSize:(CGSize)size
+{
+    return [self boundingRectWithSize:size
+                              options:NSStringDrawingUsesLineFragmentOrigin
+                           attributes:@{NSFontAttributeName:font}
+                              context:nil].size;
+}
+
 @end
