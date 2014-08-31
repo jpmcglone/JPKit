@@ -164,6 +164,17 @@ static char const *const jp_updatingFrameKey = "jp_updatingFrameKey";
     objc_setAssociatedObject(self, jp_viewPlanKey, viewPlan, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
+#pragma mark -
+- (void)jp_bringToFront
+{
+    [self.superview bringSubviewToFront:self];
+}
+
+- (void)jp_sendToBack
+{
+    [self.superview sendSubviewToBack:self];
+}
+
 #pragma mark - jp_updatingFrame
 - (BOOL)jp_updatingFrame
 {

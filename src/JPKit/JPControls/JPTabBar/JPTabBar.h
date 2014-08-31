@@ -27,7 +27,14 @@
 
 @property (nonatomic, weak) id<JPTabBarDelegate> delegate;
 @property (nonatomic, readonly) JPTabBarItem *selectedItem;
+@property (nonatomic, readonly) NSArray *items;
+
+@property (nonatomic, assign) UIEdgeInsets edgeInsets;
+@property (nonatomic, strong) UIView *backgroundView;
 
 - (void)reload;
+- (JPTabBarItem *)itemAtIndex:(NSUInteger)index;
+- (void)selectItemAtIndex:(NSUInteger)index;
+- (NSUInteger)indexOfItem:(JPTabBarItem *)item;
 
 @end

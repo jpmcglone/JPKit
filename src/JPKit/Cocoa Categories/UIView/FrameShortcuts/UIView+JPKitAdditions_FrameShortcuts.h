@@ -23,4 +23,9 @@
 - (void)jp_beginFrameUpdates;
 - (void)jp_endFrameUpdates;
 
+- (void)jp_bringToFront;
+- (void)jp_sendToBack;
+// TODO: - (void)jp_bringForward;
+// TODO: - (void)jp_sendBackward;
+
 @end

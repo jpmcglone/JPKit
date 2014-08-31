@@ -5,7 +5,7 @@
 
 #import "JPTabBar.h"
 #import "JPTabBarItem.h"
-#import "UIView+JPKitAdditions_FrameShortcuts.h"
+#import "UIView+JPKitAdditions.h"
 
 @implementation JPTabBar {
     NSMutableArray *_items;
@@ -17,9 +17,25 @@
     self = [super initWithFrame:frame];
     if (self) {
         _items = [[NSMutableArray alloc] init];
+        _edgeInsets = UIEdgeInsetsMake(5, 5, 5, 5);
         self.multipleTouchEnabled = NO;
     }
     return self;
+}
+
+- (void)setEdgeInsets:(UIEdgeInsets)edgeInsets
+{
+    _edgeInsets = edgeInsets;
+    _needsToLayout = YES;
+    [self setNeedsLayout];
+}
+
+- (NSArray *)items {
+    return _items;
+}
+- (void)selectItemAtIndex:(NSUInteger)index
+{
+    [self selectItem:_items[index]];
 }
 
 - (void)removeAllItems
@@ -39,6 +55,11 @@
         [_items addObject:item];
     }
     _needsToLayout = YES;
+}
+
+- (JPTabBarItem *)itemAtIndex:(NSUInteger)index
+{
+    return _items[index];
 }
 
 - (void)deselectSelectedItem
@@ -63,15 +84,32 @@
 
     item.highlighted = NO;
     item.selected = YES;
+    _selectedItem = item;
+}
+
+- (void)setBackgroundView:(UIView *)backgroundView
+{
+    [_backgroundView removeFromSuperview];
+    _backgroundView = backgroundView;
+    [self addSubview:_backgroundView];
+    [self layoutBackgroundView];
+}
+
+- (void)layoutBackgroundView
+{
+    _backgroundView.frame = self.bounds;
 }
 
 - (void)layoutSubviews
 {
+    [super layoutSubviews];
     if (_needsToLayout) {
+        [self layoutBackgroundView];
         CGFloat width = self.jp_width / _items.count;
         for (NSUInteger i = 0; i < _items.count; i++) {
             JPTabBarItem *item = _items[i];
-            item.frame = CGRectMake(i * width, 0, width, self.jp_height);
+            CGRect frame = CGRectMake(i * width, 0, width, self.jp_height);;
+            item.frame = CGRectFromEdgeInsets(frame, _edgeInsets);
         }
         _needsToLayout = NO;
     }
@@ -118,6 +156,11 @@
             }
         }
     }
+}
+
+- (NSUInteger)indexOfItem:(JPTabBarItem *)item
+{
+    return [_items indexOfObject:item];
 }
 
 @end
