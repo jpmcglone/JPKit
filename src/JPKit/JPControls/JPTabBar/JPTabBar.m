@@ -126,7 +126,6 @@
             if (highlighted == old) {
                 return;
             }
-            NSLog(@"%@", change);
             JPTabBarItem *tabBarItem = object;
             NSUInteger index = [_items indexOfObject:tabBarItem];
             [self.delegate tabBar:self highlighted:highlighted atIndex:index];
