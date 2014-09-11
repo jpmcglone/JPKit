@@ -33,7 +33,7 @@ static char const *const jp_updatingFrameKey = "jp_updatingFrameKey";
 #pragma mark - size
 - (CGSize)jp_size
 {
-    return self.frame.size;
+    return self.bounds.size;
 }
 
 - (void)setJp_size:(CGSize)size
@@ -133,6 +133,11 @@ static char const *const jp_updatingFrameKey = "jp_updatingFrameKey";
 - (void)setJp_left:(CGFloat)left
 {
     self.jp_x = left;
+}
+
+- (CGPoint)jp_middle
+{
+    return CGPointMake(self.jp_width * 0.5, self.jp_height * 0.5);
 }
 
 #pragma mark - JP Update Frames

@@ -20,6 +20,8 @@
 @property (nonatomic, readwrite) CGFloat jp_bottom;
 @property (nonatomic, readwrite) CGFloat jp_left;
 
+@property (nonatomic, readonly) CGPoint jp_middle;
+
 - (void)jp_beginFrameUpdates;
 - (void)jp_endFrameUpdates;
 
