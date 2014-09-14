@@ -11,7 +11,7 @@
 
 - (NSString *)jp_autoDescribeForClassType:(Class)classType withAddresses:(BOOL)withAddresses showsNulls:(BOOL)showsNulls
 {
-    NSUInteger count;
+    unsigned int count;
     objc_property_t *propList = class_copyPropertyList(classType, &count);
     NSMutableString *propPrint = [NSMutableString string];
     

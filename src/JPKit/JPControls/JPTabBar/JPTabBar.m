@@ -65,6 +65,7 @@
 
 - (void)deselectSelectedItem
 {
+    NSUInteger index = [_items indexOfObject:_selectedItem];
     if ([self.delegate respondsToSelector:@selector(tabBar:willDeselectItemAtIndex:)]) {
         [self.delegate tabBar:self willDeselectItemAtIndex:index];
     }
