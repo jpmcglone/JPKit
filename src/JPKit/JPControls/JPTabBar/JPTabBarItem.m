@@ -43,8 +43,8 @@
 
 - (void)layoutSubviews
 {
-    BOOL hasText = _titleLabel.text;
-    BOOL hasImage = _imageView.image;
+    BOOL hasText = _titleLabel.text != nil;
+    BOOL hasImage = _imageView.image != nil;
 
     CGFloat margin = 5;
     CGFloat totalHeight = 0;
