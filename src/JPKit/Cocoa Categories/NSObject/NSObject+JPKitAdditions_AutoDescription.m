@@ -57,8 +57,8 @@
         [propPrint appendString:superString];
     }
     
-    NSString *headerString = [NSString stringWithFormat:@"\njp_autoDescribe:\n<%@ :%p>\n",
-                              [self class],
+    NSString *headerString = [NSString stringWithFormat:@"\n<%@ :%p>\n",
+                              classType,
                               self];
     return [headerString stringByAppendingString:propPrint];
     return propPrint;
