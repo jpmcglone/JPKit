@@ -47,7 +47,7 @@ typedef NS_ENUM(NSUInteger, JPNavigationControllerDirection) {
 @property (nonatomic, assign) BOOL fadesWhenTransitioningIn; // defaults to NO
 @property (nonatomic, assign) BOOL fadesWhenTransitioningOut; // defaults to NO
 
-@property (nonatomic, assign) BOOL dismissesAutomatically; // defaults to YES, will dismiss on popping if there is nothing left
+@property (nonatomic, assign) BOOL dismissesAutomatically; // defaults to YES, will dismiss after popping if there is nothing left
 
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated completion:(void (^)(void))completion;
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated;

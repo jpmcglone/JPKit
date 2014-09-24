@@ -3,6 +3,8 @@
 // Copyright (c) 2014 JP McGlone. All rights reserved.
 //
 
+#import "UIViewController+JPNavigationController.h"
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 

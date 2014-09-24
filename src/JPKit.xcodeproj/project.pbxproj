@@ -41,6 +41,7 @@
 		A5EDA8DA4AA6E13CE768A9E7 /* NSDictionary+JPKitAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = A5EDA716EBAFF718882B7D18 /* NSDictionary+JPKitAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A5EDA911A0200A577E10EDAD /* JPTabBarItem.h in Headers */ = {isa = PBXBuildFile; fileRef = A5EDA567216FD3C50B514220 /* JPTabBarItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A5EDA954406328515AE04DB2 /* JPModel.h in Headers */ = {isa = PBXBuildFile; fileRef = A5EDA8C6D995993863A31C52 /* JPModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A5EDA9F74ACF82E5F61D46CD /* UIViewController+JPNavigationController.h in Headers */ = {isa = PBXBuildFile; fileRef = A5EDAD61F6809FA854F98F64 /* UIViewController+JPNavigationController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A5EDAA0CE9D648D1D54B0B33 /* NSDictionary+JPKitAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDA0B01C30C489FBEB99DE /* NSDictionary+JPKitAdditions.m */; };
 		A5EDAA6759D30C42DAEC1135 /* JPTabBarController.h in Headers */ = {isa = PBXBuildFile; fileRef = A5EDA424601C3B3B481DBFD3 /* JPTabBarController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A5EDAAA11B1673A4C2E20DDB /* JPViewPlan.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDA03525B3C62DE1E1BC7D /* JPViewPlan.m */; };
@@ -56,6 +57,7 @@
 		A5EDAD2D5A1D2A44830B4F57 /* UIView+JPKitAdditions_LayerShortcuts.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDA595A1A3569EDFD9E7D8 /* UIView+JPKitAdditions_LayerShortcuts.m */; };
 		A5EDADFED04158A7C2D9E756 /* JPViewPlan.h in Headers */ = {isa = PBXBuildFile; fileRef = A5EDADF6BF14300090AD2FB8 /* JPViewPlan.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A5EDAE47583ED082BAB709B1 /* NSDictionary+JPKitAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDA0B01C30C489FBEB99DE /* NSDictionary+JPKitAdditions.m */; };
+		A5EDAEB30D00E61D99248B25 /* UIViewController+JPNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDA8D000322A508D598AF1 /* UIViewController+JPNavigationController.m */; };
 		A5EDAEDF31080F3F52548B44 /* JPTabBar.h in Headers */ = {isa = PBXBuildFile; fileRef = A5EDAC169DD0397867E429E2 /* JPTabBar.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A5EDAF61328F76F2C180EFE7 /* NSString+JPKitAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDAEF8B12E42793377048C /* NSString+JPKitAdditions.m */; };
 		A5EDAFBA8D81883AC63A3307 /* Tests_UIView_JPKitFrameAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDAA44A679332EBA11E176 /* Tests_UIView_JPKitFrameAdditions.m */; };
@@ -117,6 +119,7 @@
 		A5EDA84CBEE40DEB41A19DCD /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		A5EDA8C6D995993863A31C52 /* JPModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPModel.h; sourceTree = "<group>"; };
 		A5EDA8CE7524EB485F57E63E /* JPModelMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPModelMap.m; sourceTree = "<group>"; };
+		A5EDA8D000322A508D598AF1 /* UIViewController+JPNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+JPNavigationController.m"; sourceTree = "<group>"; };
 		A5EDA8D8FF820ED13FB73892 /* NSObject+JPKitAdditions_Reflection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+JPKitAdditions_Reflection.h"; sourceTree = "<group>"; };
 		A5EDA8F49435948AF76F42EF /* JPTabBarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPTabBarItem.m; sourceTree = "<group>"; };
 		A5EDA95EBBE6A4266E22038F /* JPModelMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPModelMap.h; sourceTree = "<group>"; };
@@ -129,6 +132,7 @@
 		A5EDAC169DD0397867E429E2 /* JPTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPTabBar.h; sourceTree = "<group>"; };
 		A5EDACF378A060BCFD97DB9A /* NSString+JPKitAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = "NSString+JPKitAdditions.h"; sourceTree = "<group>"; };
 		A5EDAD482C02E1D9A831DB97 /* NSObject+JPKitAdditions_AutoDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+JPKitAdditions_AutoDescription.h"; sourceTree = "<group>"; };
+		A5EDAD61F6809FA854F98F64 /* UIViewController+JPNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+JPNavigationController.h"; sourceTree = "<group>"; };
 		A5EDADDA4C4D8AD6B46783EA /* UIColor+JPKitAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+JPKitAdditions.m"; sourceTree = "<group>"; };
 		A5EDADF6BF14300090AD2FB8 /* JPViewPlan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPViewPlan.h; sourceTree = "<group>"; };
 		A5EDAE2189D2D5EFF372DE0F /* JPNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPNavigationController.h; sourceTree = "<group>"; };
@@ -309,6 +313,8 @@
 			children = (
 				A5EDA535775D01699FD79333 /* UIViewController+JPKitAdditions.m */,
 				A5EDA48505B195EA17046FEA /* UIViewController+JPKitAdditions.h */,
+				A5EDA8D000322A508D598AF1 /* UIViewController+JPNavigationController.m */,
+				A5EDAD61F6809FA854F98F64 /* UIViewController+JPNavigationController.h */,
 			);
 			path = UIViewController;
 			sourceTree = "<group>";
@@ -454,6 +460,7 @@
 				A5EDAC52160287208B8AEFF5 /* NSObject+JPKitAdditions_Tagging.h in Headers */,
 				A5EDACA80EFC8215E9EB484F /* JPNavigationController.h in Headers */,
 				A5EDA03454EC09D778B47862 /* UIViewController+JPKitAdditions.h in Headers */,
+				A5EDA9F74ACF82E5F61D46CD /* UIViewController+JPNavigationController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -560,6 +567,7 @@
 				A5EDA1DC65DD2C07BC2E4272 /* UIView+JPKitAdditions.m in Sources */,
 				A5EDA20D7F7D5AF79BC8FBF3 /* JPNavigationController.m in Sources */,
 				A5EDA5C7871EBDB618EF4581 /* UIViewController+JPKitAdditions.m in Sources */,
+				A5EDAEB30D00E61D99248B25 /* UIViewController+JPNavigationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
