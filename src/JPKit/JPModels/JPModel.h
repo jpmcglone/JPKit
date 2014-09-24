@@ -15,6 +15,8 @@
 // TODO: Converts the model into JSON (NSDictionary / NSArray), includes 'other'
 //@property (nonatomic, readonly) id JSON;
 
+@property (nonatomic, readonly) NSUInteger iid;
+@property (nonatomic, readonly) NSString *sid;
 @property (nonatomic, readonly) id other;
 
 // Overrides for things like property name, class, and if it's plural or not
