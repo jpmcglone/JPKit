@@ -12,7 +12,7 @@
     UIViewController *parentViewController = self.parentViewController;
     while (parentViewController != nil) {
         if ([parentViewController isKindOfClass:[JPNavigationController class]]) {
-            return parentViewController;
+            return (JPNavigationController *)parentViewController;
         }
         parentViewController = parentViewController.parentViewController;
     }
