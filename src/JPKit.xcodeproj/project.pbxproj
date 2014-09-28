@@ -8,13 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		A5EDA00FB591ED4DEAD02B97 /* JPModelMapManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDA595D6DC2C539224D378 /* JPModelMapManager.m */; };
-		A5EDA03454EC09D778B47862 /* UIViewController+JPKitAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = A5EDA48505B195EA17046FEA /* UIViewController+JPKitAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A5EDA04898D5A53B98B05C4F /* JPKitTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDA9FDEEBD20B7C1B225BD /* JPKitTest.m */; };
 		A5EDA0774857A4DE8C34051C /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDA84CBEE40DEB41A19DCD /* Person.m */; };
-		A5EDA0F74D212E79488C6DA1 /* UILabel+JPKitAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = A5EDA5FC2E763BB630E183DC /* UILabel+JPKitAdditions.h */; };
-		A5EDA10577C8B6B91892FEB6 /* JPModelManager.h in Headers */ = {isa = PBXBuildFile; fileRef = A5EDAF7B3C805B77294A426A /* JPModelManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A5EDA12147A7CA27CFEB00B3 /* NSObject+JPKitAdditions_AutoDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDAEC92AB1A4E2A0A239E3 /* NSObject+JPKitAdditions_AutoDescription.m */; };
-		A5EDA137EFAF60E834CF14BB /* JPKitTest.h in Headers */ = {isa = PBXBuildFile; fileRef = A5EDA2A1ED1DC5068ECE431D /* JPKitTest.h */; };
 		A5EDA1611514B8D7BAE3163D /* JPTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDAAF8C5D134DFC963B40A /* JPTabBarController.m */; };
 		A5EDA1DC65DD2C07BC2E4272 /* UIView+JPKitAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDAE3C2AEB56F8306F655B /* UIView+JPKitAdditions.m */; };
 		A5EDA20D7F7D5AF79BC8FBF3 /* JPNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDA5049479239B2118AF79 /* JPNavigationController.m */; };
@@ -25,7 +21,6 @@
 		A5EDA2CDF3210C29611C6C53 /* Tests_UIColor_JPKitAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDA29D9525131DAFCE5B0E /* Tests_UIColor_JPKitAdditions.m */; };
 		A5EDA36067D6694274F39363 /* JPModelMapManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDA595D6DC2C539224D378 /* JPModelMapManager.m */; };
 		A5EDA361C34962083D70962D /* Tests_JPModels.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDA444DD9D7A9F2BCC16E8 /* Tests_JPModels.m */; };
-		A5EDA36B9AD2A151FC721A41 /* JPModelMap.h in Headers */ = {isa = PBXBuildFile; fileRef = A5EDA95EBBE6A4266E22038F /* JPModelMap.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A5EDA4422B3806322B7E5E0A /* JPTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDA8F49435948AF76F42EF /* JPTabBarItem.m */; };
 		A5EDA456C020CB260E6AF684 /* JPKitTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDA9FDEEBD20B7C1B225BD /* JPKitTest.m */; };
 		A5EDA48642D001611B5D6EE9 /* NSObject+JPKitAdditions_Reflection.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDA3E553B1ED851D3840CD /* NSObject+JPKitAdditions_Reflection.m */; };
@@ -35,30 +30,17 @@
 		A5EDA651501C4E11712B6032 /* Tests_NSObject_JPKitAdditions_AutoDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDAB435EF601F57ADFE413 /* Tests_NSObject_JPKitAdditions_AutoDescription.m */; };
 		A5EDA651C06B8A6EA80DC53A /* JPTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDA455A36C932A65FD80DD /* JPTabBar.m */; };
 		A5EDA7A6036D0270AAF6A1F5 /* UILabel+JPKitAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDA47EDFE2B44D31829311 /* UILabel+JPKitAdditions.m */; };
-		A5EDA7FA192F67BAA089A26F /* NSObject+JPKitAdditions_AutoDescription.h in Headers */ = {isa = PBXBuildFile; fileRef = A5EDAD482C02E1D9A831DB97 /* NSObject+JPKitAdditions_AutoDescription.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A5EDA80EC888ABB508B8B3C3 /* NSString+JPKitAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDAEF8B12E42793377048C /* NSString+JPKitAdditions.m */; };
 		A5EDA8C77DB30D03CF46B418 /* UIView+JPKitAdditions_FrameShortcuts.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDA17D64E1024B3A217626 /* UIView+JPKitAdditions_FrameShortcuts.m */; };
-		A5EDA8DA4AA6E13CE768A9E7 /* NSDictionary+JPKitAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = A5EDA716EBAFF718882B7D18 /* NSDictionary+JPKitAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A5EDA911A0200A577E10EDAD /* JPTabBarItem.h in Headers */ = {isa = PBXBuildFile; fileRef = A5EDA567216FD3C50B514220 /* JPTabBarItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A5EDA954406328515AE04DB2 /* JPModel.h in Headers */ = {isa = PBXBuildFile; fileRef = A5EDA8C6D995993863A31C52 /* JPModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A5EDA9F74ACF82E5F61D46CD /* UIViewController+JPNavigationController.h in Headers */ = {isa = PBXBuildFile; fileRef = A5EDAD61F6809FA854F98F64 /* UIViewController+JPNavigationController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A5EDAA0CE9D648D1D54B0B33 /* NSDictionary+JPKitAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDA0B01C30C489FBEB99DE /* NSDictionary+JPKitAdditions.m */; };
-		A5EDAA6759D30C42DAEC1135 /* JPTabBarController.h in Headers */ = {isa = PBXBuildFile; fileRef = A5EDA424601C3B3B481DBFD3 /* JPTabBarController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A5EDAAA11B1673A4C2E20DDB /* JPViewPlan.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDA03525B3C62DE1E1BC7D /* JPViewPlan.m */; };
 		A5EDAAB8D4360C736591C64C /* NSObject+JPKitAdditions_Reflection.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDA3E553B1ED851D3840CD /* NSObject+JPKitAdditions_Reflection.m */; };
-		A5EDAB16D95EC60E79D80D18 /* UIView+JPKitAdditions_LayerShortcuts.h in Headers */ = {isa = PBXBuildFile; fileRef = A5EDAF82FF3BA72D12B71F6E /* UIView+JPKitAdditions_LayerShortcuts.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A5EDAB1BEEEF0C92DF133CB8 /* JPModelMapManager.h in Headers */ = {isa = PBXBuildFile; fileRef = A5EDA643D16679EFC2700DF4 /* JPModelMapManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A5EDAC52160287208B8AEFF5 /* NSObject+JPKitAdditions_Tagging.h in Headers */ = {isa = PBXBuildFile; fileRef = A5EDA98A8DF272291653FC63 /* NSObject+JPKitAdditions_Tagging.h */; };
 		A5EDAC5D7A8744D9B25F627F /* JPModelMap.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDA8CE7524EB485F57E63E /* JPModelMap.m */; };
 		A5EDAC724751D64EC8D1F475 /* NSObject+JPKitAdditions_AutoDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDAEC92AB1A4E2A0A239E3 /* NSObject+JPKitAdditions_AutoDescription.m */; };
-		A5EDACA80EFC8215E9EB484F /* JPNavigationController.h in Headers */ = {isa = PBXBuildFile; fileRef = A5EDAE2189D2D5EFF372DE0F /* JPNavigationController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A5EDACEB65203A083AE98089 /* NSObject+JPKitAdditions_Tagging.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDAB59128F6F49E7CC691F /* NSObject+JPKitAdditions_Tagging.m */; };
-		A5EDAD1F940434ADD8E950B8 /* NSObject+JPKitAdditions_Reflection.h in Headers */ = {isa = PBXBuildFile; fileRef = A5EDA8D8FF820ED13FB73892 /* NSObject+JPKitAdditions_Reflection.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A5EDAD2D5A1D2A44830B4F57 /* UIView+JPKitAdditions_LayerShortcuts.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDA595A1A3569EDFD9E7D8 /* UIView+JPKitAdditions_LayerShortcuts.m */; };
-		A5EDADFED04158A7C2D9E756 /* JPViewPlan.h in Headers */ = {isa = PBXBuildFile; fileRef = A5EDADF6BF14300090AD2FB8 /* JPViewPlan.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A5EDAE47583ED082BAB709B1 /* NSDictionary+JPKitAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDA0B01C30C489FBEB99DE /* NSDictionary+JPKitAdditions.m */; };
 		A5EDAEB30D00E61D99248B25 /* UIViewController+JPNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDA8D000322A508D598AF1 /* UIViewController+JPNavigationController.m */; };
-		A5EDAEDF31080F3F52548B44 /* JPTabBar.h in Headers */ = {isa = PBXBuildFile; fileRef = A5EDAC169DD0397867E429E2 /* JPTabBar.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A5EDAF61328F76F2C180EFE7 /* NSString+JPKitAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDAEF8B12E42793377048C /* NSString+JPKitAdditions.m */; };
 		A5EDAFBA8D81883AC63A3307 /* Tests_UIView_JPKitFrameAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDAA44A679332EBA11E176 /* Tests_UIView_JPKitFrameAdditions.m */; };
 		A5EDAFFC4EDB36415E7B40E9 /* JPModelMap.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDA8CE7524EB485F57E63E /* JPModelMap.m */; };
@@ -68,17 +50,33 @@
 		F04A63861903581F00CA5FD7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F04A63851903581F00CA5FD7 /* UIKit.framework */; };
 		F04A63891903581F00CA5FD7 /* libJPKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F04A63711903581E00CA5FD7 /* libJPKit.a */; };
 		F04A638F1903581F00CA5FD7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F04A638D1903581F00CA5FD7 /* InfoPlist.strings */; };
-		F08D677519B018C900214381 /* JPCocoaCategories.h in Headers */ = {isa = PBXBuildFile; fileRef = F08D677419B018C900214381 /* JPCocoaCategories.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F0A1EE4119B27B3D005CC921 /* UIView+JPKitAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = F08D677619B018F200214381 /* UIView+JPKitAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F0AC84D51907A8EE009971BB /* JPKit.h in Headers */ = {isa = PBXBuildFile; fileRef = F04A63791903581E00CA5FD7 /* JPKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F0AC84D61907A8F0009971BB /* UIView+JPKitAdditions_FrameShortcuts.h in Headers */ = {isa = PBXBuildFile; fileRef = A5EDA1D9BA12F07C30444100 /* UIView+JPKitAdditions_FrameShortcuts.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F0AC84D81907AAED009971BB /* JPKit-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = F04A63781903581E00CA5FD7 /* JPKit-Prefix.pch */; };
 		F0AC84DB1908E542009971BB /* people.json in Resources */ = {isa = PBXBuildFile; fileRef = F0AC84DA1908E542009971BB /* people.json */; };
-		F0ACE47419B2837500CD9972 /* NSObject+JPKitAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = F08D677719B0197400214381 /* NSObject+JPKitAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F0ACE47519B286CC00CD9972 /* NSString+JPKitAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = A5EDACF378A060BCFD97DB9A /* NSString+JPKitAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F0CEF4A619D7A723000DCA2D /* JPKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = F04A63791903581E00CA5FD7 /* JPKit.h */; };
+		F0CEF4A719D7A723000DCA2D /* JPNavigationController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = A5EDAE2189D2D5EFF372DE0F /* JPNavigationController.h */; };
+		F0CEF4A819D7A723000DCA2D /* JPTabBarController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = A5EDA424601C3B3B481DBFD3 /* JPTabBarController.h */; };
+		F0CEF4A919D7A723000DCA2D /* JPTabBar.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = A5EDAC169DD0397867E429E2 /* JPTabBar.h */; };
+		F0CEF4AA19D7A723000DCA2D /* JPTabBarItem.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = A5EDA567216FD3C50B514220 /* JPTabBarItem.h */; };
+		F0CEF4AB19D7A723000DCA2D /* JPCocoaCategories.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = F08D677419B018C900214381 /* JPCocoaCategories.h */; };
+		F0CEF4AC19D7A723000DCA2D /* NSDictionary+JPKitAdditions.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = A5EDA716EBAFF718882B7D18 /* NSDictionary+JPKitAdditions.h */; };
+		F0CEF4AD19D7A723000DCA2D /* NSObject+JPKitAdditions_AutoDescription.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = A5EDAD482C02E1D9A831DB97 /* NSObject+JPKitAdditions_AutoDescription.h */; };
+		F0CEF4AE19D7A723000DCA2D /* NSObject+JPKitAdditions_Reflection.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = A5EDA8D8FF820ED13FB73892 /* NSObject+JPKitAdditions_Reflection.h */; };
+		F0CEF4AF19D7A723000DCA2D /* NSObject+JPKitAdditions.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = F08D677719B0197400214381 /* NSObject+JPKitAdditions.h */; };
+		F0CEF4B019D7A723000DCA2D /* NSObject+JPKitAdditions_Tagging.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = A5EDA98A8DF272291653FC63 /* NSObject+JPKitAdditions_Tagging.h */; };
+		F0CEF4B119D7A723000DCA2D /* NSString+JPKitAdditions.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = A5EDACF378A060BCFD97DB9A /* NSString+JPKitAdditions.h */; };
+		F0CEF4B219D7A723000DCA2D /* UIColor+JPKitAdditions.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = F0F1C668191C988100F2022F /* UIColor+JPKitAdditions.h */; };
+		F0CEF4B319D7A723000DCA2D /* UIView+JPKitAdditions_FrameShortcuts.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = A5EDA1D9BA12F07C30444100 /* UIView+JPKitAdditions_FrameShortcuts.h */; };
+		F0CEF4B419D7A723000DCA2D /* UIView+JPKitAdditions_LayerShortcuts.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = A5EDAF82FF3BA72D12B71F6E /* UIView+JPKitAdditions_LayerShortcuts.h */; };
+		F0CEF4B519D7A723000DCA2D /* UIView+JPKitAdditions.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = F08D677619B018F200214381 /* UIView+JPKitAdditions.h */; };
+		F0CEF4B619D7A723000DCA2D /* UILabel+JPKitAdditions.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = A5EDA5FC2E763BB630E183DC /* UILabel+JPKitAdditions.h */; };
+		F0CEF4B719D7A723000DCA2D /* UIViewController+JPKitAdditions.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = A5EDA48505B195EA17046FEA /* UIViewController+JPKitAdditions.h */; };
+		F0CEF4B819D7A723000DCA2D /* UIViewController+JPNavigationController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = A5EDAD61F6809FA854F98F64 /* UIViewController+JPNavigationController.h */; };
+		F0CEF4B919D7A723000DCA2D /* JPModel.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = A5EDA8C6D995993863A31C52 /* JPModel.h */; };
+		F0CEF4BA19D7A723000DCA2D /* JPModelManager.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = A5EDAF7B3C805B77294A426A /* JPModelManager.h */; };
+		F0CEF4BB19D7A723000DCA2D /* JPModelMap.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = A5EDA95EBBE6A4266E22038F /* JPModelMap.h */; };
+		F0CEF4BC19D7A723000DCA2D /* JPModelMapManager.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = A5EDA643D16679EFC2700DF4 /* JPModelMapManager.h */; };
+		F0CEF4BD19D7A72F000DCA2D /* JPViewPlan.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = A5EDADF6BF14300090AD2FB8 /* JPViewPlan.h */; };
 		F0F1C655190B8C1D00F2022F /* JPModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDA63E6F12F963F79F559B /* JPModel.m */; };
 		F0F1C656190B8C1F00F2022F /* JPModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDA63E6F12F963F79F559B /* JPModel.m */; };
-		F0F1C669191C988100F2022F /* UIColor+JPKitAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = F0F1C668191C988100F2022F /* UIColor+JPKitAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F0F1C66A191C988600F2022F /* UIColor+JPKitAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDADDA4C4D8AD6B46783EA /* UIColor+JPKitAdditions.m */; };
 		F0F1C66B191C988600F2022F /* UIColor+JPKitAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDADDA4C4D8AD6B46783EA /* UIColor+JPKitAdditions.m */; };
 /* End PBXBuildFile section */
@@ -92,6 +90,42 @@
 			remoteInfo = JPKit;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F0CEF4A519D7A6BE000DCA2D /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/${PRODUCT_NAME}";
+			dstSubfolderSpec = 16;
+			files = (
+				F0CEF4BD19D7A72F000DCA2D /* JPViewPlan.h in CopyFiles */,
+				F0CEF4A619D7A723000DCA2D /* JPKit.h in CopyFiles */,
+				F0CEF4A719D7A723000DCA2D /* JPNavigationController.h in CopyFiles */,
+				F0CEF4A819D7A723000DCA2D /* JPTabBarController.h in CopyFiles */,
+				F0CEF4A919D7A723000DCA2D /* JPTabBar.h in CopyFiles */,
+				F0CEF4AA19D7A723000DCA2D /* JPTabBarItem.h in CopyFiles */,
+				F0CEF4AB19D7A723000DCA2D /* JPCocoaCategories.h in CopyFiles */,
+				F0CEF4AC19D7A723000DCA2D /* NSDictionary+JPKitAdditions.h in CopyFiles */,
+				F0CEF4AD19D7A723000DCA2D /* NSObject+JPKitAdditions_AutoDescription.h in CopyFiles */,
+				F0CEF4AE19D7A723000DCA2D /* NSObject+JPKitAdditions_Reflection.h in CopyFiles */,
+				F0CEF4AF19D7A723000DCA2D /* NSObject+JPKitAdditions.h in CopyFiles */,
+				F0CEF4B019D7A723000DCA2D /* NSObject+JPKitAdditions_Tagging.h in CopyFiles */,
+				F0CEF4B119D7A723000DCA2D /* NSString+JPKitAdditions.h in CopyFiles */,
+				F0CEF4B219D7A723000DCA2D /* UIColor+JPKitAdditions.h in CopyFiles */,
+				F0CEF4B319D7A723000DCA2D /* UIView+JPKitAdditions_FrameShortcuts.h in CopyFiles */,
+				F0CEF4B419D7A723000DCA2D /* UIView+JPKitAdditions_LayerShortcuts.h in CopyFiles */,
+				F0CEF4B519D7A723000DCA2D /* UIView+JPKitAdditions.h in CopyFiles */,
+				F0CEF4B619D7A723000DCA2D /* UILabel+JPKitAdditions.h in CopyFiles */,
+				F0CEF4B719D7A723000DCA2D /* UIViewController+JPKitAdditions.h in CopyFiles */,
+				F0CEF4B819D7A723000DCA2D /* UIViewController+JPNavigationController.h in CopyFiles */,
+				F0CEF4B919D7A723000DCA2D /* JPModel.h in CopyFiles */,
+				F0CEF4BA19D7A723000DCA2D /* JPModelManager.h in CopyFiles */,
+				F0CEF4BB19D7A723000DCA2D /* JPModelMap.h in CopyFiles */,
+				F0CEF4BC19D7A723000DCA2D /* JPModelMapManager.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		A5EDA03525B3C62DE1E1BC7D /* JPViewPlan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPViewPlan.m; sourceTree = "<group>"; };
@@ -430,42 +464,6 @@
 		};
 /* End PBXGroup section */
 
-/* Begin PBXHeadersBuildPhase section */
-		F0AC84D41907A8DB009971BB /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F0A1EE4119B27B3D005CC921 /* UIView+JPKitAdditions.h in Headers */,
-				F0AC84D81907AAED009971BB /* JPKit-Prefix.pch in Headers */,
-				F0AC84D51907A8EE009971BB /* JPKit.h in Headers */,
-				F0AC84D61907A8F0009971BB /* UIView+JPKitAdditions_FrameShortcuts.h in Headers */,
-				A5EDA954406328515AE04DB2 /* JPModel.h in Headers */,
-				A5EDA36B9AD2A151FC721A41 /* JPModelMap.h in Headers */,
-				A5EDAB1BEEEF0C92DF133CB8 /* JPModelMapManager.h in Headers */,
-				F0ACE47419B2837500CD9972 /* NSObject+JPKitAdditions.h in Headers */,
-				F0F1C669191C988100F2022F /* UIColor+JPKitAdditions.h in Headers */,
-				A5EDA10577C8B6B91892FEB6 /* JPModelManager.h in Headers */,
-				A5EDA7FA192F67BAA089A26F /* NSObject+JPKitAdditions_AutoDescription.h in Headers */,
-				A5EDAD1F940434ADD8E950B8 /* NSObject+JPKitAdditions_Reflection.h in Headers */,
-				A5EDADFED04158A7C2D9E756 /* JPViewPlan.h in Headers */,
-				A5EDA8DA4AA6E13CE768A9E7 /* NSDictionary+JPKitAdditions.h in Headers */,
-				F0ACE47519B286CC00CD9972 /* NSString+JPKitAdditions.h in Headers */,
-				A5EDA137EFAF60E834CF14BB /* JPKitTest.h in Headers */,
-				F08D677519B018C900214381 /* JPCocoaCategories.h in Headers */,
-				A5EDAB16D95EC60E79D80D18 /* UIView+JPKitAdditions_LayerShortcuts.h in Headers */,
-				A5EDAA6759D30C42DAEC1135 /* JPTabBarController.h in Headers */,
-				A5EDAEDF31080F3F52548B44 /* JPTabBar.h in Headers */,
-				A5EDA911A0200A577E10EDAD /* JPTabBarItem.h in Headers */,
-				A5EDA0F74D212E79488C6DA1 /* UILabel+JPKitAdditions.h in Headers */,
-				A5EDAC52160287208B8AEFF5 /* NSObject+JPKitAdditions_Tagging.h in Headers */,
-				A5EDACA80EFC8215E9EB484F /* JPNavigationController.h in Headers */,
-				A5EDA03454EC09D778B47862 /* UIViewController+JPKitAdditions.h in Headers */,
-				A5EDA9F74ACF82E5F61D46CD /* UIViewController+JPNavigationController.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
 /* Begin PBXNativeTarget section */
 		F04A63701903581E00CA5FD7 /* JPKit */ = {
 			isa = PBXNativeTarget;
@@ -473,7 +471,7 @@
 			buildPhases = (
 				F04A636D1903581E00CA5FD7 /* Sources */,
 				F04A636E1903581E00CA5FD7 /* Frameworks */,
-				F0AC84D41907A8DB009971BB /* Headers */,
+				F0CEF4A519D7A6BE000DCA2D /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -707,6 +705,7 @@
 				DSTROOT = /tmp/JPKit.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JPKit/JPKit-Prefix.pch";
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";
 				PRIVATE_HEADERS_FOLDER_PATH = "/usr/local/include/$(PROJECT_NAME)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
