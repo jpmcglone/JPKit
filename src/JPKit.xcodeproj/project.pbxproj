@@ -43,6 +43,7 @@
 		A5EDAEB30D00E61D99248B25 /* UIViewController+JPNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDA8D000322A508D598AF1 /* UIViewController+JPNavigationController.m */; };
 		A5EDAF61328F76F2C180EFE7 /* NSString+JPKitAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDAEF8B12E42793377048C /* NSString+JPKitAdditions.m */; };
 		A5EDAFBA8D81883AC63A3307 /* Tests_UIView_JPKitFrameAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDAA44A679332EBA11E176 /* Tests_UIView_JPKitFrameAdditions.m */; };
+		A5EDAFE4A026859208A8A83C /* JPTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDA2E44F37F2CEF3061405 /* JPTextField.m */; };
 		A5EDAFFC4EDB36415E7B40E9 /* JPModelMap.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDA8CE7524EB485F57E63E /* JPModelMap.m */; };
 		F04A63751903581E00CA5FD7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F04A63741903581E00CA5FD7 /* Foundation.framework */; };
 		F04A63831903581F00CA5FD7 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F04A63821903581F00CA5FD7 /* XCTest.framework */; };
@@ -75,6 +76,7 @@
 		F0CEF4BB19D7A723000DCA2D /* JPModelMap.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = A5EDA95EBBE6A4266E22038F /* JPModelMap.h */; };
 		F0CEF4BC19D7A723000DCA2D /* JPModelMapManager.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = A5EDA643D16679EFC2700DF4 /* JPModelMapManager.h */; };
 		F0CEF4BD19D7A72F000DCA2D /* JPViewPlan.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = A5EDADF6BF14300090AD2FB8 /* JPViewPlan.h */; };
+		F0CEF4C219D8F298000DCA2D /* JPTextField.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = A5EDA1D71E372C3AE9DD5858 /* JPTextField.h */; };
 		F0F1C655190B8C1D00F2022F /* JPModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDA63E6F12F963F79F559B /* JPModel.m */; };
 		F0F1C656190B8C1F00F2022F /* JPModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDA63E6F12F963F79F559B /* JPModel.m */; };
 		F0F1C66A191C988600F2022F /* UIColor+JPKitAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDADDA4C4D8AD6B46783EA /* UIColor+JPKitAdditions.m */; };
@@ -98,6 +100,7 @@
 			dstPath = "include/${PRODUCT_NAME}";
 			dstSubfolderSpec = 16;
 			files = (
+				F0CEF4C219D8F298000DCA2D /* JPTextField.h in CopyFiles */,
 				F0CEF4BD19D7A72F000DCA2D /* JPViewPlan.h in CopyFiles */,
 				F0CEF4A619D7A723000DCA2D /* JPKit.h in CopyFiles */,
 				F0CEF4A719D7A723000DCA2D /* JPNavigationController.h in CopyFiles */,
@@ -131,10 +134,12 @@
 		A5EDA03525B3C62DE1E1BC7D /* JPViewPlan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPViewPlan.m; sourceTree = "<group>"; };
 		A5EDA0B01C30C489FBEB99DE /* NSDictionary+JPKitAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+JPKitAdditions.m"; sourceTree = "<group>"; };
 		A5EDA17D64E1024B3A217626 /* UIView+JPKitAdditions_FrameShortcuts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JPKitAdditions_FrameShortcuts.m"; sourceTree = "<group>"; };
+		A5EDA1D71E372C3AE9DD5858 /* JPTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPTextField.h; sourceTree = "<group>"; };
 		A5EDA1D9BA12F07C30444100 /* UIView+JPKitAdditions_FrameShortcuts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JPKitAdditions_FrameShortcuts.h"; sourceTree = "<group>"; };
 		A5EDA2605EACB8A6E9786383 /* Tests_JPViewPlan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tests_JPViewPlan.m; sourceTree = "<group>"; };
 		A5EDA29D9525131DAFCE5B0E /* Tests_UIColor_JPKitAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tests_UIColor_JPKitAdditions.m; sourceTree = "<group>"; };
 		A5EDA2A1ED1DC5068ECE431D /* JPKitTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPKitTest.h; sourceTree = "<group>"; };
+		A5EDA2E44F37F2CEF3061405 /* JPTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPTextField.m; sourceTree = "<group>"; };
 		A5EDA3E553B1ED851D3840CD /* NSObject+JPKitAdditions_Reflection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JPKitAdditions_Reflection.m"; sourceTree = "<group>"; };
 		A5EDA424601C3B3B481DBFD3 /* JPTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPTabBarController.h; sourceTree = "<group>"; };
 		A5EDA444DD9D7A9F2BCC16E8 /* Tests_JPModels.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tests_JPModels.m; sourceTree = "<group>"; };
@@ -216,6 +221,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A5EDA0CEC9150E2746B5CB91 /* JPTextField */ = {
+			isa = PBXGroup;
+			children = (
+				A5EDA2E44F37F2CEF3061405 /* JPTextField.m */,
+				A5EDA1D71E372C3AE9DD5858 /* JPTextField.h */,
+			);
+			path = JPTextField;
+			sourceTree = "<group>";
+		};
 		A5EDA34E299E095276E14075 /* JPModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -272,6 +286,7 @@
 			children = (
 				A5EDA8C797D26DD6C6BC1DC3 /* JPNavigation */,
 				A5EDA7AC081E4D8D6CFA3EA2 /* JPTabBar */,
+				A5EDA0CEC9150E2746B5CB91 /* JPTextField */,
 			);
 			path = JPControls;
 			sourceTree = "<group>";
@@ -566,6 +581,7 @@
 				A5EDA20D7F7D5AF79BC8FBF3 /* JPNavigationController.m in Sources */,
 				A5EDA5C7871EBDB618EF4581 /* UIViewController+JPKitAdditions.m in Sources */,
 				A5EDAEB30D00E61D99248B25 /* UIViewController+JPNavigationController.m in Sources */,
+				A5EDAFE4A026859208A8A83C /* JPTextField.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

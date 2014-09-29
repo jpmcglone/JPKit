@@ -6,3 +6,5 @@
 #import "JPTabBar.h"
 #import "JPTabBarController.h"
 #import "JPTabBarItem.h"
+
+#import "JPTextField.h"
