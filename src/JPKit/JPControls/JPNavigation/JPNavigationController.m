@@ -12,6 +12,8 @@ static CGFloat const kJPNavigationControllerAnimationDuration = 0.214;
 @implementation JPNavigationController {
     UIView *_containerView;
     BOOL _animating;
+
+    UIButton *_backButton;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -22,9 +24,23 @@ static CGFloat const kJPNavigationControllerAnimationDuration = 0.214;
         _popDirection = JPNavigationControllerDirectionRight;
         _dismissesAutomatically = YES;
         [self createContainerView];
-        // TODO: add back button and (optional) title label
+        [self createBackButton];
+        // TODO: add (optional) title label
     }
     return self;
+}
+
+- (void)createBackButton
+{
+    // TODO: graphics, animations
+    _backButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [_backButton setTitle:@"back" forState:UIControlStateNormal];
+    [_backButton addTarget:self action:@selector(popViewController) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:_backButton];
+
+    [_backButton sizeToFit];
+    _backButton.jp_origin = CGPointMake(20, 20);
+    _backButton.autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleLeftMargin;
 }
 
 - (void)createContainerView
@@ -103,6 +119,8 @@ static CGFloat const kJPNavigationControllerAnimationDuration = 0.214;
                          direction:(JPNavigationControllerDirection)direction
                         completion:(void (^)(void))completion
 {
+    // TODO: disable view when transitioning?
+
     [_containerView addSubview:viewController.view];
     viewController.view.frame = _containerView.bounds;
     viewController.view.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
@@ -228,6 +246,10 @@ static CGFloat const kJPNavigationControllerAnimationDuration = 0.214;
     }
 
     if(viewController == nil || [self.childViewControllers containsObject:viewController]) {
+        if (viewController == nil) {
+            NSLog(@"viewController was nil");
+        }
+
         NSUInteger count = self.childViewControllers.count;
         // we can assume based on the previous logic that this will always resolve
         UIViewController *underTopViewController = count > 1 ? self.childViewControllers[count - 2] : nil;
