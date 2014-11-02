@@ -24,14 +24,14 @@
                 id value = info[key];
                 Class propertyClass = [[self class] jp_classForPropertyKey:propertyKey];
                 if ([JPModel jp_isOrPrecedesClass:propertyClass]) {
-                    value = [[propertyClass alloc] initWithInfo:value];
+                    value = [(JPModel *)[propertyClass alloc] initWithInfo:value];
                 } else if ([value isKindOfClass:[NSArray class]]&& [NSArray jp_isOrPrecedesClass:propertyClass]) {
                     NSString *classString = [[self class] specs][key][@"class"] ?: nil;
                     Class objClass = NSClassFromString(classString);
                     if (objClass != nil) {
                         NSMutableArray *newArray = [[NSMutableArray alloc] initWithCapacity:[value count]];
                         for (id i in value) {
-                            id obj = [[objClass alloc] initWithInfo:i];
+                            id obj = [(JPModel *)[objClass alloc] initWithInfo:i];
                             [newArray addObject:obj];
                         }
                         value = newArray;
