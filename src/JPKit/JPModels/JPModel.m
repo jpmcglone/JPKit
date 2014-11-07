@@ -9,11 +9,6 @@
 
 @implementation JPModel
 
-+ (NSDictionary *)specs
-{
-    return nil;
-}
-
 - (void)createModelFromInfo:(id)info
 {
     if ([info isKindOfClass:[NSDictionary class]]) {
@@ -62,6 +57,27 @@
         [self createModelFromInfo:(id)info];
     }
     return self;
+}
+
++ (NSDictionary *)specs
+{
+    static NSMutableDictionary *overrideMaps = nil;
+    if (!overrideMaps) {
+        overrideMaps = [[NSMutableDictionary alloc] init];
+    }
+    Class c = [self class];
+    if (overrideMaps[c] == nil) {
+        NSDictionary *overrides = [self overrides];
+        if (overrides) {
+            overrideMaps[c] = overrides;
+        }
+    }
+    return overrideMaps[c];
+}
+
++ (NSDictionary *)overrides
+{
+    return nil;
 }
 
 @end

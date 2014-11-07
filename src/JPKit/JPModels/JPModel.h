@@ -24,7 +24,7 @@
 // @{@"children":@{@"class":@"Person",@"isPlural":@(YES),@"name":@"theChildren"},
 //   @"spouse":@{@"class":@"Person"}}
 // -- defaults -- class:class in model, isPlural:NO, name:name in data
-+ (NSDictionary *)specs;
++ (NSDictionary *)overrides;
 
 - (id)initWithInfo:(id)info;
 
