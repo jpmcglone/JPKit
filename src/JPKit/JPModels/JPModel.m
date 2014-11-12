@@ -65,7 +65,7 @@
     if (!overrideMaps) {
         overrideMaps = [[NSMutableDictionary alloc] init];
     }
-    Class c = [self class];
+    Class<NSCopying> c = [self class];
     if (overrideMaps[c] == nil) {
         NSDictionary *overrides = [self overrides];
         if (overrides) {
