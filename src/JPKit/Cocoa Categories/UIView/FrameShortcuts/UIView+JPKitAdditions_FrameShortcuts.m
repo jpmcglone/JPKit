@@ -26,7 +26,9 @@ static char const *const jp_updatingFrameKey = "jp_updatingFrameKey";
 
 - (void)setJp_origin:(CGPoint)origin
 {
-    self.jp_viewPlan.origin = origin;
+    CGRect frame = self.frame;
+    frame.origin = origin;
+    self.jp_viewPlan.frame = frame;
     [self commitViewPlanIfNotUpdating];
 }
 
@@ -38,7 +40,9 @@ static char const *const jp_updatingFrameKey = "jp_updatingFrameKey";
 
 - (void)setJp_size:(CGSize)size
 {
-    self.jp_viewPlan.size = size;
+    CGRect frame = self.frame;
+    frame.size = size;
+    self.jp_viewPlan.frame = frame;
     [self commitViewPlanIfNotUpdating];
 }
 
@@ -50,8 +54,7 @@ static char const *const jp_updatingFrameKey = "jp_updatingFrameKey";
 
 - (void)setJp_x:(CGFloat)x
 {
-    self.jp_viewPlan.x = x;
-    [self commitViewPlanIfNotUpdating];
+    self.jp_origin = CGPointMake(x, self.jp_y);
 }
 
 #pragma mark - y
@@ -62,8 +65,7 @@ static char const *const jp_updatingFrameKey = "jp_updatingFrameKey";
 
 - (void)setJp_y:(CGFloat)y
 {
-    self.jp_viewPlan.y = y;
-    [self commitViewPlanIfNotUpdating];
+    self.jp_origin = CGPointMake(self.jp_x, y);
 }
 
 #pragma mark - width
@@ -74,8 +76,7 @@ static char const *const jp_updatingFrameKey = "jp_updatingFrameKey";
 
 - (void)setJp_width:(CGFloat)width
 {
-    self.jp_viewPlan.width = width;
-    [self commitViewPlanIfNotUpdating];
+    self.jp_size = CGSizeMake(width, self.jp_height);
 }
 
 #pragma mark - height
@@ -86,8 +87,7 @@ static char const *const jp_updatingFrameKey = "jp_updatingFrameKey";
 
 - (void)setJp_height:(CGFloat)height
 {
-    self.jp_viewPlan.height = height;
-    [self commitViewPlanIfNotUpdating];
+    self.jp_size = CGSizeMake(self.jp_width, height);
 }
 
 #pragma mark - Frame alias helpers 
