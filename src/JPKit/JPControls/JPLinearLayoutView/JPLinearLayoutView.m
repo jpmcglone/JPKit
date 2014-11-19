@@ -67,10 +67,15 @@
 
 - (void)internalLayoutSubviews
 {
-    // Vertical
-    // TODO: horizontal
+    // TODO: not stretched. stacked.
+    BOOL vertical = _orientation == JPLinearLayoutViewOrientationVertical;
+
     CGFloat weightSum = [self calculatedWeightSum];
-    CGFloat selfHeight = self.contentSize.height - _padding.top - _padding.bottom;
+
+    CGFloat selfMax = vertical ?
+            self.contentSize.height - _padding.top - _padding.bottom :
+            self.contentSize.width - _padding.left - _padding.right;
+
     CGFloat totalPositiveSpace = 0;
 
     CGRect constrainedRect = CGRectZero;
@@ -79,55 +84,71 @@
 
     for (JPLinearLayoutItem *item in _items) {
         if (item.view) {
-            CGAffineTransform transform = item.view.transform;
-            CATransform3D layerTransform = item.view.layer.transform;
-            item.view.transform = transform;
-            item.view.layer.transform = layerTransform;
-
             if (item.autoSizes) {
                 item.view.jp_size = [item.view sizeThatFits:constrainedRect.size];
             }
-
-            item.view.transform = transform;
-            item.view.layer.transform = layerTransform;
-
             if (item.weight > 0) {
-                totalPositiveSpace += item.weight * selfHeight / weightSum;
+                totalPositiveSpace += item.weight * selfMax / weightSum;
             } else {
-                totalPositiveSpace += item.view.jp_height + item.margin.top + item.margin.bottom;
+                totalPositiveSpace += vertical ?
+                        item.view.jp_height + item.margin.top + item.margin.bottom :
+                        item.view.jp_width + item.margin.left + item.margin.right;
             }
         }
     }
 
-    CGFloat totalNegativeSpace = selfHeight - totalPositiveSpace;
+    CGFloat totalNegativeSpace = selfMax - totalPositiveSpace;
 
     CGFloat offset = _padding.top;
     for (JPLinearLayoutItem *item in _items) {
-        CGFloat calculatedHeight = item.weight > 0 ? item.weight * totalNegativeSpace / weightSum : item.view.jp_height;
-        offset += item.margin.top;
+        // TODO: optimize
+        CGFloat length = vertical ? item.view.jp_height : item.view.jp_width;
+        CGFloat calculatedLength = item.weight > 0 ? item.weight * totalNegativeSpace / weightSum : length;
+        offset += vertical ? item.margin.top : item.margin.left;
 
         if (item.view) {
             if (item.weight > 0) {
-                item.view.jp_height = calculatedHeight;
+                if (vertical) {
+                    item.view.jp_height = calculatedLength;
+                } else {
+                    item.view.jp_width = calculatedLength;
+                }
             }
-            item.view.jp_y = offset;
+
+            if (vertical) {
+                item.view.jp_y = offset;
+            } else {
+                item.view.jp_x = offset;
+            }
 
             switch(item.alignment) {
                 case JPLinearLayoutAlignmentLeft:
              // case JPLinearLayoutAlignmentTop:
-                    item.view.jp_x = _padding.left + item.margin.left;
+                    if (vertical) {
+                        item.view.jp_x = _padding.left + item.margin.left;
+                    } else {
+                        item.view.jp_y = _padding.top + item.margin.top;
+                    }
                     break;
                 case JPLinearLayoutAlignmentRight:
              // case JPLinearLayoutAlignmentBottom:
-                    item.view.jp_right = self.contentSize.width - _padding.right - item.margin.right;
+                    if (vertical) {
+                        item.view.jp_right = self.contentSize.width - _padding.right - item.margin.right;
+                    } else {
+                        item.view.jp_bottom = self.contentSize.height - _padding.bottom - item.margin.bottom;
+                    }
                     break;
                 case JPLinearLayoutAlignmentCenter:
                 default:
-                    item.view.center = CGPointMake(self.contentSize.width * 0.5, item.view.center.y);
+                    if (vertical) {
+                        item.view.center = CGPointMake(self.contentSize.width * 0.5, item.view.center.y);
+                    } else {
+                        item.view.center = CGPointMake(item.view.center.y, self.contentSize.height * 0.5);
+                    }
             }
         }
-        offset += calculatedHeight;
-        offset += item.margin.bottom;
+        offset += calculatedLength;
+        offset += vertical ? item.margin.bottom : item.margin.right;
     }
 }
 
