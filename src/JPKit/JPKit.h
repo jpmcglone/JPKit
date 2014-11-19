@@ -8,3 +8,6 @@
 #import "JPTabBarItem.h"
 
 #import "JPTextField.h"
+
+#import "JPLinearLayoutView.h"
+#import "JPLinearLayoutItem.h"

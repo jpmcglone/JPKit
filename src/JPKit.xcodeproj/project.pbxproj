@@ -10,6 +10,7 @@
 		A5EDA00FB591ED4DEAD02B97 /* JPModelMapManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDA595D6DC2C539224D378 /* JPModelMapManager.m */; };
 		A5EDA04898D5A53B98B05C4F /* JPKitTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDA9FDEEBD20B7C1B225BD /* JPKitTest.m */; };
 		A5EDA0774857A4DE8C34051C /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDA84CBEE40DEB41A19DCD /* Person.m */; };
+		A5EDA0E68A205F98701D5E3D /* JPLinearLayoutView.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDA5EDE4EF71FF85AF0FA5 /* JPLinearLayoutView.m */; };
 		A5EDA12147A7CA27CFEB00B3 /* NSObject+JPKitAdditions_AutoDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDAEC92AB1A4E2A0A239E3 /* NSObject+JPKitAdditions_AutoDescription.m */; };
 		A5EDA1611514B8D7BAE3163D /* JPTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDAAF8C5D134DFC963B40A /* JPTabBarController.m */; };
 		A5EDA1DC65DD2C07BC2E4272 /* UIView+JPKitAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDAE3C2AEB56F8306F655B /* UIView+JPKitAdditions.m */; };
@@ -21,6 +22,7 @@
 		A5EDA2CDF3210C29611C6C53 /* Tests_UIColor_JPKitAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDA29D9525131DAFCE5B0E /* Tests_UIColor_JPKitAdditions.m */; };
 		A5EDA36067D6694274F39363 /* JPModelMapManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDA595D6DC2C539224D378 /* JPModelMapManager.m */; };
 		A5EDA361C34962083D70962D /* Tests_JPModels.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDA444DD9D7A9F2BCC16E8 /* Tests_JPModels.m */; };
+		A5EDA3DC9E4C2BF3C5881087 /* JPLinearLayoutItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDA04E75B2DEB4C3EAA3D3 /* JPLinearLayoutItem.m */; };
 		A5EDA4422B3806322B7E5E0A /* JPTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDA8F49435948AF76F42EF /* JPTabBarItem.m */; };
 		A5EDA456C020CB260E6AF684 /* JPKitTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDA9FDEEBD20B7C1B225BD /* JPKitTest.m */; };
 		A5EDA48642D001611B5D6EE9 /* NSObject+JPKitAdditions_Reflection.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDA3E553B1ED851D3840CD /* NSObject+JPKitAdditions_Reflection.m */; };
@@ -51,6 +53,8 @@
 		F04A63861903581F00CA5FD7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F04A63851903581F00CA5FD7 /* UIKit.framework */; };
 		F04A63891903581F00CA5FD7 /* libJPKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F04A63711903581E00CA5FD7 /* libJPKit.a */; };
 		F04A638F1903581F00CA5FD7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F04A638D1903581F00CA5FD7 /* InfoPlist.strings */; };
+		F09C7E8E1A1C190600CEEBD3 /* JPLinearLayoutView.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = A5EDAACB5AD1C9DCB6E004DB /* JPLinearLayoutView.h */; };
+		F09C7E8F1A1C190600CEEBD3 /* JPLinearLayoutItem.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = A5EDA4B58915AF6B67E16DD3 /* JPLinearLayoutItem.h */; };
 		F0AC84DB1908E542009971BB /* people.json in Resources */ = {isa = PBXBuildFile; fileRef = F0AC84DA1908E542009971BB /* people.json */; };
 		F0CEF4A619D7A723000DCA2D /* JPKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = F04A63791903581E00CA5FD7 /* JPKit.h */; };
 		F0CEF4A719D7A723000DCA2D /* JPNavigationController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = A5EDAE2189D2D5EFF372DE0F /* JPNavigationController.h */; };
@@ -100,6 +104,8 @@
 			dstPath = "include/${PRODUCT_NAME}";
 			dstSubfolderSpec = 16;
 			files = (
+				F09C7E8E1A1C190600CEEBD3 /* JPLinearLayoutView.h in CopyFiles */,
+				F09C7E8F1A1C190600CEEBD3 /* JPLinearLayoutItem.h in CopyFiles */,
 				F0CEF4C219D8F298000DCA2D /* JPTextField.h in CopyFiles */,
 				F0CEF4BD19D7A72F000DCA2D /* JPViewPlan.h in CopyFiles */,
 				F0CEF4A619D7A723000DCA2D /* JPKit.h in CopyFiles */,
@@ -132,6 +138,7 @@
 
 /* Begin PBXFileReference section */
 		A5EDA03525B3C62DE1E1BC7D /* JPViewPlan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPViewPlan.m; sourceTree = "<group>"; };
+		A5EDA04E75B2DEB4C3EAA3D3 /* JPLinearLayoutItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPLinearLayoutItem.m; sourceTree = "<group>"; };
 		A5EDA0B01C30C489FBEB99DE /* NSDictionary+JPKitAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+JPKitAdditions.m"; sourceTree = "<group>"; };
 		A5EDA17D64E1024B3A217626 /* UIView+JPKitAdditions_FrameShortcuts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JPKitAdditions_FrameShortcuts.m"; sourceTree = "<group>"; };
 		A5EDA1D71E372C3AE9DD5858 /* JPTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPTextField.h; sourceTree = "<group>"; };
@@ -146,11 +153,13 @@
 		A5EDA455A36C932A65FD80DD /* JPTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPTabBar.m; sourceTree = "<group>"; };
 		A5EDA47EDFE2B44D31829311 /* UILabel+JPKitAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+JPKitAdditions.m"; sourceTree = "<group>"; };
 		A5EDA48505B195EA17046FEA /* UIViewController+JPKitAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+JPKitAdditions.h"; sourceTree = "<group>"; };
+		A5EDA4B58915AF6B67E16DD3 /* JPLinearLayoutItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPLinearLayoutItem.h; sourceTree = "<group>"; };
 		A5EDA5049479239B2118AF79 /* JPNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPNavigationController.m; sourceTree = "<group>"; };
 		A5EDA535775D01699FD79333 /* UIViewController+JPKitAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+JPKitAdditions.m"; sourceTree = "<group>"; };
 		A5EDA567216FD3C50B514220 /* JPTabBarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPTabBarItem.h; sourceTree = "<group>"; };
 		A5EDA595A1A3569EDFD9E7D8 /* UIView+JPKitAdditions_LayerShortcuts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JPKitAdditions_LayerShortcuts.m"; sourceTree = "<group>"; };
 		A5EDA595D6DC2C539224D378 /* JPModelMapManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPModelMapManager.m; sourceTree = "<group>"; };
+		A5EDA5EDE4EF71FF85AF0FA5 /* JPLinearLayoutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPLinearLayoutView.m; sourceTree = "<group>"; };
 		A5EDA5FC2E763BB630E183DC /* UILabel+JPKitAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+JPKitAdditions.h"; sourceTree = "<group>"; };
 		A5EDA63E6F12F963F79F559B /* JPModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPModel.m; sourceTree = "<group>"; };
 		A5EDA643D16679EFC2700DF4 /* JPModelMapManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPModelMapManager.h; sourceTree = "<group>"; };
@@ -165,6 +174,7 @@
 		A5EDA98A8DF272291653FC63 /* NSObject+JPKitAdditions_Tagging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+JPKitAdditions_Tagging.h"; sourceTree = "<group>"; };
 		A5EDA9FDEEBD20B7C1B225BD /* JPKitTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPKitTest.m; sourceTree = "<group>"; };
 		A5EDAA44A679332EBA11E176 /* Tests_UIView_JPKitFrameAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tests_UIView_JPKitFrameAdditions.m; sourceTree = "<group>"; };
+		A5EDAACB5AD1C9DCB6E004DB /* JPLinearLayoutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPLinearLayoutView.h; sourceTree = "<group>"; };
 		A5EDAAF8C5D134DFC963B40A /* JPTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPTabBarController.m; sourceTree = "<group>"; };
 		A5EDAB435EF601F57ADFE413 /* Tests_NSObject_JPKitAdditions_AutoDescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tests_NSObject_JPKitAdditions_AutoDescription.m; sourceTree = "<group>"; };
 		A5EDAB59128F6F49E7CC691F /* NSObject+JPKitAdditions_Tagging.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JPKitAdditions_Tagging.m"; sourceTree = "<group>"; };
@@ -266,6 +276,17 @@
 			path = UIColor;
 			sourceTree = "<group>";
 		};
+		A5EDA463A57E90B79F70D713 /* JPLinearLayoutView */ = {
+			isa = PBXGroup;
+			children = (
+				A5EDA5EDE4EF71FF85AF0FA5 /* JPLinearLayoutView.m */,
+				A5EDAACB5AD1C9DCB6E004DB /* JPLinearLayoutView.h */,
+				A5EDA04E75B2DEB4C3EAA3D3 /* JPLinearLayoutItem.m */,
+				A5EDA4B58915AF6B67E16DD3 /* JPLinearLayoutItem.h */,
+			);
+			path = JPLinearLayoutView;
+			sourceTree = "<group>";
+		};
 		A5EDA4F60B65AF406C0D7DF7 /* NSObject */ = {
 			isa = PBXGroup;
 			children = (
@@ -287,6 +308,7 @@
 				A5EDA8C797D26DD6C6BC1DC3 /* JPNavigation */,
 				A5EDA7AC081E4D8D6CFA3EA2 /* JPTabBar */,
 				A5EDA0CEC9150E2746B5CB91 /* JPTextField */,
+				A5EDA463A57E90B79F70D713 /* JPLinearLayoutView */,
 			);
 			path = JPControls;
 			sourceTree = "<group>";
@@ -582,6 +604,8 @@
 				A5EDA5C7871EBDB618EF4581 /* UIViewController+JPKitAdditions.m in Sources */,
 				A5EDAEB30D00E61D99248B25 /* UIViewController+JPNavigationController.m in Sources */,
 				A5EDAFE4A026859208A8A83C /* JPTextField.m in Sources */,
+				A5EDA0E68A205F98701D5E3D /* JPLinearLayoutView.m in Sources */,
+				A5EDA3DC9E4C2BF3C5881087 /* JPLinearLayoutItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
