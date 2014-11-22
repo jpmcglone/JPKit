@@ -138,8 +138,18 @@
                         item.view.jp_bottom = self.contentSize.height - _padding.bottom - item.margin.bottom;
                     }
                     break;
+                case JPLinearLayoutAlignmentStretch:
+                    if (vertical) {
+                        item.view.jp_width = self.jp_width - _padding.left - _padding.right - item.margin.left - item.margin.right;
+                        item.view.jp_left = _padding.left + item.margin.left;
+                    } else {
+                        item.view.jp_height = self.jp_height - _padding.top - _padding.bottom - item.margin.top - item.margin.bottom;
+                        item.view.jp_left = _padding.top + item.margin.top;
+                    }
+                    break;
                 case JPLinearLayoutAlignmentCenter:
                 default:
+                    // TODO: take padding into consideration?
                     if (vertical) {
                         item.view.center = CGPointMake(self.contentSize.width * 0.5, item.view.center.y);
                     } else {

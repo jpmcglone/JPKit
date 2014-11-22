@@ -8,6 +8,7 @@
 typedef NS_ENUM(NSUInteger, JPLinearLayoutAlignment) {
     // Both
             JPLinearLayoutAlignmentCenter,
+            JPLinearLayoutAlignmentStretch,
 
     // Horizontal
             JPLinearLayoutAlignmentLeft,
@@ -16,6 +17,7 @@ typedef NS_ENUM(NSUInteger, JPLinearLayoutAlignment) {
     // Vertical - purely semantic
             JPLinearLayoutAlignmentTop = JPLinearLayoutAlignmentLeft,
             JPLinearLayoutAlignmentBottom = JPLinearLayoutAlignmentRight
+
 };
 
 @interface JPLinearLayoutItem : NSObject
