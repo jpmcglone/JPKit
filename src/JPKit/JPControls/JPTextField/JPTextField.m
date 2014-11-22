@@ -24,10 +24,23 @@
     [self setNeedsLayout];
 }
 
+- (void)resetPlaceholderColor
+{
+    if (_placeholderColor && self.placeholder) {
+        self.attributedPlaceholder = [[NSAttributedString alloc] initWithString:self.placeholder attributes:@{NSForegroundColorAttributeName : _placeholderColor}];
+    }
+}
+
 - (void)setPlaceholderColor:(UIColor *)placeholderColor
 {
     _placeholderColor = [placeholderColor copy];
-    self.attributedPlaceholder = [[NSAttributedString alloc] initWithString:self.placeholder attributes:@{NSForegroundColorAttributeName: placeholderColor}];
+    [self resetPlaceholderColor];
+}
+
+- (void)setPlaceholder:(NSString *)placeholder
+{
+    [super setPlaceholder:placeholder];
+    [self resetPlaceholderColor];
 }
 
 - (CGRect)textRectForBounds:(CGRect)bounds
