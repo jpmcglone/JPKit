@@ -4,3 +4,4 @@
 #import "NSObject+JPKitAdditions.h"
 #import "NSDictionary+JPKitAdditions.h"
 #import "NSString+JPKitAdditions.h"
+#import "NSMutableDictionary+JPKitAdditions.h"
