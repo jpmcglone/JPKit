@@ -67,7 +67,8 @@
 
 - (void)internalLayoutSubviews
 {
-    // TODO: not stretched. stacked.
+    self.contentSize = self.bounds.size;
+
     BOOL vertical = _orientation == JPLinearLayoutViewOrientationVertical;
 
     CGFloat weightSum = [self calculatedWeightSum];
@@ -77,6 +78,7 @@
             self.contentSize.width - _padding.left - _padding.right;
 
     CGFloat totalPositiveSpace = 0;
+    CGFloat totalNegativeSpace = 0;
 
     CGRect constrainedRect = CGRectZero;
     constrainedRect.size = self.contentSize;
@@ -97,7 +99,17 @@
         }
     }
 
-    CGFloat totalNegativeSpace = selfMax - totalPositiveSpace;
+    // if normal, set content size. quick hack to make stacked version work
+    if (_mode == JPLinearLayoutViewModeNormal) {
+        if (vertical) {
+            self.contentSize = CGSizeMake(self.contentSize.width, totalPositiveSpace);
+        } else {
+            self.contentSize = CGSizeMake(totalPositiveSpace, self.contentSize.height);
+        }
+    } else {
+        // this only matters in stretched mode
+        totalNegativeSpace = selfMax - totalPositiveSpace;
+    }
 
     CGFloat offset = _padding.top;
     for (JPLinearLayoutItem *item in _items) {
