@@ -94,7 +94,7 @@ static CGFloat const kJPNavigationControllerAnimationDuration = 0.214;
     return frame;
 }
 
-- (JPNavigationControllerDirection)directionOppositeOfDirection:(JPNavigationControllerDirection)direction
++ (JPNavigationControllerDirection)directionOppositeOfDirection:(JPNavigationControllerDirection)direction
 {
     switch (direction) {
         case JPNavigationControllerDirectionNone:
@@ -135,7 +135,7 @@ static CGFloat const kJPNavigationControllerAnimationDuration = 0.214;
                         animations:^{
                             // Old VC final frame
                             if (_visibleViewController != nil) {
-                                JPNavigationControllerDirection oppositeDirection = [self directionOppositeOfDirection:direction];
+                                JPNavigationControllerDirection oppositeDirection = [[self class] directionOppositeOfDirection:direction];
                                 _visibleViewController.view.frame = [self offsetFrameForDirection:oppositeDirection];
                                 _visibleViewController.view.alpha = _fadesWhenTransitioningOut ? 0 : 1;
                             }

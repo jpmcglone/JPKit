@@ -64,4 +64,6 @@ typedef NS_ENUM(NSUInteger, JPNavigationControllerDirection) {
 - (void)popToRootViewControllerAnimated:(BOOL)animated;
 - (void)popToRootViewController;
 
++ (JPNavigationControllerDirection)directionOppositeOfDirection:(JPNavigationControllerDirection)direction;
+
 @end
