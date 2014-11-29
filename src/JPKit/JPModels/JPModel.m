@@ -31,6 +31,10 @@
                         }
                         value = newArray;
                     }
+                } else if ([NSDate jp_isOrPrecedesClass:propertyClass]) {
+                    // TODO: other things than just UNIX timestamp
+                    NSTimeInterval timeInterval = [info[key] doubleValue];
+                    value = [NSDate dateWithTimeIntervalSince1970:timeInterval];
                 }
                 [self setValue:value
                         forKey:propertyKey];
