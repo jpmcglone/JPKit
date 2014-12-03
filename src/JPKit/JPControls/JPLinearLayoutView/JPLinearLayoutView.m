@@ -102,9 +102,9 @@
     // if normal, set content size. quick hack to make stacked version work
     if (_mode == JPLinearLayoutViewModeNormal) {
         if (vertical) {
-            self.contentSize = CGSizeMake(self.contentSize.width, totalPositiveSpace);
+            self.contentSize = CGSizeMake(self.contentSize.width, totalPositiveSpace + _padding.top + _padding.bottom);
         } else {
-            self.contentSize = CGSizeMake(totalPositiveSpace, self.contentSize.height);
+            self.contentSize = CGSizeMake(totalPositiveSpace + _padding.left + _padding.right, self.contentSize.height);
         }
     } else {
         // this only matters in stretched mode
