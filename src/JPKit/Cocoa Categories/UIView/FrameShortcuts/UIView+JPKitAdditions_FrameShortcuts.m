@@ -140,6 +140,31 @@ static char const *const jp_updatingFrameKey = "jp_updatingFrameKey";
     return CGPointMake(self.jp_width * 0.5, self.jp_height * 0.5);
 }
 
+- (CGPoint)jp_center
+{
+    return self.center;
+}
+
+- (CGFloat)jp_centerX
+{
+    return self.center.x;
+}
+
+- (void)setJp_centerX:(CGFloat)jp_centerX
+{
+    self.center = CGPointMake(jp_centerX, self.center.y);
+}
+
+- (CGFloat)jp_centerY
+{
+    return self.center.y;
+}
+
+- (void)setJp_centerY:(CGFloat)jp_centerY
+{
+    self.center = CGPointMake(self.center.x, jp_centerY);
+}
+
 #pragma mark - JP Update Frames
 #pragma mark - begin / end updates
 - (void)jp_beginFrameUpdates

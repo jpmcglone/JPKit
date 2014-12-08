@@ -22,6 +22,10 @@
 
 @property (nonatomic, readonly) CGPoint jp_middle;
 
+@property (nonatomic, readwrite) CGPoint jp_center; // alias for .center
+@property (nonatomic, readwrite) CGFloat jp_centerX;
+@property (nonatomic, readwrite) CGFloat jp_centerY;
+
 - (void)jp_beginFrameUpdates;
 - (void)jp_endFrameUpdates;
 
