@@ -40,4 +40,16 @@
     [self jp_animateWithDuration:duration animations:animations completion:nil];
 }
 
+- (id)jp_firstResponder
+{
+    if (self.isFirstResponder) {
+        return self;
+    }
+    for (UIView *subview in self.subviews) {
+        id responder = [subview jp_firstResponder];
+        if (responder) return responder;
+    }
+    return nil;
+}
+
 @end

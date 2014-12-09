@@ -15,6 +15,8 @@ CGRectFromEdgeInsets(CGRect rect, UIEdgeInsets edgeInsets) {
 
 @interface UIView (JPKitAdditions)
 
+@property (nonatomic, readonly) id jp_firstResponder;
+
 // If delay and duration is 0, it does it on the same run loop
 + (void)jp_animateWithDuration:(NSTimeInterval)duration delay:(NSTimeInterval)delay options:(UIViewAnimationOptions)options animations:(void (^)(void))animations completion:(void (^)(BOOL finished))completion;
 + (void)jp_animateWithDuration:(NSTimeInterval)duration delay:(NSTimeInterval)delay animations:(void (^)(void))animations completion:(void (^)(BOOL finished))completion;
