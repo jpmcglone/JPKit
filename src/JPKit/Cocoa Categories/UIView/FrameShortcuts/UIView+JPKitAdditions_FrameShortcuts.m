@@ -145,6 +145,11 @@ static char const *const jp_updatingFrameKey = "jp_updatingFrameKey";
     return self.center;
 }
 
+- (void)setJp_center:(CGPoint)jp_center
+{
+    self.center = jp_center;
+}
+
 - (CGFloat)jp_centerX
 {
     return self.center.x;
