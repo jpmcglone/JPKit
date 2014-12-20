@@ -154,7 +154,6 @@ static CGFloat const kJPNavigationControllerAnimationDuration = 0.3141592;
 
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated completion:(void (^)(void))completion notifiesDelegate:(BOOL)notifiesDelegate
 {
-    NSLog(@"Pushing to %@",viewController);
     if (notifiesDelegate && [_delegate respondsToSelector:@selector(navigationController:shouldPushViewController:)]) {
         BOOL shouldPush = [_delegate navigationController:self shouldPushViewController:viewController];
         if (!shouldPush) {
@@ -229,7 +228,6 @@ static CGFloat const kJPNavigationControllerAnimationDuration = 0.3141592;
 
 - (void)popToViewController:(UIViewController *)viewController animated:(BOOL)animated completion:(void (^)(void))completion notifiesDelegate:(BOOL)notifiesDelegate
 {
-    NSLog(@"Popping to %@", viewController);
     if (notifiesDelegate && [_delegate respondsToSelector:@selector(navigationController:shouldPopToViewController:)]) {
         BOOL shouldPop = [_delegate navigationController:self shouldPopToViewController:viewController];
         if (!shouldPop) {
