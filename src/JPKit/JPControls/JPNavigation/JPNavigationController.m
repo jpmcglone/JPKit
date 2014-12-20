@@ -7,12 +7,10 @@
 #import "UIView+JPKitAdditions.h"
 #import "UIViewController+JPKitAdditions.h"
 
-static CGFloat const kJPNavigationControllerAnimationDuration = 0.214;
+static CGFloat const kJPNavigationControllerAnimationDuration = 0.3141592;
 
 @implementation JPNavigationController {
     UIView *_containerView;
-    BOOL _animating;
-
     UIButton *_backButton;
 }
 
@@ -148,7 +146,6 @@ static CGFloat const kJPNavigationControllerAnimationDuration = 0.214;
                         (BOOL finished) {
                             [_visibleViewController.view removeFromSuperview];
                             _visibleViewController = viewController;
-                            _animating = NO;
                             if (completion) {
                                 completion();
                             }
