@@ -55,7 +55,7 @@
 - (void)setItems:(NSArray *)items
 {
     _oldItems = _items;
-    _items = items;
+    _items = [items copy];
     [self refresh];
 }
 

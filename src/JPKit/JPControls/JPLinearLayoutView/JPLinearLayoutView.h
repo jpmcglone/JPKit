@@ -21,7 +21,7 @@ typedef NS_ENUM(NSUInteger, JPLinearLayoutViewMode) {
 
 @property (nonatomic, assign) JPLinearLayoutViewMode mode; // defaults to normal
 @property (nonatomic, assign) JPLinearLayoutViewOrientation *orientation; // defaults to vertical
-@property (nonatomic, strong) NSArray *items;
+@property (nonatomic, copy) NSArray *items;
 @property (nonatomic, assign) CGFloat weightSum; // set to 0 for automatic mode that uses the items weights intelligently
 
 - (void)refresh;
