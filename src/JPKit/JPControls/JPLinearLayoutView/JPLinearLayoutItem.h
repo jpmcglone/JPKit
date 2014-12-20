@@ -40,4 +40,6 @@ typedef NS_ENUM(NSUInteger, JPLinearLayoutAlignment) {
 
 @property (nonatomic, assign) BOOL autoSizes; // defaults to YES
 
+@property (nonatomic, weak) UIView *sizingView; // this sets the view you want to use for sizing. This is especially useful for views with contentViews.
+
 @end

@@ -87,7 +87,7 @@
     for (JPLinearLayoutItem *item in _items) {
         if (item.view) {
             if (item.autoSizes) {
-                item.view.jp_size = [item.view sizeThatFits:constrainedRect.size];
+                item.view.jp_size = [item.sizingView ?: item.view sizeThatFits:constrainedRect.size];
             }
             if (item.weight > 0) {
                 totalPositiveSpace += item.weight * selfMax / weightSum;
