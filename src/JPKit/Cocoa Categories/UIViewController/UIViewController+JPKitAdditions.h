@@ -10,6 +10,8 @@
 
 @interface UIViewController (JPKitAdditions)
 
+- (void)jp_endEditing;
+
 - (void)jp_presentInView:(UIView *)inView animated:(BOOL)animated completion:(void (^)(BOOL finished))completion;
 - (void)jp_presentInView:(UIView *)view animated:(BOOL)animated;
 - (void)jp_presentInView:(UIView *)view;

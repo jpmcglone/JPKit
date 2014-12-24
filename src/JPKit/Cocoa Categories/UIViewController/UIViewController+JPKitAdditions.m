@@ -8,6 +8,11 @@
 
 @implementation UIViewController (JPKitAdditions)
 
+- (void)jp_endEditing
+{
+    [self.view endEditing:YES];
+}
+
 - (void)jp_presentInView:(UIView *)inView animated:(BOOL)animated completion:(void (^)(BOOL finished))completion
 {
     if (inView == nil) {
