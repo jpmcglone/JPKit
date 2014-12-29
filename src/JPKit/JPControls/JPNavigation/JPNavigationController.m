@@ -241,10 +241,6 @@ static CGFloat const kJPNavigationControllerAnimationDuration = 0.3141592;
     }
 
     if(viewController == nil || [self.childViewControllers containsObject:viewController]) {
-        if (viewController == nil) {
-            NSLog(@"viewController was nil");
-        }
-
         NSUInteger count = self.childViewControllers.count;
         // we can assume based on the previous logic that this will always resolve
         UIViewController *underTopViewController = count > 1 ? self.childViewControllers[count - 2] : nil;
