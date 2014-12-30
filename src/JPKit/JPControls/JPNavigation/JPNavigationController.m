@@ -122,9 +122,9 @@ static CGFloat const kJPNavigationControllerAnimationDuration = 0.3141592;
     // forces the first responder to go away before the animations even begin
     [self.view endEditing:NO];
 
-    [_containerView addSubview:viewController.view];
     viewController.view.frame = _containerView.bounds;
     viewController.view.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
+    [_containerView addSubview:viewController.view];
 
     // New VC initial frame
     viewController.view.frame = [self offsetFrameForDirection:direction];
