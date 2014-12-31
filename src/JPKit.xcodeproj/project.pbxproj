@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		40C10D141A54940600C1E648 /* UITableView+UITableView_JPKitAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C10D131A54940600C1E648 /* UITableView+UITableView_JPKitAdditions.m */; };
+		40C10D151A54940600C1E648 /* UITableView+UITableView_JPKitAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C10D131A54940600C1E648 /* UITableView+UITableView_JPKitAdditions.m */; };
+		40C10D161A54944900C1E648 /* UITableView+UITableView_JPKitAdditions.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 40C10D121A54940600C1E648 /* UITableView+UITableView_JPKitAdditions.h */; };
 		A5EDA00FB591ED4DEAD02B97 /* JPModelMapManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDA595D6DC2C539224D378 /* JPModelMapManager.m */; };
 		A5EDA04898D5A53B98B05C4F /* JPKitTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDA9FDEEBD20B7C1B225BD /* JPKitTest.m */; };
 		A5EDA052E8AE8C2C34DB0805 /* UITextField+JPKitAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDA325B86794F4EB198C0B /* UITextField+JPKitAdditions.m */; };
@@ -108,6 +111,7 @@
 			dstPath = "include/${PRODUCT_NAME}";
 			dstSubfolderSpec = 16;
 			files = (
+				40C10D161A54944900C1E648 /* UITableView+UITableView_JPKitAdditions.h in CopyFiles */,
 				F03397101A21A5B9001B3CE2 /* UITextField+JPKitAdditions.h in CopyFiles */,
 				F033970F1A21A1E6001B3CE2 /* NSMutableDictionary+JPKitAdditions.h in CopyFiles */,
 				F09C7E8E1A1C190600CEEBD3 /* JPLinearLayoutView.h in CopyFiles */,
@@ -143,6 +147,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		40C10D121A54940600C1E648 /* UITableView+UITableView_JPKitAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+UITableView_JPKitAdditions.h"; sourceTree = "<group>"; };
+		40C10D131A54940600C1E648 /* UITableView+UITableView_JPKitAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+UITableView_JPKitAdditions.m"; sourceTree = "<group>"; };
 		A5EDA03525B3C62DE1E1BC7D /* JPViewPlan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPViewPlan.m; sourceTree = "<group>"; };
 		A5EDA04E75B2DEB4C3EAA3D3 /* JPLinearLayoutItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPLinearLayoutItem.m; sourceTree = "<group>"; };
 		A5EDA0B01C30C489FBEB99DE /* NSDictionary+JPKitAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+JPKitAdditions.m"; sourceTree = "<group>"; };
@@ -241,6 +247,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		40C10D111A54939300C1E648 /* UITableView */ = {
+			isa = PBXGroup;
+			children = (
+				40C10D121A54940600C1E648 /* UITableView+UITableView_JPKitAdditions.h */,
+				40C10D131A54940600C1E648 /* UITableView+UITableView_JPKitAdditions.m */,
+			);
+			path = UITableView;
+			sourceTree = "<group>";
+		};
 		A5EDA0CEC9150E2746B5CB91 /* JPTextField */ = {
 			isa = PBXGroup;
 			children = (
@@ -369,6 +384,7 @@
 		A5EDA95C5F05BE3888F6EE36 /* Cocoa Categories */ = {
 			isa = PBXGroup;
 			children = (
+				40C10D111A54939300C1E648 /* UITableView */,
 				F08D677419B018C900214381 /* JPCocoaCategories.h */,
 				A5EDA3BF5451B1DEC127C746 /* NSDictionary */,
 				A5EDA4F60B65AF406C0D7DF7 /* NSObject */,
@@ -619,6 +635,7 @@
 				A5EDA1611514B8D7BAE3163D /* JPTabBarController.m in Sources */,
 				A5EDA651C06B8A6EA80DC53A /* JPTabBar.m in Sources */,
 				A5EDA4422B3806322B7E5E0A /* JPTabBarItem.m in Sources */,
+				40C10D141A54940600C1E648 /* UITableView+UITableView_JPKitAdditions.m in Sources */,
 				A5EDA7A6036D0270AAF6A1F5 /* UILabel+JPKitAdditions.m in Sources */,
 				A5EDACEB65203A083AE98089 /* NSObject+JPKitAdditions_Tagging.m in Sources */,
 				A5EDA1DC65DD2C07BC2E4272 /* UIView+JPKitAdditions.m in Sources */,
@@ -637,6 +654,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40C10D151A54940600C1E648 /* UITableView+UITableView_JPKitAdditions.m in Sources */,
 				A5EDA8C77DB30D03CF46B418 /* UIView+JPKitAdditions_FrameShortcuts.m in Sources */,
 				A5EDAFBA8D81883AC63A3307 /* Tests_UIView_JPKitFrameAdditions.m in Sources */,
 				F0F1C655190B8C1D00F2022F /* JPModel.m in Sources */,
