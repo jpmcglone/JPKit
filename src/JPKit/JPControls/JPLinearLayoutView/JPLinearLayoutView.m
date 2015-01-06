@@ -10,6 +10,7 @@
 
 @implementation JPLinearLayoutView {
     NSArray *_oldItems;
+    CGPoint _contentOffset;
 }
 
 - (void)removeOldItems
@@ -33,10 +34,14 @@
 
 - (void)refresh
 {
+    _contentOffset = self.contentOffset;
     [self removeOldItems];
     [self addNewItems];
     [self internalLayoutSubviews];
     // TODO: animate all of this O_O
+
+    // TODO: if it's still applicable
+    self.contentOffset = _contentOffset;
 }
 
 - (CGFloat)calculatedWeightSum
