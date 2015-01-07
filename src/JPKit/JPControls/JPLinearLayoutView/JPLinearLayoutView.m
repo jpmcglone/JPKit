@@ -57,6 +57,12 @@
     return weightSum;
 }
 
+- (void)setPadding:(UIEdgeInsets)padding
+{
+    _padding = padding;
+    [self refresh];
+}
+
 - (void)setItems:(NSArray *)items
 {
     _oldItems = _items;
