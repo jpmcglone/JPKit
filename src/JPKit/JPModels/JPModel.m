@@ -36,8 +36,9 @@
                     NSTimeInterval timeInterval = [info[key] doubleValue];
                     value = [NSDate dateWithTimeIntervalSince1970:timeInterval];
                 }
-                [self setValue:value
-                        forKey:propertyKey];
+                if (value != [NSNull null]) {
+                    [self setValue:value forKey:propertyKey];
+                }
             } else {
                 if (_other == nil) {
                     _other = [[NSMutableDictionary alloc] init];
