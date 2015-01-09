@@ -26,7 +26,7 @@
     // TODO: animate
     for(JPLinearLayoutItem *item in _items) {
         if (item.view) {
-            [self addSubview:item.view];
+            [self insertSubview:item.view atIndex:0];
         }
     }
 }
