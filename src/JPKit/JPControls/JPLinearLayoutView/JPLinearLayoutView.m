@@ -121,7 +121,7 @@
         totalNegativeSpace = selfMax - totalPositiveSpace;
     }
 
-    CGFloat offset = _padding.top;
+    CGFloat offset = vertical ? _padding.top : _padding.left;
     for (JPLinearLayoutItem *item in _items) {
         // TODO: optimize
         CGFloat length = vertical ? item.view.jp_height : item.view.jp_width;
@@ -175,7 +175,7 @@
                     if (vertical) {
                         item.view.center = CGPointMake(self.contentSize.width * 0.5, item.view.center.y);
                     } else {
-                        item.view.center = CGPointMake(item.view.center.y, self.contentSize.height * 0.5);
+                        item.view.center = CGPointMake(item.view.center.x, self.contentSize.height * 0.5);
                     }
             }
         }
