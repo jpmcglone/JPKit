@@ -10,6 +10,8 @@
 
 @interface UIViewController (JPKitAdditions)
 
+@property (nonatomic, assign) BOOL jp_showsNavigationBar; // tells a JPNavigationController whether or not to show the navigation bar
+
 - (void)jp_endEditing;
 
 - (void)jp_presentInView:(UIView *)inView animated:(BOOL)animated completion:(void (^)(BOOL finished))completion;

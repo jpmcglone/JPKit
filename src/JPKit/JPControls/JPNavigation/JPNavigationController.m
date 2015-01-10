@@ -6,12 +6,16 @@
 #import "JPNavigationController.h"
 #import "UIView+JPKitAdditions.h"
 #import "UIViewController+JPKitAdditions.h"
+#import "UILabel+JPKitAdditions.h"
 
 static CGFloat const kJPNavigationControllerAnimationDuration = 0.3141592;
 
 @implementation JPNavigationController {
     UIView *_containerView;
     UIButton *_backButton;
+    UIVisualEffectView *_navigationBar;
+    UILabel *_titleLabel;
+    BOOL _showsNavigationBar;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -23,9 +27,20 @@ static CGFloat const kJPNavigationControllerAnimationDuration = 0.3141592;
         _dismissesAutomatically = YES;
         [self createContainerView];
         [self createBackButton];
+        [self createTitleLabel];
+
         // TODO: add (optional) title label
     }
     return self;
+}
+
+- (void)createNavigationBarIfNeeded
+{
+    if (!_navigationBar) {
+        UIBlurEffect *blurEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
+        _navigationBar = [[UIVisualEffectView alloc] initWithEffect:blurEffect];
+        [self.view insertSubview:_navigationBar aboveSubview:_containerView];
+    }
 }
 
 - (void)createBackButton
@@ -37,8 +52,22 @@ static CGFloat const kJPNavigationControllerAnimationDuration = 0.3141592;
     [self.view addSubview:_backButton];
 
     [_backButton sizeToFit];
-    _backButton.jp_origin = CGPointMake(20, 20);
+    _backButton.jp_x = 20;
+    _backButton.jp_centerY = 100 * 0.5 + 9;
     _backButton.autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleLeftMargin;
+}
+
+- (void)createTitleLabel
+{
+    _titleLabel = [[UILabel alloc] init];
+    // TODO: make the title animate to read it all..
+    _titleLabel.minimumScaleFactor = 0.9;
+    _titleLabel.numberOfLines = 2;
+    _titleLabel.adjustsFontSizeToFitWidth = YES;
+    _titleLabel.font = [UIFont fontWithName:@"Avenir-Heavy" size:24];
+    _titleLabel.textColor = [UIColor whiteColor];
+    _titleLabel.textAlignment = NSTextAlignmentCenter;
+    [self.view addSubview:_titleLabel];
 }
 
 - (void)createContainerView
@@ -47,7 +76,11 @@ static CGFloat const kJPNavigationControllerAnimationDuration = 0.3141592;
     _containerView.backgroundColor = [UIColor clearColor];
     _containerView.clipsToBounds = NO;
     _containerView.frame = self.view.bounds;
-    _containerView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
+    _containerView.autoresizingMask =
+            UIViewAutoresizingFlexibleTopMargin |
+            UIViewAutoresizingFlexibleBottomMargin |
+            UIViewAutoresizingFlexibleLeftMargin |
+            UIViewAutoresizingFlexibleRightMargin;
     [self.view addSubview:_containerView];
 }
 
@@ -112,6 +145,129 @@ static CGFloat const kJPNavigationControllerAnimationDuration = 0.3141592;
     }
 }
 
+- (void)setShowsNavigationBar:(BOOL)showsNavigationBar
+{
+    [self showNavigationBar:showsNavigationBar animated:NO];
+}
+
+- (void)showNavigationBar:(BOOL)show
+{
+    [self showNavigationBar:show animated:YES];
+}
+
+- (void)showNavigationBar:(BOOL)show animated:(BOOL)animated
+{
+    if (_showsNavigationBar == show) {
+        return;
+    }
+
+    _showsNavigationBar = show;
+
+    // TODO: animate in / out of view
+    if (show) {
+        [self createNavigationBarIfNeeded];
+        _navigationBar.alpha = 0;
+
+        CGRect endFrame = CGRectMake(0, 0, self.view.jp_width, 100);
+        CGRect startFrame = endFrame;
+
+        _navigationBar.frame = startFrame;
+        [UIView jp_animateWithDuration:animated ? kJPNavigationControllerAnimationDuration : 0
+                            animations:^{
+                                _navigationBar.alpha = 1;
+                                _navigationBar.frame = endFrame;
+                            }];
+    } else {
+        [UIView jp_animateWithDuration:kJPNavigationControllerAnimationDuration
+                         animations:^{
+                             _navigationBar.alpha = 0;
+                         } completion:^(BOOL finished) {
+                    if (finished) {
+                        [_navigationBar removeFromSuperview];
+                        _navigationBar = nil;
+                    }
+                }];
+    }
+}
+
+- (void)setJp_showsNavigationBar:(BOOL)jp_showsNavigationBar
+{
+    [self showNavigationBar:jp_showsNavigationBar animated:YES];
+}
+
+- (void)showTitle:(NSString *)title inDirection:(JPNavigationControllerDirection)direction
+{
+    [self hideTitleInDirection:[[self class] directionOppositeOfDirection:direction]];
+
+    if (title == nil) {
+        return;
+    }
+
+    [self createTitleLabel];
+    _titleLabel.text = title;
+    [self transitionTitleLabel:_titleLabel direction:direction remove:NO];
+}
+
+- (void)hideTitleInDirection:(JPNavigationControllerDirection)direction
+{
+    if (_titleLabel == nil) {
+        return;
+    }
+
+    [self transitionTitleLabel:_titleLabel direction:direction remove:YES];
+}
+
+- (void)layoutTitleLabel
+{
+    // TODO: make a back button configurable and a close button, too
+    CGFloat left = _backButton.jp_right + 10;
+    CGFloat right = self.view.jp_width - 20;
+    _titleLabel.jp_size = [_titleLabel jp_sizeConstrainedToSize:CGSizeMake(right - left, CGFLOAT_MAX)];
+
+    _titleLabel.jp_centerY = 100 * 0.5 + 9;
+    _titleLabel.jp_centerX = self.view.jp_middle.x;
+    if (_titleLabel.jp_left < left) {
+        _titleLabel.jp_left = left;
+    }
+
+}
+
+- (void)transitionTitleLabel:(UILabel *)label direction:(JPNavigationControllerDirection)direction remove:(BOOL)remove
+{
+    [self layoutTitleLabel];
+
+    CGRect frame = label.frame;
+    CGRect newFrame = frame;
+    label.alpha = remove ? 1 : 0;
+    CGFloat offset = 40;
+    switch (direction) {
+        case JPNavigationControllerDirectionUp:
+            newFrame.origin.y += offset;
+            break;
+        case JPNavigationControllerDirectionDown:
+            newFrame.origin.y -= offset;
+            break;
+        case JPNavigationControllerDirectionLeft:
+            newFrame.origin.x += offset;
+            break;
+        case JPNavigationControllerDirectionRight:
+            newFrame.origin.x -= offset;
+            break;
+        default:
+            break;
+    }
+    label.frame = remove ? frame : newFrame;
+
+    [UIView animateWithDuration:kJPNavigationControllerAnimationDuration animations:^{
+        label.alpha = remove ? 0 : 1;
+        label.frame = remove ? newFrame : frame;
+    } completion:^(BOOL finished) {
+        if (remove) {
+            [label removeFromSuperview];
+        }
+    }];
+}
+
 - (void)transitionToViewController:(UIViewController *)viewController
                           animated:(BOOL)animated
                          direction:(JPNavigationControllerDirection)direction
@@ -153,6 +309,12 @@ static CGFloat const kJPNavigationControllerAnimationDuration = 0.3141592;
                                 completion();
                             }
                         }];
+    // Show the navigation bar or not
+    BOOL shouldAnimateNavigationBar = self.childViewControllers.count > 0;
+    [self showNavigationBar:viewController.jp_showsNavigationBar animated:animated && shouldAnimateNavigationBar];
+
+    // Show the viewController's title
+    [self showTitle:viewController.title inDirection:direction];
 }
 
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated completion:(void (^)(void))completion notifiesDelegate:(BOOL)notifiesDelegate

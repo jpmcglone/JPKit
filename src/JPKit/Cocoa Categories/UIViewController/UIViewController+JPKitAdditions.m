@@ -5,8 +5,22 @@
 
 #import "UIViewController+JPKitAdditions.h"
 #import "UIView+JPKitAdditions.h"
+#import <objc/runtime.h>
+
+#define kJPShowsNavigationBarKey @"jp_showsNavigationBar"
 
 @implementation UIViewController (JPKitAdditions)
+
+- (void)setJp_showsNavigationBar:(BOOL)showsNavigationBar
+{
+    objc_setAssociatedObject(self, kJPShowsNavigationBarKey, @(showsNavigationBar), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    self.parentViewController.jp_showsNavigationBar = showsNavigationBar;
+}
+
+- (BOOL)jp_showsNavigationBar
+{
+    return [objc_getAssociatedObject(self, kJPShowsNavigationBarKey) boolValue];
+}
 
 - (void)jp_endEditing
 {

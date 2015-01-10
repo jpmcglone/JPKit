@@ -34,6 +34,10 @@ typedef NS_ENUM(NSUInteger, JPNavigationControllerDirection) {
 
 @property (nonatomic, weak) id <JPNavigationControllerDelegate> delegate;
 
+@property (nonatomic, assign) BOOL showsNavigationBar;
+- (void)showNavigationBar:(BOOL)show animated:(BOOL)animated;
+- (void)showNavigationBar:(BOOL)show;
+
 // will automatically be sized and get an autoresizingMask, you can change after you set it I suppose
 @property (nonatomic, strong) UIView *backgroundView; // none by default, this view controller is clear
 
