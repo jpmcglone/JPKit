@@ -12,6 +12,16 @@
     NSArray *_oldItems;
 }
 
+- (id)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        self.clipsToBounds = NO;
+    }
+    return self;
+}
+
+
 - (void)removeOldItems
 {
     // TODO: animate?
