@@ -103,6 +103,13 @@ static CGFloat const kJPNavigationControllerAnimationDuration = 0.3141592;
     return rootViewController;
 }
 
+- (void)setTitle:(NSString *)title
+{
+    [super setTitle:title];
+    _titleLabel.text = title;
+    [self layoutTitleLabel];
+}
+
 - (CGRect)offsetFrameForDirection:(JPNavigationControllerDirection)direction
 {
     CGRect frame = _containerView.bounds;
@@ -198,11 +205,6 @@ static CGFloat const kJPNavigationControllerAnimationDuration = 0.3141592;
 - (void)showTitle:(NSString *)title inDirection:(JPNavigationControllerDirection)direction
 {
     [self hideTitleInDirection:[[self class] directionOppositeOfDirection:direction]];
-
-    if (title == nil) {
-        return;
-    }
-
     [self createTitleLabel];
     _titleLabel.text = title;
     [self transitionTitleLabel:_titleLabel direction:direction remove:NO];
@@ -229,7 +231,6 @@ static CGFloat const kJPNavigationControllerAnimationDuration = 0.3141592;
     if (_titleLabel.jp_left < left) {
         _titleLabel.jp_left = left;
     }
-
 }
 
 - (void)transitionTitleLabel:(UILabel *)label direction:(JPNavigationControllerDirection)direction remove:(BOOL)remove
@@ -262,8 +263,10 @@ static CGFloat const kJPNavigationControllerAnimationDuration = 0.3141592;
         label.alpha = remove ? 0 : 1;
         label.frame = remove ? newFrame : frame;
     } completion:^(BOOL finished) {
-        if (remove) {
-            [label removeFromSuperview];
+        if (finished) {
+            if (remove) {
+                [label removeFromSuperview];
+            }
         }
     }];
 }
