@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 JP McGlone. All rights reserved.
 //
 
-#import "UITableView+UITableView_JPKitAdditions.h"
+#import "UITableView+JPKitAdditions.h"
 
-@implementation UITableView (UITableView_JPKitAdditions)
+@implementation UITableView (JPKitAdditions)
 
 -(void)jp_scrollToTopAnimated:(BOOL)animated scrollFinished:(void (^)())scrollFinished
 {

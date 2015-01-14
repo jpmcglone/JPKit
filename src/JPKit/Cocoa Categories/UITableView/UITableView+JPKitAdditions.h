@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UITableView (UITableView_JPKitAdditions)
+@interface UITableView (JPKitAdditions)
 
 -(void)jp_scrollToRowAtIndexPath:(NSIndexPath *)indexPath
                 atScrollPosition:(UITableViewScrollPosition)scrollPosition

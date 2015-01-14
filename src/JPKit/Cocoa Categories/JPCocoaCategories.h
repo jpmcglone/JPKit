@@ -6,3 +6,4 @@
 #import "NSString+JPKitAdditions.h"
 #import "NSMutableDictionary+JPKitAdditions.h"
 #import "UITextField+JPKitAdditions.h"
+#import "UITableView+JPKitAdditions.h"
