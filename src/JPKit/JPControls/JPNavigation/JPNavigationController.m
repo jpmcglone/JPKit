@@ -9,6 +9,7 @@
 #import "UILabel+JPKitAdditions.h"
 
 static CGFloat const kJPNavigationControllerAnimationDuration = 0.3141592;
+static CGFloat const kJPNavigationControllerNavigationBarHeight = 75;
 
 @implementation JPNavigationController {
     UIView *_containerView;
@@ -53,7 +54,7 @@ static CGFloat const kJPNavigationControllerAnimationDuration = 0.3141592;
 
     [_backButton sizeToFit];
     _backButton.jp_x = 20;
-    _backButton.jp_centerY = 100 * 0.5 + 9;
+    _backButton.jp_centerY = kJPNavigationControllerNavigationBarHeight * 0.5 + 9;
     _backButton.autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleLeftMargin;
 }
 
@@ -175,7 +176,7 @@ static CGFloat const kJPNavigationControllerAnimationDuration = 0.3141592;
         [self createNavigationBarIfNeeded];
         _navigationBar.alpha = 0;
 
-        CGRect endFrame = CGRectMake(0, 0, self.view.jp_width, 100);
+        CGRect endFrame = CGRectMake(0, 0, self.view.jp_width, kJPNavigationControllerNavigationBarHeight);
         CGRect startFrame = endFrame;
 
         _navigationBar.frame = startFrame;
@@ -226,7 +227,7 @@ static CGFloat const kJPNavigationControllerAnimationDuration = 0.3141592;
     CGFloat right = self.view.jp_width - 20;
     _titleLabel.jp_size = [_titleLabel jp_sizeConstrainedToSize:CGSizeMake(right - left, CGFLOAT_MAX)];
 
-    _titleLabel.jp_centerY = 100 * 0.5 + 9;
+    _titleLabel.jp_centerY = kJPNavigationControllerNavigationBarHeight * 0.5 + 9;
     _titleLabel.jp_centerX = self.view.jp_middle.x;
     if (_titleLabel.jp_left < left) {
         _titleLabel.jp_left = left;
