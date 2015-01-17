@@ -278,6 +278,7 @@ static CGFloat const kJPNavigationControllerNavigationBarHeight = 75;
                         completion:(void (^)(void))completion
 {
     // TODO: disable view when transitioning?
+    _backButton.enabled = NO;
 
     // forces the first responder to go away before the animations even begin
     [self.view endEditing:NO];
@@ -307,6 +308,7 @@ static CGFloat const kJPNavigationControllerNavigationBarHeight = 75;
                         }
                         completion:^
                         (BOOL finished) {
+                            _backButton.enabled = YES;
                             [_visibleViewController.view removeFromSuperview];
                             _visibleViewController = viewController;
                             if (completion) {
