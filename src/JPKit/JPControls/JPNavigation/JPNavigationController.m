@@ -65,7 +65,7 @@ static CGFloat const kJPNavigationControllerNavigationBarHeight = 75;
     _titleLabel.minimumScaleFactor = 0.9;
     _titleLabel.numberOfLines = 2;
     _titleLabel.adjustsFontSizeToFitWidth = YES;
-    _titleLabel.font = [UIFont fontWithName:@"Avenir-Heavy" size:24];
+    _titleLabel.font = [UIFont fontWithName:@"Avenir-Heavy" size:20];
     _titleLabel.textColor = [UIColor whiteColor];
     _titleLabel.textAlignment = NSTextAlignmentCenter;
     [self.view addSubview:_titleLabel];
@@ -225,7 +225,7 @@ static CGFloat const kJPNavigationControllerNavigationBarHeight = 75;
     // TODO: make a back button configurable and a close button, too
     CGFloat left = _backButton.jp_right + 10;
     CGFloat right = self.view.jp_width - 20;
-    _titleLabel.jp_size = [_titleLabel jp_sizeConstrainedToSize:CGSizeMake(right - left, CGFLOAT_MAX)];
+    _titleLabel.jp_size = [_titleLabel jp_sizeConstrainedToSize:CGSizeMake(right - left, kJPNavigationControllerNavigationBarHeight - 20)];
 
     _titleLabel.jp_centerY = kJPNavigationControllerNavigationBarHeight * 0.5 + 9;
     _titleLabel.jp_centerX = self.view.jp_middle.x;
