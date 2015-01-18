@@ -24,7 +24,7 @@
 - (CGSize)jp_sizeWithFont:(UIFont *)font constrainedToSize:(CGSize)size
 {
     return [self boundingRectWithSize:size
-                              options:NSStringDrawingUsesLineFragmentOrigin
+                              options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading
                            attributes:@{NSFontAttributeName:font}
                               context:nil].size;
 }
