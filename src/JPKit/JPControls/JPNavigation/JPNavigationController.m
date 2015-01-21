@@ -8,7 +8,6 @@
 #import "UIViewController+JPKitAdditions.h"
 #import "UILabel+JPKitAdditions.h"
 
-static CGFloat const kJPNavigationControllerAnimationDuration = 0.3141592;
 static CGFloat const kJPNavigationControllerNavigationBarHeight = 75;
 
 @implementation JPNavigationController {

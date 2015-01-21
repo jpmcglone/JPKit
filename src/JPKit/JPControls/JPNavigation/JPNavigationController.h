@@ -5,6 +5,8 @@
 
 #import <UIKit/UIKit.h>
 
+static CGFloat const kJPNavigationControllerAnimationDuration = 0.3141592;
+
 typedef NS_ENUM(NSUInteger, JPNavigationControllerDirection) {
     JPNavigationControllerDirectionNone,
     JPNavigationControllerDirectionLeft,
