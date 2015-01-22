@@ -40,6 +40,9 @@ typedef NS_ENUM(NSUInteger, JPNavigationControllerDirection) {
 - (void)showNavigationBar:(BOOL)show animated:(BOOL)animated;
 - (void)showNavigationBar:(BOOL)show;
 
+// Let the user set a custom back button :D
+@property (nonatomic, strong) UIControl *backButton;
+
 // will automatically be sized and get an autoresizingMask, you can change after you set it I suppose
 @property (nonatomic, strong) UIView *backgroundView; // none by default, this view controller is clear
 

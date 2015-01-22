@@ -12,7 +12,6 @@ static CGFloat const kJPNavigationControllerNavigationBarHeight = 75;
 
 @implementation JPNavigationController {
     UIView *_containerView;
-    UIButton *_backButton;
     UIVisualEffectView *_navigationBar;
     UILabel *_titleLabel;
     BOOL _showsNavigationBar;
@@ -26,7 +25,7 @@ static CGFloat const kJPNavigationControllerNavigationBarHeight = 75;
         _popDirection = JPNavigationControllerDirectionRight;
         _dismissesAutomatically = YES;
         [self createContainerView];
-        [self createBackButton];
+        [self createDefaultBackButton];
         [self createTitleLabel];
 
         // TODO: add (optional) title label
@@ -43,18 +42,34 @@ static CGFloat const kJPNavigationControllerNavigationBarHeight = 75;
     }
 }
 
-- (void)createBackButton
+- (void)addBackButton
 {
-    // TODO: graphics, animations
-    _backButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [_backButton setTitle:@"back" forState:UIControlStateNormal];
     [_backButton addTarget:self action:@selector(popViewController) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:_backButton];
 
-    [_backButton sizeToFit];
+    _backButton.jp_size = [_backButton sizeThatFits:self.view.jp_size];
     _backButton.jp_x = 20;
     _backButton.jp_centerY = kJPNavigationControllerNavigationBarHeight * 0.5 + 9;
     _backButton.autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleLeftMargin;
+}
+
+- (void)setBackButton:(UIControl *)backButton
+{
+    [_backButton removeFromSuperview];
+
+    _backButton = backButton;
+    [self addBackButton];
+}
+
+- (void)createDefaultBackButton
+{
+    if (_backButton) {
+        return;
+    }
+    // TODO: graphics, animations
+    UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [backButton setTitle:@"back" forState:UIControlStateNormal];
+    self.backButton = backButton;
 }
 
 - (void)createTitleLabel
