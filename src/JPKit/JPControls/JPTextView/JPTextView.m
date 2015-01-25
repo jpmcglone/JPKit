@@ -12,8 +12,6 @@
     UILabel *_placeHolderLabel;
 }
 
-CGFloat const UI_PLACEHOLDER_TEXT_CHANGED_ANIMATION_DURATION = 0.25;
-
 - (void)dealloc
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
@@ -45,8 +43,7 @@ CGFloat const UI_PLACEHOLDER_TEXT_CHANGED_ANIMATION_DURATION = 0.25;
 
 - (id)initWithFrame:(CGRect)frame
 {
-    if( (self = [super initWithFrame:frame]) )
-    {
+    if ((self = [super initWithFrame:frame])) {
         [self setPlaceholder:@""];
         [self setPlaceholderColor:[UIColor lightGrayColor]];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textChanged:) name:UITextViewTextDidChangeNotification object:nil];
@@ -56,35 +53,30 @@ CGFloat const UI_PLACEHOLDER_TEXT_CHANGED_ANIMATION_DURATION = 0.25;
 
 - (void)textChanged:(NSNotification *)notification
 {
-    if([[self placeholder] length] == 0)
-    {
+    if ([[self placeholder] length] == 0) {
         return;
     }
 
-    [UIView animateWithDuration:UI_PLACEHOLDER_TEXT_CHANGED_ANIMATION_DURATION animations:^{
-        if([[self text] length] == 0)
-        {
-            [[self viewWithTag:999] setAlpha:1];
-        }
-        else
-        {
-            [[self viewWithTag:999] setAlpha:0];
-        }
-    }];
+    if ([[self text] length] == 0) {
+        [[self viewWithTag:999] setAlpha:1];
+    }
+    else {
+        [[self viewWithTag:999] setAlpha:0];
+    }
+
 }
 
-- (void)setText:(NSString *)text {
+- (void)setText:(NSString *)text
+{
     [super setText:text];
     [self textChanged:nil];
 }
 
 - (void)drawRect:(CGRect)rect
 {
-    if( [[self placeholder] length] > 0 )
-    {
-        if (_placeHolderLabel == nil )
-        {
-            _placeHolderLabel = [[UILabel alloc] initWithFrame:CGRectMake(8,8,self.bounds.size.width - 16,0)];
+    if ([[self placeholder] length] > 0) {
+        if (_placeHolderLabel == nil) {
+            _placeHolderLabel = [[UILabel alloc] initWithFrame:CGRectMake(8, 8, self.bounds.size.width - 16, 0)];
             _placeHolderLabel.lineBreakMode = NSLineBreakByWordWrapping;
             _placeHolderLabel.numberOfLines = 0;
             _placeHolderLabel.font = self.font;
@@ -100,8 +92,7 @@ CGFloat const UI_PLACEHOLDER_TEXT_CHANGED_ANIMATION_DURATION = 0.25;
         [self sendSubviewToBack:_placeHolderLabel];
     }
 
-    if( [[self text] length] == 0 && [[self placeholder] length] > 0 )
-    {
+    if ([[self text] length] == 0 && [[self placeholder] length] > 0) {
         [[self viewWithTag:999] setAlpha:1];
     }
 
