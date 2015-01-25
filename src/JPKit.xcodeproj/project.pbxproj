@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		4007E53C1A65F01600BF5E27 /* UITableView+JPKitAdditions.m in CopyFiles */ = {isa = PBXBuildFile; fileRef = 40C10D131A54940600C1E648 /* UITableView+JPKitAdditions.m */; };
+		404BE33B1A7465B400B1100A /* JPLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 404BE33A1A7465B400B1100A /* JPLabel.m */; };
+		404BE33C1A7465B400B1100A /* JPLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 404BE33A1A7465B400B1100A /* JPLabel.m */; };
+		404BE33F1A7465C800B1100A /* JPTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 404BE33E1A7465C800B1100A /* JPTextView.m */; };
+		404BE3401A7465C800B1100A /* JPTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 404BE33E1A7465C800B1100A /* JPTextView.m */; };
+		404BE3411A74683000B1100A /* JPLabel.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 404BE3391A7465B400B1100A /* JPLabel.h */; };
+		404BE3421A74683D00B1100A /* JPTextView.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 404BE33D1A7465C800B1100A /* JPTextView.h */; };
 		40C10D141A54940600C1E648 /* UITableView+JPKitAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C10D131A54940600C1E648 /* UITableView+JPKitAdditions.m */; };
 		40C10D151A54940600C1E648 /* UITableView+JPKitAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C10D131A54940600C1E648 /* UITableView+JPKitAdditions.m */; };
 		40C10D161A54944900C1E648 /* UITableView+JPKitAdditions.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 40C10D121A54940600C1E648 /* UITableView+JPKitAdditions.h */; };
@@ -112,6 +118,8 @@
 			dstPath = "include/${PRODUCT_NAME}";
 			dstSubfolderSpec = 16;
 			files = (
+				404BE3421A74683D00B1100A /* JPTextView.h in CopyFiles */,
+				404BE3411A74683000B1100A /* JPLabel.h in CopyFiles */,
 				4007E53C1A65F01600BF5E27 /* UITableView+JPKitAdditions.m in CopyFiles */,
 				40C10D161A54944900C1E648 /* UITableView+JPKitAdditions.h in CopyFiles */,
 				F03397101A21A5B9001B3CE2 /* UITextField+JPKitAdditions.h in CopyFiles */,
@@ -149,6 +157,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		404BE3391A7465B400B1100A /* JPLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPLabel.h; sourceTree = "<group>"; };
+		404BE33A1A7465B400B1100A /* JPLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPLabel.m; sourceTree = "<group>"; };
+		404BE33D1A7465C800B1100A /* JPTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPTextView.h; sourceTree = "<group>"; };
+		404BE33E1A7465C800B1100A /* JPTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPTextView.m; sourceTree = "<group>"; };
 		40C10D121A54940600C1E648 /* UITableView+JPKitAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+JPKitAdditions.h"; sourceTree = "<group>"; };
 		40C10D131A54940600C1E648 /* UITableView+JPKitAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+JPKitAdditions.m"; sourceTree = "<group>"; };
 		A5EDA03525B3C62DE1E1BC7D /* JPViewPlan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPViewPlan.m; sourceTree = "<group>"; };
@@ -249,6 +261,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		404BE3371A74659400B1100A /* JPTextView */ = {
+			isa = PBXGroup;
+			children = (
+				404BE33D1A7465C800B1100A /* JPTextView.h */,
+				404BE33E1A7465C800B1100A /* JPTextView.m */,
+			);
+			path = JPTextView;
+			sourceTree = "<group>";
+		};
+		404BE3381A74659C00B1100A /* JPLabel */ = {
+			isa = PBXGroup;
+			children = (
+				404BE3391A7465B400B1100A /* JPLabel.h */,
+				404BE33A1A7465B400B1100A /* JPLabel.m */,
+			);
+			path = JPLabel;
+			sourceTree = "<group>";
+		};
 		40C10D111A54939300C1E648 /* UITableView */ = {
 			isa = PBXGroup;
 			children = (
@@ -334,6 +364,8 @@
 		A5EDA4FE3A105549EB547C10 /* JPControls */ = {
 			isa = PBXGroup;
 			children = (
+				404BE3381A74659C00B1100A /* JPLabel */,
+				404BE3371A74659400B1100A /* JPTextView */,
 				A5EDA8C797D26DD6C6BC1DC3 /* JPNavigation */,
 				A5EDA7AC081E4D8D6CFA3EA2 /* JPTabBar */,
 				A5EDA0CEC9150E2746B5CB91 /* JPTextField */,
@@ -625,6 +657,7 @@
 				A5EDAC5D7A8744D9B25F627F /* JPModelMap.m in Sources */,
 				A5EDAF61328F76F2C180EFE7 /* NSString+JPKitAdditions.m in Sources */,
 				A5EDA00FB591ED4DEAD02B97 /* JPModelMapManager.m in Sources */,
+				404BE33B1A7465B400B1100A /* JPLabel.m in Sources */,
 				A5EDA2593991E581AA0770EF /* JPModelManager.m in Sources */,
 				A5EDAC724751D64EC8D1F475 /* NSObject+JPKitAdditions_AutoDescription.m in Sources */,
 				A5EDAAB8D4360C736591C64C /* NSObject+JPKitAdditions_Reflection.m in Sources */,
@@ -635,6 +668,7 @@
 				A5EDA04898D5A53B98B05C4F /* JPKitTest.m in Sources */,
 				A5EDAD2D5A1D2A44830B4F57 /* UIView+JPKitAdditions_LayerShortcuts.m in Sources */,
 				A5EDA1611514B8D7BAE3163D /* JPTabBarController.m in Sources */,
+				404BE33F1A7465C800B1100A /* JPTextView.m in Sources */,
 				A5EDA651C06B8A6EA80DC53A /* JPTabBar.m in Sources */,
 				A5EDA4422B3806322B7E5E0A /* JPTabBarItem.m in Sources */,
 				40C10D141A54940600C1E648 /* UITableView+JPKitAdditions.m in Sources */,
@@ -661,6 +695,7 @@
 				A5EDAFBA8D81883AC63A3307 /* Tests_UIView_JPKitFrameAdditions.m in Sources */,
 				F0F1C655190B8C1D00F2022F /* JPModel.m in Sources */,
 				A5EDAFFC4EDB36415E7B40E9 /* JPModelMap.m in Sources */,
+				404BE33C1A7465B400B1100A /* JPLabel.m in Sources */,
 				A5EDA80EC888ABB508B8B3C3 /* NSString+JPKitAdditions.m in Sources */,
 				A5EDA361C34962083D70962D /* Tests_JPModels.m in Sources */,
 				A5EDA0774857A4DE8C34051C /* Person.m in Sources */,
@@ -670,6 +705,7 @@
 				A5EDA651501C4E11712B6032 /* Tests_NSObject_JPKitAdditions_AutoDescription.m in Sources */,
 				A5EDA48642D001611B5D6EE9 /* NSObject+JPKitAdditions_Reflection.m in Sources */,
 				A5EDA55528D7F02D19DFE4AB /* JPViewPlan.m in Sources */,
+				404BE3401A7465C800B1100A /* JPTextView.m in Sources */,
 				A5EDA2ABCD7655B65F50B2E8 /* Tests_JPViewPlan.m in Sources */,
 				A5EDAA0CE9D648D1D54B0B33 /* NSDictionary+JPKitAdditions.m in Sources */,
 				A5EDA456C020CB260E6AF684 /* JPKitTest.m in Sources */,
