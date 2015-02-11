@@ -4,6 +4,7 @@
 //
 
 #import "UIView+JPKitAdditions.h"
+#import "UIScrollView+JPKitAdditions.h"
 
 @implementation UIView (JPKitAdditions)
 
@@ -38,6 +39,33 @@
 + (void)jp_animateWithDuration:(NSTimeInterval)duration animations:(void (^)(void))animations
 {
     [self jp_animateWithDuration:duration animations:animations completion:nil];
+}
+
+- (UIView *)jp_oldestAncestorOfClass:(Class)theClass
+{
+    UIView *ancestorWithClass = nil;
+    UIView *view = self;
+    do {
+        if ([view isKindOfClass:theClass]) {
+            ancestorWithClass = view;
+        }
+        view = view.superview;
+    } while (view);
+
+    return ancestorWithClass;
+}
+
+- (UIView *)jp_youngestAncestorOfClass:(Class)theClass
+{
+    UIView *view = self;
+    do {
+        if ([view isKindOfClass:theClass]) {
+            return view;
+        }
+        view = view.superview;
+    } while (view);
+
+    return nil;
 }
 
 - (void)_jp_addAllSubviewsToArray:(NSMutableArray *)array fromView:(UIView *)view
@@ -78,7 +106,12 @@
     if (nextFirstResponder) {
         [nextFirstResponder becomeFirstResponder];
     } else {
+        UIView *firstResponder = self.jp_firstResponder;
         [self endEditing:YES];
+        UIScrollView *scrollView = [firstResponder jp_youngestAncestorOfClass:[UIScrollView class]];
+        if (scrollView) {
+            [scrollView jp_scrollToBottom];
+        }
     }
 }
 
@@ -88,7 +121,12 @@
     if (previousFirstResponder) {
         [previousFirstResponder becomeFirstResponder];
     } else {
+        UIView *firstResponder = self.jp_firstResponder;
         [self endEditing:YES];
+        UIScrollView *scrollView = [firstResponder jp_youngestAncestorOfClass:[UIScrollView class]];
+        if (scrollView) {
+            [scrollView jp_scrollToTop];
+        }
     }
 }
 

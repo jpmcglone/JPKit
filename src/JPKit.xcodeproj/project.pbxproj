@@ -14,6 +14,7 @@
 		404BE3401A7465C800B1100A /* JPTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 404BE33E1A7465C800B1100A /* JPTextView.m */; };
 		404BE3411A74683000B1100A /* JPLabel.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 404BE3391A7465B400B1100A /* JPLabel.h */; };
 		404BE3421A74683D00B1100A /* JPTextView.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 404BE33D1A7465C800B1100A /* JPTextView.h */; };
+		40A8689D1A8B3F7600044F0A /* UIScrollView+JPKitAdditions.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = BAED32CB7940FDBDD3B0A7BA /* UIScrollView+JPKitAdditions.h */; };
 		40C10D141A54940600C1E648 /* UITableView+JPKitAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C10D131A54940600C1E648 /* UITableView+JPKitAdditions.m */; };
 		40C10D151A54940600C1E648 /* UITableView+JPKitAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C10D131A54940600C1E648 /* UITableView+JPKitAdditions.m */; };
 		40C10D161A54944900C1E648 /* UITableView+JPKitAdditions.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 40C10D121A54940600C1E648 /* UITableView+JPKitAdditions.h */; };
@@ -59,6 +60,8 @@
 		A5EDAFBA8D81883AC63A3307 /* Tests_UIView_JPKitFrameAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDAA44A679332EBA11E176 /* Tests_UIView_JPKitFrameAdditions.m */; };
 		A5EDAFE4A026859208A8A83C /* JPTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDA2E44F37F2CEF3061405 /* JPTextField.m */; };
 		A5EDAFFC4EDB36415E7B40E9 /* JPModelMap.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDA8CE7524EB485F57E63E /* JPModelMap.m */; };
+		BAED323C921884C7CDAAC905 /* UIScrollView+JPKitAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BAED32F16E3BFB698C0AC0A4 /* UIScrollView+JPKitAdditions.m */; };
+		BAED379AEA390F2FE47907A3 /* UIScrollView+JPKitAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BAED32F16E3BFB698C0AC0A4 /* UIScrollView+JPKitAdditions.m */; };
 		F033970F1A21A1E6001B3CE2 /* NSMutableDictionary+JPKitAdditions.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = A5EDA107C96F634F901C8BE3 /* NSMutableDictionary+JPKitAdditions.h */; };
 		F03397101A21A5B9001B3CE2 /* UITextField+JPKitAdditions.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = A5EDAF65E28833670AC88B78 /* UITextField+JPKitAdditions.h */; };
 		F04A63751903581E00CA5FD7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F04A63741903581E00CA5FD7 /* Foundation.framework */; };
@@ -118,6 +121,7 @@
 			dstPath = "include/${PRODUCT_NAME}";
 			dstSubfolderSpec = 16;
 			files = (
+				40A8689D1A8B3F7600044F0A /* UIScrollView+JPKitAdditions.h in CopyFiles */,
 				404BE3421A74683D00B1100A /* JPTextView.h in CopyFiles */,
 				404BE3411A74683000B1100A /* JPLabel.h in CopyFiles */,
 				4007E53C1A65F01600BF5E27 /* UITableView+JPKitAdditions.m in CopyFiles */,
@@ -222,6 +226,8 @@
 		A5EDAF7B3C805B77294A426A /* JPModelManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPModelManager.h; sourceTree = "<group>"; };
 		A5EDAF82FF3BA72D12B71F6E /* UIView+JPKitAdditions_LayerShortcuts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JPKitAdditions_LayerShortcuts.h"; sourceTree = "<group>"; };
 		A5EDAFB426F11349D2E0A717 /* NSMutableDictionary+JPKitAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+JPKitAdditions.m"; sourceTree = "<group>"; };
+		BAED32CB7940FDBDD3B0A7BA /* UIScrollView+JPKitAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+JPKitAdditions.h"; sourceTree = "<group>"; };
+		BAED32F16E3BFB698C0AC0A4 /* UIScrollView+JPKitAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+JPKitAdditions.m"; sourceTree = "<group>"; };
 		F04A63711903581E00CA5FD7 /* libJPKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libJPKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F04A63741903581E00CA5FD7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F04A63781903581E00CA5FD7 /* JPKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JPKit-Prefix.pch"; sourceTree = "<group>"; };
@@ -428,6 +434,7 @@
 				A5EDAB91C910F3122A18827E /* UILabel */,
 				A5EDAB7D41128C5586EC464C /* UIViewController */,
 				A5EDAC252BC18ABC1DDEB471 /* UITextField */,
+				BAED38DB395C2922E461029C /* UIScrollView */,
 			);
 			path = "Cocoa Categories";
 			sourceTree = "<group>";
@@ -500,6 +507,15 @@
 				A5EDAE3C2AEB56F8306F655B /* UIView+JPKitAdditions.m */,
 			);
 			path = UIView;
+			sourceTree = "<group>";
+		};
+		BAED38DB395C2922E461029C /* UIScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				BAED32F16E3BFB698C0AC0A4 /* UIScrollView+JPKitAdditions.m */,
+				BAED32CB7940FDBDD3B0A7BA /* UIScrollView+JPKitAdditions.h */,
+			);
+			path = UIScrollView;
 			sourceTree = "<group>";
 		};
 		F04A63681903581E00CA5FD7 = {
@@ -683,6 +699,7 @@
 				A5EDA3DC9E4C2BF3C5881087 /* JPLinearLayoutItem.m in Sources */,
 				A5EDA89E6DA2982E9C319F60 /* NSMutableDictionary+JPKitAdditions.m in Sources */,
 				A5EDA052E8AE8C2C34DB0805 /* UITextField+JPKitAdditions.m in Sources */,
+				BAED323C921884C7CDAAC905 /* UIScrollView+JPKitAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -712,6 +729,7 @@
 				A5EDA240F4AD055661C3042E /* UIView+JPKitAdditions_LayerShortcuts.m in Sources */,
 				A5EDA2CDF3210C29611C6C53 /* Tests_UIColor_JPKitAdditions.m in Sources */,
 				F0F1C66B191C988600F2022F /* UIColor+JPKitAdditions.m in Sources */,
+				BAED379AEA390F2FE47907A3 /* UIScrollView+JPKitAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

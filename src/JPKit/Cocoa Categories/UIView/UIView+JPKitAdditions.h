@@ -25,6 +25,9 @@ CGRectFromEdgeInsets(CGRect rect, UIEdgeInsets edgeInsets) {
 - (void)jp_goToNextFirstResponder;
 - (void)jp_goToPreviousFirstResponder;
 
+- (UIView *)jp_oldestAncestorOfClass:(Class)theClass;
+- (UIView *)jp_youngestAncestorOfClass:(Class)theClass;
+
 // If delay and duration is 0, it does it on the same run loop
 + (void)jp_animateWithDuration:(NSTimeInterval)duration delay:(NSTimeInterval)delay options:(UIViewAnimationOptions)options animations:(void (^)(void))animations completion:(void (^)(BOOL finished))completion;
 + (void)jp_animateWithDuration:(NSTimeInterval)duration delay:(NSTimeInterval)delay animations:(void (^)(void))animations completion:(void (^)(BOOL finished))completion;
