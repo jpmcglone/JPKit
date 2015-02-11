@@ -20,7 +20,7 @@
 - (void)jp_scrollToRightAnimated:(BOOL)animated;
 - (void)jp_scrollToRight;
 
-// Defaults: margin -> 0 , animated -> YES
+// Defaults: margin -> 10 , animated -> YES
 - (void)jp_scrollToView:(UIView *)view margin:(CGFloat)margin vertical:(BOOL)vertical animated:(BOOL)animated;
 - (void)jp_scrollToView:(UIView *)view margin:(CGFloat)margin animated:(BOOL)animated;
 - (void)jp_scrollToView:(UIView *)view animated:(BOOL)animated;

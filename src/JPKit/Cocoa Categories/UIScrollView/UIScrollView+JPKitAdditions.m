@@ -57,11 +57,14 @@
 
 - (void)jp_scrollToView:(UIView *)view margin:(CGFloat)margin vertical:(BOOL)vertical animated:(BOOL)animated
 {
+    CGRect frameInScrollView = [view convertRect:view.bounds toView:self];
     if (vertical) {
-        CGFloat y = view.jp_bottom + margin + self.contentInset.top + self.contentInset.bottom;
+        CGFloat y = CGRectGetMaxY(frameInScrollView) + margin - (self.jp_height - self.contentInset.bottom);
+        y = y < 0 ? 0 : y;
         [self setContentOffset:CGPointMake(self.contentOffset.x, y) animated:animated];
     } else {
-        CGFloat x = view.jp_right + margin + self.contentInset.left + self.contentInset.right;
+        CGFloat x = CGRectGetMaxX(frameInScrollView) + margin - (self.jp_width - self.contentInset.right);
+        x = x < 0 ? 0 : x;
         [self setContentOffset:CGPointMake(x, self.contentOffset.y) animated:animated];
     }
 }
@@ -73,7 +76,7 @@
 
 - (void)jp_scrollToView:(UIView *)view animated:(BOOL)animated
 {
-    [self jp_scrollToView:view margin:0 animated:animated];
+    [self jp_scrollToView:view margin:10 animated:animated];
 }
 
 - (void)jp_scrollToView:(UIView *)view margin:(CGFloat)margin

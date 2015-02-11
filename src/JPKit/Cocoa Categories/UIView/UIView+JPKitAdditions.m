@@ -59,7 +59,7 @@
 {
     UIView *view = self;
     do {
-        if ([view isKindOfClass:theClass]) {
+        if ([view.class isEqual:theClass]) {
             return view;
         }
         view = view.superview;
@@ -102,13 +102,17 @@
 
 - (void)jp_goToNextFirstResponder
 {
+    UIView *firstResponder = self.jp_firstResponder;
+    UIScrollView *scrollView = [firstResponder jp_oldestAncestorOfClass:[UIScrollView class]];
+
     UIView *nextFirstResponder = self.jp_nextFirstResponder;
     if (nextFirstResponder) {
         [nextFirstResponder becomeFirstResponder];
+        if (scrollView) {
+            [scrollView jp_scrollToView:nextFirstResponder];
+        }
     } else {
-        UIView *firstResponder = self.jp_firstResponder;
         [self endEditing:YES];
-        UIScrollView *scrollView = [firstResponder jp_youngestAncestorOfClass:[UIScrollView class]];
         if (scrollView) {
             [scrollView jp_scrollToBottom];
         }
@@ -117,13 +121,17 @@
 
 - (void)jp_goToPreviousFirstResponder
 {
+    UIView *firstResponder = self.jp_firstResponder;
+    UIScrollView *scrollView = [firstResponder jp_oldestAncestorOfClass:[UIScrollView class]];
+
     UIView *previousFirstResponder = self.jp_previousFirstResponder;
     if (previousFirstResponder) {
         [previousFirstResponder becomeFirstResponder];
+        if (scrollView) {
+            [scrollView jp_scrollToView:previousFirstResponder];
+        }
     } else {
-        UIView *firstResponder = self.jp_firstResponder;
         [self endEditing:YES];
-        UIScrollView *scrollView = [firstResponder jp_youngestAncestorOfClass:[UIScrollView class]];
         if (scrollView) {
             [scrollView jp_scrollToTop];
         }
