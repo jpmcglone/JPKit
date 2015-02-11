@@ -15,7 +15,15 @@ CGRectFromEdgeInsets(CGRect rect, UIEdgeInsets edgeInsets) {
 
 @interface UIView (JPKitAdditions)
 
-@property (nonatomic, readonly) id jp_firstResponder;
+@property (nonatomic, readonly) UIView *jp_firstResponder;
+
+// Next and previous first responder use the y value in the window, not the respective views. Much better results!
+// TODO: caching, to speed things up
+@property (nonatomic, readonly) UIView *jp_nextFirstResponder;
+@property (nonatomic, readonly) UIView *jp_previousFirstResponder;
+
+- (void)jp_goToNextFirstResponder;
+- (void)jp_goToPreviousFirstResponder;
 
 // If delay and duration is 0, it does it on the same run loop
 + (void)jp_animateWithDuration:(NSTimeInterval)duration delay:(NSTimeInterval)delay options:(UIViewAnimationOptions)options animations:(void (^)(void))animations completion:(void (^)(BOOL finished))completion;
