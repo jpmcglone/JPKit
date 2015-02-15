@@ -12,5 +12,7 @@
 #import "JPLinearLayoutView.h"
 #import "JPLinearLayoutItem.h"
 
+#import "JPSoundManager.h"
+
 // Unorganized
 #define CGSIZE_MAX CGSizeMake(CGFLOAT_MAX, CGFLOAT_MAX)

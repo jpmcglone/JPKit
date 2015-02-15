@@ -15,6 +15,9 @@
 		404BE3411A74683000B1100A /* JPLabel.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 404BE3391A7465B400B1100A /* JPLabel.h */; };
 		404BE3421A74683D00B1100A /* JPTextView.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 404BE33D1A7465C800B1100A /* JPTextView.h */; };
 		40A8689D1A8B3F7600044F0A /* UIScrollView+JPKitAdditions.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = BAED32CB7940FDBDD3B0A7BA /* UIScrollView+JPKitAdditions.h */; };
+		40A868A11A91469800044F0A /* JPSoundManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 40A868A01A91469800044F0A /* JPSoundManager.m */; };
+		40A868A21A91469800044F0A /* JPSoundManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 40A868A01A91469800044F0A /* JPSoundManager.m */; };
+		40A868A31A9146BE00044F0A /* JPSoundManager.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 40A8689F1A91469800044F0A /* JPSoundManager.h */; };
 		40C10D141A54940600C1E648 /* UITableView+JPKitAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C10D131A54940600C1E648 /* UITableView+JPKitAdditions.m */; };
 		40C10D151A54940600C1E648 /* UITableView+JPKitAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C10D131A54940600C1E648 /* UITableView+JPKitAdditions.m */; };
 		40C10D161A54944900C1E648 /* UITableView+JPKitAdditions.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 40C10D121A54940600C1E648 /* UITableView+JPKitAdditions.h */; };
@@ -121,6 +124,7 @@
 			dstPath = "include/${PRODUCT_NAME}";
 			dstSubfolderSpec = 16;
 			files = (
+				40A868A31A9146BE00044F0A /* JPSoundManager.h in CopyFiles */,
 				40A8689D1A8B3F7600044F0A /* UIScrollView+JPKitAdditions.h in CopyFiles */,
 				404BE3421A74683D00B1100A /* JPTextView.h in CopyFiles */,
 				404BE3411A74683000B1100A /* JPLabel.h in CopyFiles */,
@@ -165,6 +169,8 @@
 		404BE33A1A7465B400B1100A /* JPLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPLabel.m; sourceTree = "<group>"; };
 		404BE33D1A7465C800B1100A /* JPTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPTextView.h; sourceTree = "<group>"; };
 		404BE33E1A7465C800B1100A /* JPTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPTextView.m; sourceTree = "<group>"; };
+		40A8689F1A91469800044F0A /* JPSoundManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPSoundManager.h; sourceTree = "<group>"; };
+		40A868A01A91469800044F0A /* JPSoundManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPSoundManager.m; sourceTree = "<group>"; };
 		40C10D121A54940600C1E648 /* UITableView+JPKitAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+JPKitAdditions.h"; sourceTree = "<group>"; };
 		40C10D131A54940600C1E648 /* UITableView+JPKitAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+JPKitAdditions.m"; sourceTree = "<group>"; };
 		A5EDA03525B3C62DE1E1BC7D /* JPViewPlan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPViewPlan.m; sourceTree = "<group>"; };
@@ -283,6 +289,15 @@
 				404BE33A1A7465B400B1100A /* JPLabel.m */,
 			);
 			path = JPLabel;
+			sourceTree = "<group>";
+		};
+		40A8689E1A91468800044F0A /* JPManagers */ = {
+			isa = PBXGroup;
+			children = (
+				40A8689F1A91469800044F0A /* JPSoundManager.h */,
+				40A868A01A91469800044F0A /* JPSoundManager.m */,
+			);
+			path = JPManagers;
 			sourceTree = "<group>";
 		};
 		40C10D111A54939300C1E648 /* UITableView */ = {
@@ -550,6 +565,7 @@
 		F04A63761903581E00CA5FD7 /* JPKit */ = {
 			isa = PBXGroup;
 			children = (
+				40A8689E1A91468800044F0A /* JPManagers */,
 				F04A63791903581E00CA5FD7 /* JPKit.h */,
 				A5EDA4FE3A105549EB547C10 /* JPControls */,
 				A5EDA95C5F05BE3888F6EE36 /* Cocoa Categories */,
@@ -678,6 +694,7 @@
 				A5EDAC724751D64EC8D1F475 /* NSObject+JPKitAdditions_AutoDescription.m in Sources */,
 				A5EDAAB8D4360C736591C64C /* NSObject+JPKitAdditions_Reflection.m in Sources */,
 				F0F1C656190B8C1F00F2022F /* JPModel.m in Sources */,
+				40A868A11A91469800044F0A /* JPSoundManager.m in Sources */,
 				A5EDAAA11B1673A4C2E20DDB /* JPViewPlan.m in Sources */,
 				A5EDAE47583ED082BAB709B1 /* NSDictionary+JPKitAdditions.m in Sources */,
 				F0F1C66A191C988600F2022F /* UIColor+JPKitAdditions.m in Sources */,
@@ -724,6 +741,7 @@
 				A5EDA55528D7F02D19DFE4AB /* JPViewPlan.m in Sources */,
 				404BE3401A7465C800B1100A /* JPTextView.m in Sources */,
 				A5EDA2ABCD7655B65F50B2E8 /* Tests_JPViewPlan.m in Sources */,
+				40A868A21A91469800044F0A /* JPSoundManager.m in Sources */,
 				A5EDAA0CE9D648D1D54B0B33 /* NSDictionary+JPKitAdditions.m in Sources */,
 				A5EDA456C020CB260E6AF684 /* JPKitTest.m in Sources */,
 				A5EDA240F4AD055661C3042E /* UIView+JPKitAdditions_LayerShortcuts.m in Sources */,
