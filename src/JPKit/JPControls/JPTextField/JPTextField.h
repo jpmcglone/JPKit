@@ -7,6 +7,9 @@
 
 @interface JPTextField : UITextField
 
+// image is always made square
+@property (nonatomic, strong) UIImage *image;
+
 @property (nonatomic, assign) UIEdgeInsets edgeInsets;
 @property (nonatomic, copy) UIColor *placeholderColor;
 
