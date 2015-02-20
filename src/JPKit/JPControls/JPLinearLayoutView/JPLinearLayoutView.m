@@ -166,7 +166,7 @@
                         item.view.jp_left = _padding.left + item.margin.left;
                     } else {
                         item.view.jp_height = self.jp_height - _padding.top - _padding.bottom - item.margin.top - item.margin.bottom;
-                        item.view.jp_left = _padding.top + item.margin.top;
+                        item.view.jp_top = _padding.top + item.margin.top;
                     }
                     break;
                 case JPLinearLayoutAlignmentCenter:
