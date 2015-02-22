@@ -32,6 +32,9 @@
 
 - (SystemSoundID)cacheSound:(NSString *)soundFile
 {
+    if (!soundFile) {
+        return 0;
+    }
     soundFile = [self fixedSoundFileName:soundFile];
 
     NSNumber *soundID = [self soundIDForSoundFile:soundFile];
@@ -49,6 +52,9 @@
 
 - (void)playSound:(NSString *)soundFile
 {
+    if (!soundFile) {
+        return;
+    }
     soundFile = [self fixedSoundFileName:soundFile];
 
     if (_sounds[soundFile]) {
@@ -62,6 +68,9 @@
 
 - (void)removeSound:(NSString *)soundFile
 {
+    if (!soundFile) {
+        return;
+    }
     soundFile = [self fixedSoundFileName:soundFile];
 
     SystemSoundID sid = [self soundIDForSoundFile:soundFile];
