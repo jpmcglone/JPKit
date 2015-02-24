@@ -26,6 +26,13 @@
 @property (nonatomic, readwrite) CGFloat jp_centerX;
 @property (nonatomic, readwrite) CGFloat jp_centerY;
 
+- (void)jp_centerVertically;
+- (void)jp_centerHorizontally;
+- (void)jp_alignLeftMargin:(CGFloat)margin;
+- (void)jp_alignRightMargin:(CGFloat)margin;
+- (void)jp_alignTopMargin:(CGFloat)margin;
+- (void)jp_alignBottomMargin:(CGFloat)margin;
+
 - (void)jp_beginFrameUpdates;
 - (void)jp_endFrameUpdates;
 

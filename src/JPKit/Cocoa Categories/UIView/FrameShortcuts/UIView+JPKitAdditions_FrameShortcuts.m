@@ -170,6 +170,36 @@ static char const *const jp_updatingFrameKey = "jp_updatingFrameKey";
     self.center = CGPointMake(self.center.x, jp_centerY);
 }
 
+- (void)jp_centerVertically
+{
+    self.jp_centerY = self.superview.jp_middle.y;
+}
+
+- (void)jp_centerHorizontally
+{
+    self.jp_centerX = self.superview.jp_middle.x;
+}
+
+- (void)jp_alignLeftMargin:(CGFloat)margin
+{
+    self.jp_left = margin;
+}
+
+- (void)jp_alignRightMargin:(CGFloat)margin
+{
+    self.jp_right = self.superview.jp_width - margin;
+}
+
+- (void)jp_alignTopMargin:(CGFloat)margin
+{
+    self.jp_top = margin;
+}
+
+- (void)jp_alignBottomMargin:(CGFloat)margin
+{
+    self.jp_bottom = self.superview.jp_height - margin;
+}
+
 #pragma mark - JP Update Frames
 #pragma mark - begin / end updates
 - (void)jp_beginFrameUpdates
