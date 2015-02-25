@@ -35,6 +35,7 @@
     if (!soundFile) {
         return 0;
     }
+
     soundFile = [self fixedSoundFileName:soundFile];
 
     NSNumber *soundID = [self soundIDForSoundFile:soundFile];
@@ -57,13 +58,11 @@
     }
     soundFile = [self fixedSoundFileName:soundFile];
 
-    if (_sounds[soundFile]) {
-        NSNumber *soundID = [self soundIDForSoundFile:soundFile];
-        SystemSoundID sid;
-        if (!soundID) sid = [self cacheSound:soundFile];
-        else sid = [soundID integerValue];
-        AudioServicesPlaySystemSound(sid);
-    }
+    NSNumber *soundID = [self soundIDForSoundFile:soundFile];
+    SystemSoundID sid;
+    if (!soundID) sid = [self cacheSound:soundFile];
+    else sid = [soundID integerValue];
+    AudioServicesPlaySystemSound(sid);
 }
 
 - (void)removeSound:(NSString *)soundFile
