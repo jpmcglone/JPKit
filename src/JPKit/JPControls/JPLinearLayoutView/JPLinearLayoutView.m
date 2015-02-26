@@ -184,4 +184,15 @@
     }
 }
 
+- (void)setFrame:(CGRect)frame
+{
+    // Refresh the linear layout only if the frame size changes,
+    CGSize oldSize = self.jp_size;
+    [super setFrame:frame];
+    CGSize newSize = self.jp_size;
+    if (oldSize.width != newSize.width || oldSize.height != newSize.height) {
+        [self refresh];
+    }
+}
+
 @end
