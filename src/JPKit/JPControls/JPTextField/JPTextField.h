@@ -10,7 +10,7 @@
 // image is always made square
 @property (nonatomic, strong) UIImage *image;
 
-@property (nonatomic, assign) UIEdgeInsets edgeInsets;
+@property (nonatomic, assign) UIEdgeInsets edgeInsets; //default UIEdgeInsetsMake(5, 5, 5, 5);
 @property (nonatomic, copy) UIColor *placeholderColor;
 
 @end

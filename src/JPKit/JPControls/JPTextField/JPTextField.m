@@ -35,6 +35,7 @@
 {
     _edgeInsets = edgeInsets;
     [self setNeedsLayout];
+    [self setNeedsDisplay];
 }
 
 - (void)resetPlaceholderColor
@@ -69,6 +70,11 @@
 {
     rect = CGRectFromEdgeInsets(rect, _edgeInsets);
 
+    rect.origin.x += _edgeInsets.left;
+    rect.origin.y += _edgeInsets.top;
+    rect.size.width -= _edgeInsets.right;
+    rect.size.height -= _edgeInsets.bottom;
+
     CGSize imageSize = [self imageSize];
     if (imageSize.height == 0 || imageSize.width == 0) {
         return rect;
@@ -99,6 +105,20 @@
     _imageView.jp_size = imageSize;
     _imageView.jp_left = _edgeInsets.left;
     _imageView.jp_centerY = self.jp_middle.y - 0.5 * (_edgeInsets.top + _edgeInsets.bottom);
+}
+
+- (CGSize)sizeThatFits:(CGSize)size
+{
+    // adjust for insets
+    size.height -= (_edgeInsets.top + _edgeInsets.bottom);
+    size.width -= (_edgeInsets.left + _edgeInsets.right);
+
+    CGSize theSize = [super sizeThatFits:size];
+
+    theSize.height += _edgeInsets.top + _edgeInsets.bottom;
+    theSize.width += _edgeInsets.left + _edgeInsets.right;
+
+    return theSize;
 }
 
 @end
