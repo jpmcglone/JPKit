@@ -66,36 +66,16 @@
     return CGSizeMake(width, width);
 }
 
-- (CGRect)adjustRectForImageAndInsets:(CGRect)rect
-{
-    rect = CGRectFromEdgeInsets(rect, _edgeInsets);
-
-    rect.origin.x += _edgeInsets.left;
-    rect.origin.y += _edgeInsets.top;
-    rect.size.width -= _edgeInsets.right;
-    rect.size.height -= _edgeInsets.bottom;
-
-    CGSize imageSize = [self imageSize];
-    if (imageSize.height == 0 || imageSize.width == 0) {
-        return rect;
-    }
-
-    rect.size.width -= (imageSize.width + kGap);
-    rect.origin.x += (imageSize.width + kGap);
-
-    return rect;
-}
-
 - (CGRect)textRectForBounds:(CGRect)bounds
 {
     CGRect rect = [super textRectForBounds:bounds];
-    return [self adjustRectForImageAndInsets:rect];
+    return CGRectFromEdgeInsets(rect, _edgeInsets);
 }
 
 - (CGRect)editingRectForBounds:(CGRect)bounds
 {
     CGRect rect = [super editingRectForBounds:bounds];
-    return [self adjustRectForImageAndInsets:rect];
+    return CGRectFromEdgeInsets(rect, _edgeInsets);
 }
 
 - (void)layoutSubviews
