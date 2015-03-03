@@ -93,11 +93,12 @@
     CGRect constrainedRect = CGRectZero;
     constrainedRect.size = self.contentSize;
     constrainedRect = CGRectFromEdgeInsets(constrainedRect, _padding);
-
     for (JPLinearLayoutItem *item in _items) {
         if (item.view) {
             if (item.autoSizes) {
-                item.view.jp_size = [item.sizingView ?: item.view sizeThatFits:constrainedRect.size];
+                UIView *view = item.sizingView ?: item.view;
+                CGRect itemConstrainedRect = CGRectFromEdgeInsets(constrainedRect, item.margin);
+                item.view.jp_size = [view sizeThatFits:itemConstrainedRect.size];
             }
             if (item.weight > 0) {
                 totalPositiveSpace += item.weight * selfMax / weightSum;
