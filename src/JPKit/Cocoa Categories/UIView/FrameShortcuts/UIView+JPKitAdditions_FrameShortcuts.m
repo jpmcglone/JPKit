@@ -200,6 +200,11 @@ static char const *const jp_updatingFrameKey = "jp_updatingFrameKey";
     self.jp_bottom = self.superview.jp_height - margin;
 }
 
+- (void)jp_centerIt
+{
+    self.center = self.superview.jp_middle;
+}
+
 #pragma mark - JP Update Frames
 #pragma mark - begin / end updates
 - (void)jp_beginFrameUpdates

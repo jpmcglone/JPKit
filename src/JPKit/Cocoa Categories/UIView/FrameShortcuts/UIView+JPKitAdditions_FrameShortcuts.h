@@ -33,6 +33,8 @@
 - (void)jp_alignTopMargin:(CGFloat)margin;
 - (void)jp_alignBottomMargin:(CGFloat)margin;
 
+- (void)jp_centerIt;
+
 - (void)jp_beginFrameUpdates;
 - (void)jp_endFrameUpdates;
 
