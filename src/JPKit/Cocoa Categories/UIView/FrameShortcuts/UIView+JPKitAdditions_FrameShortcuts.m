@@ -202,7 +202,7 @@ static char const *const jp_updatingFrameKey = "jp_updatingFrameKey";
 
 - (void)jp_centerIt
 {
-    self.center = self.superview.jp_middle;
+    self.jp_center = self.superview.jp_middle;
 }
 
 #pragma mark - JP Update Frames
